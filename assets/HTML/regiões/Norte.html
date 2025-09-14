@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Regiões Norte</title>
     <link rel="stylesheet" href="../../CSS/página regiões/norte.css">
+    <script src="../../JS/regiões.js" type="text/javascript"></script>
 </head>
 <body>
     <!--Espaço Cabeçalho-->
@@ -33,16 +34,16 @@
     <!--Seção Texto-->
     <section id="texto-inicial">
 
-      <p>Explore a imensidão da Amazônia, faça passeios de barco pelos rios e descubra a incrível diversidade da fauna e flora. Uma experiência única na natureza! <br><span class="destaque1">Aqui te oferecemos um guia sobre turísmo da Região Norte!</span> </p>
+      <p>Explore a imensidão da Amazônia, faça passeios de barco pelos rios e descubra a incrível diversidade da fauna e flora. Uma experiência única na natureza! <br><span class="destaque1">Aqui te oferecemos um guia inicial sobre turísmo da Região Norte!</span> </p>
     </section>
 
     <section id="caixa-destinos">
-      <p ><span class="destaque1">Principais Destinos Acessíveis!</span><br>Clique em cima das imagens para descobrir locais para visitar nas cidades.
+      <p ><span class="destaque1">Principais Destinos Acessíveis!</span><br>Clique em cima das imagens para descobrir mais sobre as cidades!
       </p>
 
       <section class="containers">
         <!--caixa Manaus-->
-        <div class="card">
+        <div class="card" onclick="toggleCidade('Manaus')">
           <img src="../../HTML/regiões/img/Norte/manausfigma.png" alt="Paisagem Cidade Manaus no Amazonas">
 
           <h4>Manaus (AM)</h4>
@@ -50,15 +51,15 @@
           <p>Maior cidade da Amazónia, destacada por sua arquitetura histórica, rica gastronomia e a beleza natural da Floresta Amazônica. </p>
         </div>
         <!--caixa Bélem-->
-        <div class="card" id="card2">
+        <div class="card" id="card2" onclick="toggleCidade('Belem')">
           <img src="../../HTML/regiões/img/Norte/Bélem.png" alt="Paisagem Cidade Bélem do Pará">
 
           <h4>Bélem (PA) </h4>
           <br>
           <p>Um importante centro histórico, cultural e econômico, reconhecida por sua riqueza natural e culinária típica. </p>
         </div>
-        <!--caixa Altar do Chão-->
-        <div class="card" id="card3">
+        <!--caixa Palmas-->
+        <div class="card" id="card3" onclick="toggleCidade('Palmas')">
           <img src="../../HTML/regiões/img/Norte/Palmas.png" alt="Paisagem Cidade Palmas em Tocantis">
 
           <h4>Palmas (TO)</h4>
@@ -66,6 +67,12 @@
           <p>Capital mais jovem do Brasil, Palmas atrai visitantes pelo lago da Usina Hidrelétrica de Lajeado, praias fluviais e belas paisagens do Jalapão.</p>
         </div>
       </section>
+
+      <!--Manaus-->
+      <section class="containers-cidade" id="Manaus">
+        <section class="texto-cidade">
+          <p> <span class="destaque1">Manaus tem se tornado cada vez mais inclusiva no turismo</span>, investindo em acessibilidade em pontos culturais e naturais. O Teatro Amazonas, por exemplo, conta com rampas e estrutura adaptada, e espaços como o Bosque da Ciência e o Museu da Amazônia oferecem recursos para garantir uma experiência acolhedora a todos os visitantes. <span class="destaque1">A cidade avança para que pessoas com deficiência possam vivenciar de perto suas riquezas culturais e ambientais com autonomia e conforto.</span> </p>
+        </section>
 
       <section class="containers-fotos" id="fotos-manaus">
         <div>
@@ -81,29 +88,63 @@
           <p>Praia da Ponta Negra</p>
         </div>
         <div>
-          <img src="img/Norte/Mercadão.jpg" alt="Vista do Mercado Municipal de Manaus, conhecido como Mercadão, acessível para pessoas com mobilidade reduzida">
-          <p>Mercado Municipal</p>
+          <img src="img/Norte/Museu Amazonas.png" alt="Vista do Museu Amazonas, conhecido como Musa possui também um Jardim Botânico as visitas permitem uma estreita intimidade com a floresta ">
+          <p>Museu Amazonas</p>
         </div>
       </section>
+      </section>
+
+      <!--Bélem-->
+      <section class="containers-cidade" id="Belem">
+        <section class="texto-cidade">
+          <p> <span class="destaque1">Belém, porta de entrada da Amazônia, vem ampliando a acessibilidade em pontos turísticos</span>, como o Mangal das Garças e a Estação das Docas, que contam com rampas, banheiros adaptados e áreas de fácil circulação. <span class="destaque1">A cidade busca oferecer experiências inclusivas, para que todos possam vivenciar sua rica história, gastronomia e tradições culturais.</span> </p>
+        </section>
 
       <section class="containers-fotos" id="fotos-bélem">
         <div>
-          <img src="img/Norte/Teatro Amazonas.png" alt="">
-          <p>Teatro Amazonas</p>
+          <img src="img/Norte/Mangal das Garças.png" alt="Vista do Mangal das Garças: um parque zoobotânico, a imagem possui muitas árvores, um grande mar que possui uma escada para dar acesso ao Mangal">
+          <p>Mangal das Garças</p>
         </div>
         <div>
-          <img src="img/Norte/Bosque da Ciencia.png" alt="">
-          <p>Bosque da Ciência</p>
+          <img src="img/Norte/Museu Paraense.png" alt="Vista do Museu Paraense: Parece uma casinha retro, cor rosa com janelas e portas rosa e ao fundo muitas árvores.">
+          <p>Museu Paraense</p>
         </div>
         <div>
-          <img src="img/Norte/Praia da Ponta Negra.jpg" alt="">
-          <p>Praia da Ponta Negra</p>
+          <img src="img/Norte/Praça da Bíblia.png" alt="Vista da Praça da Bíblia: Um lugar aberto, parece uma quadra de escola aberta, possui árvores espalhadas, alguns blocos decorativos coloridos espalhadas um atrás do outro e muitas pessoas andando em volta.">
+          <p>Praça da Bíblia</p>
         </div>
         <div>
-          <img src="img/Norte/Mercadão.jpg" alt="">
-          <p>Mercado Municipal</p>
+          <img src="img/Norte/Estação das Docas.png" alt="Vista da Estação das Docas: um vibrante centro de lazer, gastronomia e eventos. Na imagem tem um Armazém amarelo, a rua cor marrom claro, ao lado tem o mar.">
+          <p>Estação das Docas</p>
         </div>
       </section>
+      </section>
+
+      <!--Palmas-->
+      <section class="containers-cidade" id="Palmas">
+        <section class="texto-cidade">
+          <p> <span class="destaque1">Palmas tem se estruturado para receber visitantes com mais inclusão, </span> oferecendo calçadões e praças acessíveis, como na Praia da Graciosa. O Parque Cesamar e outros espaços de lazer da capital contam com rampas e áreas adaptadas, <span class="destaque1"> garantindo que pessoas com deficiência possam aproveitar a natureza e a cultura local com conforto e segurança.</span> </p>
+        </section>
+
+      <section class="containers-fotos" id="fotos-bélem">
+        <div>
+          <img src="img/Norte/Praia Graciosa.png" alt="Paisagem da praia Graciosa com o sol se pondo ao fundo, o mar bem cristalido reflete o sol, algumas pessoas sentadas na área e lado delas um guarda sol grande feito de palha, na praia também possui alguns coqueiros.">
+          <p>Praia Graciosa</p>
+        </div>
+        <div>
+          <img src="img/Norte/Parque Cesamar.png" alt="A imagem do parque Cesamar possui muitas árvores, o chão com gramado bem verdinho, flores rosas e vermelhas espalhadas em arbustos e algumas lixeiras">
+          <p>Parque Cesamar</p>
+        </div>
+        <div>
+          <img src="img/Norte/Praça dos Girassóis.png" alt="Praça dos Girassóis: por mais que o nome se remeta a girassóis, essa praça não possui nenhum girassól, porém muitas árvores, gramado bem verde, bancos. A praça, eleita símbolo da capital possui no chão cinza, o símbolo de uma rosa dos ventos.">
+          <p>Praça dos Girassóis</p>
+        </div>
+        <div>
+        </div>
+      </section>
+      </section>
+
+
 
 
     </section>

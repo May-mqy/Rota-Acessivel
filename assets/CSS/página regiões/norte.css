@@ -163,7 +163,7 @@ body {
 
 .card{
   background-color: #FFF;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px #061a313a;
   overflow: hidden;
   width: 30%;
   height: 500px;
@@ -198,24 +198,44 @@ body {
   box-shadow: 10px 10px var(--destaque1);
 }
 
-/*Caixa com fotos dos locais*/
-.containers-fotos{
-  /*position: absolute;*/
+
+.containers-cidade{
+  display: none;
+
   background-color: #fff;
-  box-shadow: 3px 5px 20px  #061a3180;
+  box-shadow: 0 4px 8px #061a313a;
   overflow: hidden;
   width: 90%;
-  height: 320px;
+  height: auto;
   cursor: pointer;
+
   transition: transform 0.2s, box-shadow 0.2s;
   border-radius: 25px;
-  margin: 60px auto;
+  margin: 60px 65px;
   padding: 40px 100px;
+}
+
+.containers-cidade.show {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transform: translateY(0);
+}
+.containers-cidade {
+  transform: translateY(-10px);
+}
+
+
+.texto-cidade{
+  font-size: 20px;
+  color: var(--cor-principal-escura);
+  margin-bottom: 40px;
+}
+
+/*Caixa com fotos dos locais*/
+.containers-fotos{
   display: flex;
   flex-direction: row;
   gap: 60px;
-
-  /*visibility: hidden;*/
+  justify-content: center;
 
   & p{
     font-size: 20px;
@@ -241,15 +261,16 @@ body {
 }
 
 .news{
+  position: relative;
   background-color: #FFF;
   color: var(--cor-principal-escura);
-  box-shadow: 3px 5px 20px  #061a3180;
+  box-shadow: 0 4px 8px #061a313a;
   overflow: hidden;
   width: 36%;
   height: 380px;
   transition: transform 0.2s, box-shadow 0.2s;
   border-radius: 25px;
-  margin: auto auto auto auto;
+  margin: 60px auto auto auto;
   padding: 25px;
 
   h4{
@@ -267,6 +288,8 @@ body {
   flex-direction: row;
   margin-top: 25px;
   margin-bottom:50px;
+  flex-wrap: nowrap; 
+  width: auto;
 
   .elementos{
     display: flex;
