@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regiões Nordeste</title>
+    <link rel="stylesheet" href="../../CSS/página regiões/nordeste.css">
+    <script src="../../JS/regiões.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <!--Espaço Cabeçalho-->
+    <header class="navbar">
+    <div class="logo">LOGO</div>
+    <nav>
+      <ul>
+        <li><a href="#">Regiões</a></li>
+        <li><a href="#">Parceiros</a></li>
+        <li><a href="#">Comunidade</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Português BR ></a></li>
+      </ul>
+    </nav>
+    <button class="btn-viagem">✈ Planeje sua Viagem</button>
+  </header>
+
+    <!--Seção Inical-->
+    <section class ="inicio">
+        <div class="bloco1">
+            <h1 class>REGIÃO NORDESTE</h1>
+            <div class="caixa-nome-local">Fortaleza (CE) </div>
+        </div>
+    </section>
+
+    <!--Seção Texto-->
+    <section id="texto-inicial">
+
+      <p>Relaxe em praias paradisíacas, aproveite o calor humano e mergulhe na cultura vibrante de festas, ritmos e sabores típicos. Cada canto do Nordeste guarda uma experiência inesquecível!
+          <br> <span class="destaque1">Aqui te oferecemos um guia inicial sobre turismo da Região Nordeste.</span> </p>
+    </section>
+
+    <section id="caixa-destinos">
+      <p ><span class="destaque1">Principais Destinos Acessíveis!</span><br>Clique em cima das imagens para descobrir mais sobre as cidades!
+      </p>
+
+      <section class="containers">
+        <!--caixa Salvador-->
+        <div class="card" onclick="toggleCidade('Regiao1')">
+          <img src="../../HTML/regiões/img/Nordeste/Salvador.png" alt="Paisagem Cidade Manaus no Amazonas">
+
+          <h4>Salvador (BA)</h4>
+          <br>
+          <p>Cidade histórica e vibrante, Salvador reúne o Pelourinho, belas praias e a forte influência afro-brasileira na música e culinária. </p>
+        </div>
+        <!--caixa Recife-->
+        <div class="card" id="card2" onclick="toggleCidade('Regiao2')">
+          <img src="../../HTML/regiões/img/Nordeste/Recife.png" alt="Paisagem Cidade Bélem do Pará">
+
+          <h4>Recife (PE) </h4>
+          <br>
+          <p>Chamado de “Veneza Brasileira”, Recife encanta com seus rios, pontes, igrejas barrocas e a proximidade de Olinda, Patrimônio da Humanidade. </p>
+        </div>
+        <!--caixa Fortaleza-->
+        <div class="card" id="card3" onclick="toggleCidade('Regiao3')">
+          <img src="../../HTML/regiões/img/Nordeste/Fortaleza-veneza.png" alt="Paisagem Cidade Palmas em Tocantis">
+
+          <h4>Fortaleza (CE)</h4>
+          <br>
+          <p>Além das belas praias como Iracema e Meireles, que já contam com trechos adaptados com rampas e cadeiras anfíbias, a cidade também oferece espaços culturais acessíveis.</p>
+        </div>
+      </section>
+
+      <!--Salvador completo-->
+      <section class="containers-cidade" id="Regiao1">
+        <section class="texto-cidade">
+          <p> <span class="destaque1">Salvador tem avançado na inclusão de visitantes em seus principais atrativos. </span> O Elevador Lacerda e o Mercado Modelo contam com recursos de acessibilidade, enquanto praias como Itapuã oferecem rampas e cadeiras anfíbias para pessoas com deficiência.<span class="destaque1"> A capital baiana alia cultura, história e mar com experiências cada vez mais acessíveis.</span> </p>
+        </section>
+
+      <section class="containers-fotos" id="fotos-manaus">
+        <div>
+          <img src="img/Nordeste/Elevador Lacerda.png" alt="O Elevador Lacerda, ícone de Salvador, aparece em primeiro plano com sua estrutura bege ligando a Cidade Alta à Cidade Baixa. Ao fundo, o mar azul da Baía de Todos-os-Santos com vários barcos, o Mercado Modelo e o Forte de São Marcelo. Possui um icone sinalizando que é acessível para deficientes visuais, pois possui Sistema Braille">
+          <p>Elevador Lacerda</p>
+        </div>
+        <div>
+          <img src="img/Nordeste/Mercado Modelo Salvador.png" alt="Vista aérea do Mercado Modelo, prédio histórico amarelo com telhado de duas águas, em Salvador. Ao fundo, barcos e iates coloridos ancorados no mar azul-turquesa da Baía de Todos-os-Santos. A cena é cercada por prédios altos e árvores. Possui um icone sinalizando que é acessível para deficientes físico">
+          <p>Mercado Modelo</p>
+        </div>
+        <div>
+          <img src="img/Nordeste/Praia Itapuã.png" alt="Vista da Praia de Itapuã, em Salvador, com céu azul, nuvens brancas e mar verde-azulado com pequenas ondas. À esquerda, coqueiros inclinados pelo vento e um calçadão de pedras brancas. Algumas pessoas aproveitam a praia sob guarda-sóis coloridos e cadeiras na areia.">
+          <p>Praia de Itapuã</p>
+        </div>
+    
+      </section>
+      </section>
+
+      <!--Recife-->
+      <section class="containers-cidade" id="Regiao2">
+        <section class="texto-cidade">
+          <p> <span class="destaque1">Recife vem fortalecendo o turismo acessível, </span> com iniciativas em espaços como o Marco Zero e o Recife Antigo, que contam com rampas, pisos táteis e banheiros adaptados. A Praia de Boa Viagem também dispõe de projetos de acessibilidade, <span class="destaque1">permitindo que todos possam curtir o litoral e a cultura vibrante da cidade.</span> </p>
+        </section>
+
+      <section class="containers-fotos" id="fotos-bélem">
+        <div>
+          <img src="img/Nordeste/Marco zero.png" alt="">
+          <p>Marco Zero</p>
+        </div>
+        <div>
+          <img src="img/Nordeste/Recife antigo.png" alt="">
+          <p>Recife Antigo</p>
+        </div>
+        <div>
+          <img src="img/Nordeste/Praia Boa Viagem.png" alt="">
+          <p>Praia Boa Viagem</p>
+        </div>
+        <div>
+      
+        </div>
+      </section>
+      </section>
+
+      <!--Fortaleza-->
+      <section class="containers-cidade" id="Regiao3">
+        <section class="texto-cidade">
+          <p> <span class="destaque1">Fortaleza oferece diversas opções inclusivas, </span> como a Orla da Beira-Mar, que possui calçadão acessível e áreas adaptadas. Além disso, praias como a do Futuro contam com cadeiras anfíbias e apoio especializado. <span class="destaque1"> A capital cearense busca garantir que pessoas com deficiência possam vivenciar plenamente sua energia, hospitalidade e belezas naturais.</span> </p>
+        </section>
+
+      <section class="containers-fotos" id="fotos-bélem">
+        <div>
+          <img src="img/Nordeste/Teatro Jose Alencar.png" alt="">
+          <p>Teatro José de Alencar</p>
+        </div>
+        <div>
+          <img src="img/Nordeste/Centro Dragão.png" alt="">
+          <p>Centro Dragão do Mar</p>
+        </div>
+        <div>
+          <img src="img/Nordeste/Praia do Futuro.png" alt="">
+          <p>Praia do Futuro</p>
+        </div>
+        <div>
+          <img src="img/Nordeste/Praia Acessivel.png" alt="">
+          <p>Praia Acessível</p>
+        </div>
+        <div>
+        </div>
+      </section>
+      </section>
+    </section>
+
+    <!--noticias-->
+    <section class="containers-news">
+      <div class="news">
+        <h4>Nordeste Acessível: Praias e Cidades Inclusivas Reveladas!</h4>
+        <p>Descubra os destinos nordestinos que estão transformando o turismo com acessibilidade para todos.</p>
+
+      <div class="elementos-caixa">
+        <div class="elementos">
+          <img src="./svg/pessoa.svg" alt="simbolo de uma pessoa">
+          <p>Jr Blitz</p>
+        </div>
+
+        <div class="elementos">
+          <img src="./svg/calendario.svg" alt="Simbolo Calendário">
+          <p>04 de Abril, 2025</p>
+        </div>
+
+      </div>
+
+      <a href="https://www.vivala.com.br/turismo-no-norte-do-brasil" class="but-news"  target="_blank">Ler Artigo Completo  &rarr;</a>
+      </div>
+
+
+      <div class="news">
+        <h4>Roteiro de turismo no nordeste para pessoas PCD!</h4>
+        <p>Com paisagens paradisíacas, cultura diversificada e culinária marcante, o local também vem ganhando destaque no cenário de viagem acessível no Nordeste.</p>
+
+      <div class="elementos-caixa">
+        <div class="elementos">
+          <img src="./svg/pessoa.svg" alt="simbolo de uma pessoa">
+          <p> Amanda Oliveirai</p>
+        </div>
+
+        <div class="elementos">
+          <img src="./svg/calendario.svg" alt="Simbolo Calendário">
+          <p> 05 de julho, 2025</p>
+        </div>
+
+      </div>
+
+      <a href="https://terrabrasilnoticias.com/2025/07/roteiro-de-turismo-no-nordeste-para-pessoas-pcd/" class="but-news"  target="_blank">Ler Artigo Completo  &rarr;</a>
+      </div>
+
+    </section>
+</body>
+</html>

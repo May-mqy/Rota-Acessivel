@@ -80,7 +80,7 @@ body {
 .inicio {
   position: relative;
   height: 100vh;
-  background: url("../../HTML/regiões/img/Norte/Palmas-Tocantis.jpg") no-repeat center center/cover;
+  background: url("../../HTML/regiões/img/Nordeste/Fortaleza.webp") no-repeat center center/cover;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
@@ -293,7 +293,7 @@ body {
   .elementos{
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    gap: 7px;
 
     img{
         height: 30px;
