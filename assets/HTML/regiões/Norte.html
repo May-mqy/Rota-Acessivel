@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regiões Norte</title>
+    <link rel="stylesheet" href="../../CSS/página regiões/norte.css">
+    <script src="../../JS/regiões.js" type="text/javascript"></script>
+</head>
+<body>
+    <!--Espaço Cabeçalho-->
+    <header class="navbar">
+    <div class="logo">LOGO</div>
+    <nav>
+      <ul>
+        <li><a href="#">Regiões</a></li>
+        <li><a href="#">Parceiros</a></li>
+        <li><a href="#">Comunidade</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Português BR ></a></li>
+      </ul>
+    </nav>
+    <button class="btn-viagem">✈ Planeje sua Viagem</button>
+  </header>
+
+    <!--Seção Inical-->
+    <section class ="inicio">
+        <div class="bloco1">
+            <h1 class>REGIÃO NORTE</h1>
+            <div class="caixa-nome-local">Palmas (TO) </div>
+        </div>
+    </section>
+
+    <!--Seção Texto-->
+    <section id="texto-inicial">
+
+      <p>Explore a imensidão da Amazônia, faça passeios de barco pelos rios e descubra a incrível diversidade da fauna e flora. Uma experiência única na natureza! <br><span class="destaque1">Aqui te oferecemos um guia inicial sobre turísmo da Região Norte!</span> </p>
+    </section>
+
+    <section id="caixa-destinos">
+      <p ><span class="destaque1">Principais Destinos Acessíveis!</span><br>Clique em cima das imagens para descobrir mais sobre as cidades!
+      </p>
+
+      <section class="containers">
+        <!--caixa Manaus-->
+        <div class="card" onclick="toggleCidade('Regiao1')">
+          <img src="../../HTML/regiões/img/Norte/manausfigma.png" alt="Paisagem Cidade Manaus no Amazonas">
+
+          <h4>Manaus (AM)</h4>
+          <br>
+          <p>Maior cidade da Amazónia, destacada por sua arquitetura histórica, rica gastronomia e a beleza natural da Floresta Amazônica. </p>
+        </div>
+        <!--caixa Bélem-->
+        <div class="card" id="card2" onclick="toggleCidade('Regiao2')">
+          <img src="../../HTML/regiões/img/Norte/Bélem.png" alt="Paisagem Cidade Bélem do Pará">
+
+          <h4>Bélem (PA) </h4>
+          <br>
+          <p>Um importante centro histórico, cultural e econômico, reconhecida por sua riqueza natural e culinária típica. </p>
+        </div>
+        <!--caixa Palmas-->
+        <div class="card" id="card3" onclick="toggleCidade('Regiao3')">
+          <img src="../../HTML/regiões/img/Norte/Palmas.png" alt="Paisagem Cidade Palmas em Tocantis">
+
+          <h4>Palmas (TO)</h4>
+          <br>
+          <p>Capital planejada e moderna, Palmas atrai visitantes com suas praias fluviais e áreas verdes  naturais no entorno da cidade.</p>
+        </div>
+      </section>
+
+      <!--Manaus-->
+      <section class="containers-cidade" id="Regiao1">
+        <section class="texto-cidade">
+          <p> <span class="destaque1">Manaus tem se tornado cada vez mais inclusiva no turismo</span>, investindo em acessibilidade em pontos culturais e naturais. O Teatro Amazonas, por exemplo, conta com rampas e estrutura adaptada, e espaços como o Bosque da Ciência e o Museu da Amazônia oferecem recursos para garantir uma experiência acolhedora a todos os visitantes. <span class="destaque1">A cidade avança para que pessoas com deficiência possam vivenciar de perto suas riquezas culturais e ambientais com autonomia e conforto.</span> </p>
+        </section>
+
+      <section class="containers-fotos" id="fotos-manaus">
+        <div>
+          <img src="img/Norte/Teatro Amazonas.png" alt="Imagem áerea do Teatro Amazonas, acessível para deficientes auditivos">
+          <p>Teatro Amazonas</p>
+        </div>
+        <div>
+          <img src="img/Norte/Bosque da Ciencia.png" alt="Imagem Bosque da Ciência, onde um homem cego com colete rosa e boné rosa toca uma onça empalhada em exposição tátil, ao seu redor outras obras, uma de borboletas e quadros de pessoas, possui um icone indicando que esse local é acessível para defientes visuais">
+          <p>Bosque da Ciência</p>
+        </div>
+        <div>
+          <img src="img/Norte/Praia da Ponta Negra.jpg" alt="Paisagem da praia da Ponta Negra acessível para todos, espaço aberto bem arborizado e um mar aberto ao fundo, tem também vários guarda-sol ao redor.">
+          <p>Praia da Ponta Negra</p>
+        </div>
+        <div>
+          <img src="img/Norte/Museu Amazonas.png" alt="Vista do Museu Amazonas, conhecido como Musa possui também um Jardim Botânico as visitas permitem uma estreita intimidade com a floresta. Possui um icone sinalizando que é acessível para deficientes físico ">
+          <p>Museu Amazonas</p>
+        </div>
+      </section>
+      </section>
+
+      <!--Bélem-->
+      <section class="containers-cidade" id="Regiao2">
+        <section class="texto-cidade">
+          <p> <span class="destaque1">Belém, porta de entrada da Amazônia, vem ampliando a acessibilidade em pontos turísticos</span>, como o Mangal das Garças e a Estação das Docas, que contam com rampas, banheiros adaptados e áreas de fácil circulação. <span class="destaque1">A cidade busca oferecer experiências inclusivas, para que todos possam vivenciar sua rica história, gastronomia e tradições culturais.</span> </p>
+        </section>
+
+      <section class="containers-fotos" id="fotos-bélem">
+        <div>
+          <img src="img/Norte/Mangal das Garças.png" alt="Vista aérea do parque Mangal das Garças, em Belém, com lagos cercados por árvores, passarela de madeira e visitantes caminhando em meio à natureza. Possui icone indicando que é acessivel para deficientes físicos.">
+          <p>Mangal das Garças</p>
+        </div>
+        <div>
+          <img src="img/Norte/Museu Paraense.png" alt="Vista do Museu Paraense: Parece uma casinha retro, cor rosa com janelas e portas rosa e ao fundo muitas árvores. Possui icone indicando que é acessivel para deficientes visuais">
+          <p>Museu Paraense</p>
+        </div>
+        <div>
+          <img src="img/Norte/Praça da Bíblia.png" alt="Vista da Praça da Bíblia: Um lugar aberto, parece uma quadra de escola aberta, possui árvores espalhadas, alguns blocos decorativos coloridos espalhadas um atrás do outro e muitas pessoas andando em volta. Possui icone indicando que é acessivel para deficientes físicos.">
+          <p>Praça da Bíblia</p>
+        </div>
+        <div>
+          <img src="img/Norte/Estação das Docas.png" alt="Vista da Estação das Docas: um vibrante centro de lazer, gastronomia e eventos. Na imagem tem um Armazém amarelo, a rua cor marrom claro, ao lado tem o mar. Possui icone indicando que é acessivel para deficientes físicos.">
+          <p>Estação das Docas</p>
+        </div>
+      </section>
+      </section>
+
+      <!--Palmas-->
+      <section class="containers-cidade" id="Regiao3">
+        <section class="texto-cidade">
+          <p> <span class="destaque1">Palmas tem se estruturado para receber visitantes com mais inclusão, </span> oferecendo calçadões e praças acessíveis, como na Praia da Graciosa. O Parque Cesamar e outros espaços de lazer da capital contam com rampas e áreas adaptadas, <span class="destaque1"> garantindo que pessoas com deficiência possam aproveitar a natureza e a cultura local com conforto e segurança.</span> </p>
+        </section>
+
+      <section class="containers-fotos" id="fotos-bélem">
+        <div>
+          <img src="img/Norte/Praia Graciosa.png" alt="Paisagem da praia Graciosa com o sol se pondo ao fundo, o mar bem cristalido reflete o sol, algumas pessoas sentadas na área e lado delas um guarda sol grande feito de palha, na praia também possui alguns coqueiros.">
+          <p>Praia Graciosa</p>
+        </div>
+        <div>
+          <img src="img/Norte/Parque Cesamar.png" alt="A imagem do parque Cesamar possui muitas árvores, o chão com gramado bem verdinho, flores rosas e vermelhas espalhadas em arbustos e algumas lixeiras">
+          <p>Parque Cesamar</p>
+        </div>
+        <div>
+          <img src="img/Norte/Praça dos Girassóis.png" alt="Praça dos Girassóis: por mais que o nome se remeta a girassóis, essa praça não possui nenhum girassól, porém muitas árvores, gramado bem verde, bancos. A praça, eleita símbolo da capital possui no chão cinza, o símbolo de uma rosa dos ventos.">
+          <p>Praça dos Girassóis</p>
+        </div>
+        <div>
+        </div>
+      </section>
+      </section>
+    </section>
+
+    <!--noticias-->
+    <section class="containers-news">
+      <div class="news">
+        <h4>Turismo no norte do Brasil: os 17 melhores lugares para conhecer</h4>
+        <p>Para quem busca vivências únicas e profundas encontra no Norte um território onde o tempo corre diferente e cada encontro se transforma em aprendizado.</p>
+
+      <div class="elementos-caixa">
+        <div class="elementos">
+          <img src="./svg/pessoa.svg" alt="simbolo de uma pessoa">
+          <p>Vivalá</p>
+        </div>
+
+        <div class="elementos">
+          <img src="./svg/calendario.svg" alt="Simbolo Calendário">
+          <p>30 de Julho, 2025</p>
+        </div>
+
+        <div class="elementos">
+          <img src="./svg/relogio.svg" alt="Simbolo Calendário">
+          <p>35 min</p>
+        </div>
+      </div>
+
+      <a href="https://www.vivala.com.br/turismo-no-norte-do-brasil" class="but-news"  target="_blank">Ler Artigo Completo  &rarr;</a>
+      </div>
+
+
+      <div class="news">
+        <h4>Turismo acessível em Manaus. Destino para ser explorado!</h4>
+        <p>Mostra como a cidade pode ser desfrutada por todos, destacando atrações adaptadas, dicas de mobilidade e inclusão para visitantes com deficiência.</p>
+
+      <div class="elementos-caixa">
+        <div class="elementos">
+          <img src="./svg/pessoa.svg" alt="simbolo de uma pessoa">
+          <p>Ricardo Shimosakai</p>
+        </div>
+
+        <div class="elementos">
+          <img src="./svg/calendario.svg" alt="Simbolo Calendário">
+          <p>03 de Maio, 2020</p>
+        </div>
+
+      </div>
+
+      <a href="https://ricardoshimosakai.com.br/turismo-acessivel-em-manaus/" class="but-news"  target="_blank">Ler Artigo Completo  &rarr;</a>
+      </div>
+
+    </section>
+</body>
+</html>

@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+    --cor-principal-escura: #0D2642;
+    --cor-branco:#FFF;
+    --destaque1: #00852F;
+    --destaque2: #3498DB;
+    --destaque3: #F39C12;
+    --cor-footer: #2C3E50;
+    --fonte-OpenSans: "Open Sans", sans-serif;
+}
+
+
+
+body {
+  font-family: var(--fonte-OpenSans);
+  font-style:normal;
+  color: var(--cor-branco);
+  font-size: 30px;
+
+}
+
+
+/* Navbar exemplo */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Botão viagem */
+.btn-viagem {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #fff;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.btn-viagem:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+
+/* Seção Inicial */
+.inicio {
+  position: relative;
+  height: 100vh;
+  background: url("../../HTML/regiões/img/Nordeste/Fortaleza.webp") no-repeat center center/cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.bloco1  { 
+  width: 100%;
+  
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); /* Sobreposição fundo um pouco escuro*/
+}
+
+.bloco1 h1 {
+  font-family: "Oswald";
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+
+  font-family: var(--cor-branco);
+  font-size: 400%;
+  margin: auto auto -40px 60px;
+}
+
+.caixa-nome-local {
+  position: relative;
+  background:var(--cor-principal-escura);
+  display: inline-block;
+  padding: 10px 15px;
+  border-top-left-radius: 42px; /*muda só um lado(canto superior esquerdo)
+  
+  /*escrito*/
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center;
+
+  /*caixinha*/
+  width: 20%;
+  height: 150%;
+
+  /*posição*/
+  left: 80%;
+}
+
+/*Texto inicial*/
+#texto-inicial{
+  position: relative;
+  color: var(--cor-principal-escura);
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  & p{
+    text-align: center;
+   
+  }
+}
+
+.destaque1{
+  font-weight: 700;
+}
+
+#caixa-destinos{
+  position: relative;
+  color: var(--destaque1);
+  width: 80%;
+  margin: auto;
+  padding-top: 50px;
+  
+}
+
+.containers{
+  color: var(--cor-principal-escura);
+  font-size: 20px;
+  position: relative;
+  margin-top: 40px;
+
+  display: flex;
+  gap:50px
+
+
+}
+
+.card{
+  background-color: #FFF;
+  box-shadow: 0 4px 8px #061a313a;
+  overflow: hidden;
+  width: 30%;
+  height: 500px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: left;
+  border-radius: 25px;
+  margin-left: auto;
+  margin-bottom: auto;
+
+  & h4,p{
+    margin-left: 10px;
+  }
+
+  img{
+    width: 100%;
+    height: 300px;
+  }
+}
+
+.card:hover {
+      transform: translateY(-5px);
+      box-shadow: 10px 10px var(--destaque3);
+    }
+    
+#card2:hover{
+  transform: translateY(-5px);
+  box-shadow: 10px 10px var(--destaque2);
+}
+#card3:hover{
+  transform: translateY(-5px);
+  box-shadow: 10px 10px var(--destaque1);
+}
+
+
+.containers-cidade{
+  display: none;
+
+  background-color: #fff;
+  box-shadow: 0 4px 8px #061a313a;
+  overflow: hidden;
+  width: 90%;
+  height: auto;
+  cursor: pointer;
+
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: 25px;
+  margin: 60px 65px;
+  padding: 40px 100px;
+}
+
+.containers-cidade.show {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transform: translateY(0);
+}
+.containers-cidade {
+  transform: translateY(-10px);
+}
+
+
+.texto-cidade{
+  font-size: 20px;
+  color: var(--cor-principal-escura);
+  margin-bottom: 40px;
+}
+
+/*Caixa com fotos dos locais*/
+.containers-fotos{
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  justify-content: center;
+
+  & p{
+    font-size: 20px;
+    color: var(--cor-principal-escura);
+    font-weight: 700;
+    text-align: center;
+  }
+
+  img{
+    width: px;
+    height: 200px;
+  }
+}
+
+.containers-news{
+  position: relative;
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50px;
+ 
+}
+
+.news{
+  position: relative;
+  background-color: #FFF;
+  color: var(--cor-principal-escura);
+  box-shadow: 0 4px 8px #061a313a;
+  overflow: hidden;
+  width: 36%;
+  height: 380px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: 25px;
+  margin: 60px auto auto auto;
+  padding: 25px;
+
+  h4{
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  p{
+    font-size:20px ;
+  }
+}
+
+.elementos-caixa{
+  gap:20px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 25px;
+  margin-bottom:50px;
+  flex-wrap: nowrap; 
+
+  .elementos{
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+
+    img{
+        height: 30px;
+        width: 30px;
+    }
+
+    p{
+        width: auto;
+        flex-wrap: nowrap;
+    }
+  }
+}
+
+.but-news{
+  display: flex;
+  width: 100%;
+  height: 40px;
+  border-radius: 15px;
+  background-color: var(--destaque2);
+  color: #FFF;
+  font-weight: 700;
+  font-size: 15px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
