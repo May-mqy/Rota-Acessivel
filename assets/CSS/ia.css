@@ -26,32 +26,6 @@ body, html {
         height: 95vh;
     }
 
-#icone {
-        color: #000;
-        border-right: 1px solid #444;
-        background-color: #b4b4b4;
-        display: flex;
-        flex-direction: column;
-
-    }
-
-#icone img {
-
-    width: 30px;
-    height: 30px;
-    padding: 10px;
-
-}
-
-#home-icone {
-
-    width: 30px;
-    padding: 10px;
-    margin-top: 69.5vh;
-
-
-}
-
 .chat {
         flex: 1;
         display: flex;
