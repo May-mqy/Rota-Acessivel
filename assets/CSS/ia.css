@@ -130,6 +130,25 @@ body, html {
         flex: 1;
     }
 
+@media (max-width: 941px) {
+
+
+
+    .chat-header p {
+
+        display: none;
+
+    }
+
+    .message {
+
+        font-size: 0.9em;
+
+    }
+
+    
+}
+
 
 @media (max-width: 728px) {
 
@@ -143,7 +162,7 @@ body, html {
     }
 
     #chat-mensagens {
-    max-height: 300px; /* ou uma altura relativa à tela */
+    max-height: 275px; 
     overflow-y: auto;
     }
 
