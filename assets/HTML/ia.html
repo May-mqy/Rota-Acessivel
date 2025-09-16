@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rota Acessivel</title>
+    <link rel="stylesheet" href="../CSS/ia.css">
+
+</head>
+<body>
+
+    <header>
+        <nav style="background-color: red; height: 5vh; width: 100%;" ></nav>
+    </header>
+
+
+    <div class="main">
+
+        <div id="icone">
+            <img src="../Img/ia/Estrela Gemini Colorida.png" alt="">
+            <img src="../Img/ia/vector_historico.png" alt="">
+            <img src="../Img/ia/vector_curtidos.png" alt="">
+            <img src="../Img/ia/home.png" alt="" id="home-icone">
+        </div>
+
+        <div class="chat">
+
+            <div class="chat-header">
+                <h2>Seu próximo destino <br>começa aqui!</h2>
+                <p>O que mais te anima ao planejar sua viagem: conhecer destinos adaptados, aproveitar hospedagens confortáveis ou compartilhar suas próprias experiências de viagem?</p>
+            </div>
+            
+            <div id="chat-mensagens">
+                <div class="message bot-message">Olá! Estou pronto para te ajudar a encontrar lugares e rotas que sejam acessíveis. Onde você gostaria de ir?</div>
+            </div>
+            
+            <form id="chat-form">
+                <textarea type="text" id="chat-input" placeholder="Digite sua mensagem..."></textarea>
+                <button type="submit">
+                    <img src="../Img/ia/Vector.png" alt="Enviar">
+                </button>
+                <button id="botao-voz">
+                    <img src="../Img/ia/voz.png" alt="Botao para entrada de audio">
+                </button>
+                <button id="botao-pause">
+                    <img id="icone-pause" src="../Img/ia/pause.png" alt="">
+                </button>
+            </form>
+        </div>
+
+        <div id="maps"></div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="../JS/ia.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3fAIwnI8xO_gWfTfbz0mExkey7S63qd8&callback=initMap" async defer></script>
+</body>
+</html>
