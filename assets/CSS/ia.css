@@ -26,6 +26,7 @@ body, html {
         height: 95vh;
     }
 
+
 .chat {
         flex: 1;
         display: flex;
@@ -132,6 +133,19 @@ body, html {
 
 @media (max-width: 728px) {
 
+    .main {
+        flex-direction: column;
+    }
+
+    #maps {
+        height: 300px; 
+        
+    }
+
+    #chat-mensagens {
+    max-height: 300px; /* ou uma altura relativa à tela */
+    overflow-y: auto;
+    }
 
     .chat-header h2 {
 
