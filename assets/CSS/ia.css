@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 @font-face {
     font-family: Oswald;
     src: url(../fonts/Oswald-VariableFont_wght.ttf);
@@ -12,14 +14,13 @@ body, html {
             margin: 0;
             padding: 0;
             border: 0;
-            font-family: Alumni;
+            font-family: "Open Sans", sans-serif;
             font-size: 1.3em;
             height: 100%;
             background-color: #1a1a1a;
             color: #fff;
         }
         
-
 
 .main {
         display: flex;
@@ -44,7 +45,7 @@ body, html {
     }
 
 .chat-header h2 {
-        color: #000;
+        color: #061A31;
         font-size: 2em;
         font-family: Oswald;
         margin: 0;
@@ -53,7 +54,7 @@ body, html {
 .chat-header p {
         margin: 10px 0 0;
         line-height: 1.5;
-        color: #000;
+        color: #061A31;
     }
 
 #chat-mensagens {
@@ -81,13 +82,13 @@ body, html {
 
 
 .user-message {
-        background-color: #555;
+        background-color:#3498DB;
         margin-left: auto;
         color: #fff;
     }
 
 .bot-message {
-        background-color: #444;
+        background-color: #F39C12;
         margin-right: auto;
         color: #eee;
     }

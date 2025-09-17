@@ -320,3 +320,159 @@ body {
   align-items: center;
   text-decoration: none;
 }
+
+/* ajustes responsivos */
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+
+  body{
+    font-size: 20px;
+  }
+
+  .bloco1 h1 {
+  font-size: 90px;
+}
+
+.caixa-nome-local {
+  /*escrito*/
+  font-size: 20px;
+}
+  
+  .containers{
+    width: 80%;
+    height: 500px;
+    margin:40px;
+    align-items: center;
+    gap: 30px;
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-y: auto;
+  }
+
+  .card{
+    width: 70%;
+    height: auto;
+    margin: auto;
+  }
+
+  .containers-cidade{
+    width: 95%;
+    padding: 10px 10px;
+    margin: 40px auto;
+    overflow-x: auto;
+  }
+
+  .texto-cidade{
+  font-size: 16px;
+}
+
+  .containers-fotos{
+    flex-wrap: wrap;
+    align-items: center;
+    margin: auto;
+   
+
+    img{
+      width: 150px;
+      height: 150px;
+      margin: 50px;
+      margin-bottom: 0px;   
+    }
+  }
+
+  .containers-news{
+    margin-top: -50px;
+    width: 90%;
+    height:800px;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .news{
+    width: 80%;
+    height: auto;
+    margin: 40px auto;
+  }
+}
+
+
+/*Mobile*/
+@media screen and (max-width: 767px) {
+body{
+    font-size: 18px;
+  }
+
+  .bloco1 h1 {
+  font-size: 62px;
+}
+
+.caixa-nome-local {
+  /*escrito*/
+  font-size: 16px;
+}
+  
+  .containers{
+    width: 80%;
+    height: 500px;
+    margin:20px auto auto auto;
+
+    align-items: center;
+    gap: 30px;
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-y: auto;
+  }
+
+  .card{
+    width: 90%;
+    height: auto;
+    margin: auto;
+  }
+
+  .containers-cidade{
+    width: 95%;
+    padding: 10px 10px;
+    margin: 40px auto;
+    overflow-x: auto;
+  }
+
+  .texto-cidade{
+  font-size: 16px;
+}
+
+  .containers-fotos{
+    flex-wrap: wrap;
+    align-items: center;
+    margin: auto;
+   
+
+    img{
+      width: 150px;
+      height: 150px;
+      margin: 50px;
+      margin-bottom: 0px;   
+    }
+  }
+
+  .containers-news{
+    
+    width: 90%;
+    height:auto;
+    gap: 5px;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .news{
+    width: 500px;
+    height: auto;
+    margin: 40px auto;
+  }
+}
