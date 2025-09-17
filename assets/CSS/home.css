@@ -1,0 +1,148 @@
+:root{
+    --azul-escuro: #0D2642;
+    --azul-acinzentado: #2C3E50;
+    --azul-claro: #3498DB;
+    --branco: #FAFAFA;
+    --cinza: #D9D9D9;
+    --branco-cinza: #EFE8FF;
+    --verde: #00852F;
+    --verde-claro: #27AE60;
+    --amarelo: #F39C12;
+}
+
+/*         CABECALHO             */
+
+.cabecalho{
+    color: var(--branco);
+    background-color: #0D2642;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 9vh;
+    padding: 0 20px;
+}
+
+.cabecalho__nav{
+    display: flex;
+}
+
+.cabecalho__lista, .cabecalho__botoes{
+    display: flex;
+    width: 500px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cabecalho__lista--item:hover{
+    text-decoration: underline;
+}
+
+.cabecalho__btn--link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--branco);
+    padding: 20px;
+    border-radius: 10px;
+    height: 20px;
+}
+
+.cabecalho__btn--link:hover{
+    background-color: var(--azul-acinzentado);
+}
+
+.cabecalho__btn--img{
+    height: 20px;
+}
+
+@media screen and (max-width:768px){
+  .cabecalho__lista, .cabecalho__botoes{
+    display: none;
+  }
+}
+
+/*        HOME        */
+
+.conteudo__video--background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.conteudo__video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+.conteudo__visita {
+  position: relative;
+  z-index: 1;
+  height: 93vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+/* Título */
+.conteudo__visita--titulo {
+  text-transform: uppercase;
+  font-size: 5rem;
+  margin-bottom: 30px;
+}
+
+/* Lista de botões */
+.conteudo__visita--lista {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Botões */
+.conteudo__btn--link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.conteudo__btn--link:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Imagem dentro do botão */
+.conteudo__btn--img {
+  height: 20px;
+}
+
+@media screen and (max-width:1024px){
+  .cabecalho__botoes{
+    width: 390px;
+  }
+}
+
+@media screen and (max-width: 375px){
+  .conteudo__visita--titulo{
+    font-size: 3rem;
+  }
+}

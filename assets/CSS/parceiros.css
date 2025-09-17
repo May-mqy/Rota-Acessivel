@@ -1,0 +1,112 @@
+.conteudo__parceiros{
+    background: linear-gradient(
+  215deg,
+  #195A94 0%,
+  #195A94 20%,
+  #3498DB 20%,
+  #3498DB 85%,   
+  #195A94 85%,
+  #195A94 100%   
+);
+
+padding: 30px 0;
+}
+
+.conteudo__parceiros--titulo{
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 400px;
+    font-size: 30px;
+    color: var(--azul-escuro);
+}
+
+.conteudo__parceiros--txt{
+    width: 220px;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.conteudo__parceiros--item{
+    background-color: var(--branco);
+    width: 160px;
+    height: 160px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudo__parceiros--img{
+    padding: 10px;
+    width: 170px;
+}
+
+.conteudo__parceiros{
+    display: flex;
+    justify-content: space-around;
+}
+
+.conteudo__parceiros--bt{
+    background-color: var(--verde-claro);
+    padding: 5px;
+    color: var(--branco);
+    border-radius: 20px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.conteudo__parceiros--bt:hover{
+    background-color: var(--verde);
+}
+
+/*    LISTA PARCEIROS      */
+
+.conteudo__parceiros--lista{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 400px;
+}
+
+.container__parceiros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media screen and (max-width: 375px){
+    .conteudo__parceiros--titulo{
+        width: 250px;
+    }
+
+    .conteudo__parceiros--lista{
+        width: auto;
+    }
+
+    .conteudo__parceiros--titulo{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .conteudo__parceiros{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .conteudo__parceiros--lista{
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+
+     .conteudo__parceiros--item{
+        width: 120px;
+        height: 120px;
+    }
+
+    .conteudo__parceiros--img{
+        width: 100px;
+    }
+}

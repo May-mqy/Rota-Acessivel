@@ -1,0 +1,129 @@
+.conteudo__sembarreira{
+    background: linear-gradient(
+  215deg,
+  #1a2738 0%,
+  #1a2738 20%,
+  #22324a 20%,
+  #22324a 85%,   
+  #2e4060 85%,
+  #2e4060 100%   
+);
+}
+
+.conteudo__sembarreira{
+    display: flex;
+    justify-content: space-around;
+}
+
+.conteudo__sembarreira--titulo{
+    width: 400px;
+    margin: 40px 0 0 50px;
+    color: var(--branco-cinza);
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.conteudo__sembarreira--txt{
+    width: 400px;
+    margin-left: 50px;
+    color: var(--branco-cinza);
+    font-size: 20px;
+}
+
+.conteudo__sembarreira--negrito{
+    font-weight: bold;
+}
+
+.conteudo__sembarreira--img{
+    width: 600px;
+    margin-top: 100px;
+}
+
+.item__txt{
+    position: absolute;
+    bottom: -29px;
+    left: 50%;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    transform: translateX(-50%);
+    background-color: var(--branco-cinza);
+    text-align: center;
+}
+
+
+
+@media screen and (max-width:1700px){
+    .conteudo__sembarreira{
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .conteudo__sembarreira--img{
+        margin-top: 50px;
+    }
+
+    .conteudo__sembarreira--container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .conteudo__sembarreira{
+        flex-direction: column;
+    }
+
+    .conteudo__sembarreira--container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+
+    .conteudo__sembarreira--txt, .conteudo__sembarreira--titulo{
+        margin: 0;
+    }
+
+    .conteudo__sembarreira{
+        flex-direction: column;
+    }
+
+    .conteudo__sembarreira--titulo{
+        margin-top: 30px;
+    }
+
+   .conteudo__sembarreira--img{
+    margin-top: 60px;
+   }
+
+    .conteudo__sembarreira--container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+        
+
+    .conteudo__sembarreira--img{
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 375px){
+
+    .conteudo__sembarreira--titulo{
+        width: 250px;
+    }
+
+    .conteudo__sembarreira--txt{
+        width: 250px;
+    }
+
+    .conteudo__sembarreira--img{
+        width: 300px;
+    }
+}
