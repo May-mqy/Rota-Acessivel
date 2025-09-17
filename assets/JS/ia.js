@@ -135,7 +135,13 @@ function extrairLocais(texto) {
     const locaisEncontrados = [];
     let match;
     while ((match = regex.exec(texto)) !== null) {
-        locaisEncontrados.push(match[1]);
+        const nomeCompleto = match[1];
+        const nomeSimplificado = nomeCompleto.split(',')[0].trim();
+        
+        locaisEncontrados.push({
+            nomeCompleto: nomeCompleto,
+            nomeSimplificado: nomeSimplificado
+        });
     }
     return locaisEncontrados;
 }
@@ -188,7 +194,7 @@ const respostaGemini = async (userInput) => {
     try {
         const response = await fetch(API_URL, requestOptions);
         const data = await response.json();
-        if (!response.ok) throw new Error(data.error.menssage);
+        if (!response.ok) throw new Error(data.error.message);
 
         const geminiResponseText = data.candidates[0].content.parts[0].text;
 
@@ -198,17 +204,25 @@ const respostaGemini = async (userInput) => {
         });
 
         const locais = extrairLocais(geminiResponseText);
-        adicionarMarcadoresNoMapa(locais);
+        const locaisCompletos = locais.map(local => local.nomeCompleto);
+        adicionarMarcadoresNoMapa(locaisCompletos);
 
-        const respostaHtml = marked.parse(geminiResponseText)
+        
+        let textoParaChat = geminiResponseText;
+        locais.forEach(local => {
+            const regex = new RegExp(`\\(${local.nomeCompleto}\\)`, 'g');
+            textoParaChat = textoParaChat.replace(regex, `(${local.nomeSimplificado})`);
+        });
+
+        const respostaHtml = marked.parse(textoParaChat);
         adicionarMensagemChat(respostaHtml, "bot");
-    
+
         if (inputVoz) {
-            const textoParaVoz = geminiResponseText.replace(/\*\*(.*?)\*\*/g, '$1').replace(/\*/g, '').replace(/#/g, '').replace(/(\r\n|\n|\r)/gm, ' ');
+            const textoParaVoz = textoParaChat.replace(/\*\*(.*?)\*\*/g, '$1').replace(/\*/g, '').replace(/#/g, '').replace(/(\r\n|\n|\r)/gm, ' ');
             falarMensagem(textoParaVoz);
         }
 
-        inputVoz = false; 
+        inputVoz = false;
 
     } catch (error) {
         console.log(error);
