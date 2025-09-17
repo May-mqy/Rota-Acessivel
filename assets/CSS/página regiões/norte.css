@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
 
+@font-face {
+    font-family: Oswald;
+    src: url(../../fonts/Oswald-VariableFont_wght.ttf);
+}
+
 /* Reset básico */
 * {
   margin: 0;
@@ -29,51 +34,8 @@ body {
 
 
 /* Navbar exemplo */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(0,0,0,0.6);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-  z-index: 1000;
-}
 
-.logo {
-  font-weight: bold;
-  font-size: 20px;
-}
 
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.navbar a:hover {
-  text-decoration: underline;
-}
-
-/* Botão viagem */
-.btn-viagem {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid #fff;
-  color: white;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-.btn-viagem:hover {
-  background: rgba(255, 255, 255, 0.3);
-}
 
 
 /* Seção Inicial */
@@ -93,7 +55,7 @@ body {
 }
 
 .bloco1 h1 {
-  font-family: "Oswald";
+  font-family: Oswald;
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
@@ -320,6 +282,125 @@ body {
   align-items: center;
   text-decoration: none;
 }
+
+/*FOOTER*/
+
+footer{
+  font-family: var(--fonte-OpenSans);
+}
+
+        .footer-exclusivo {
+        background-color: #223345; /* cor azul escura do fundo */
+        color: #fff;
+        padding: 40px 20px 20px;
+        }
+
+        .footer-exclusivo-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+        }
+
+        .footer-exclusivo-logo {
+        margin-bottom: 15px;
+
+        img{
+          height: 60px;
+          width: auto;
+        }
+        }
+
+        .footer-exclusivo-subtitulo {
+        font-size: 14px;
+        margin-bottom: 10px;
+        }
+
+        .footer-exclusivo-redes a {
+        font-size: 20px;
+        margin-right: 10px;
+        color: #fff;
+        transition: 0.3s;
+        }
+
+        .footer-exclusivo-redes a:hover {
+        color: #f0c040;
+        }
+
+        .footer-exclusivo-contato p {
+        margin: 5px 0;
+        font-size: 14px;
+        }
+
+        .footer-exclusivo-coluna h4 {
+        margin-bottom: 10px;
+        font-size: 16px;
+        }
+        .footer-exclusivo-coluna p {
+        font-size: 14px;
+        }
+
+        .footer-exclusivo-coluna ul {
+        list-style: none;
+        padding: 0;
+        }
+
+        .footer-exclusivo-coluna ul li {
+        margin-bottom: 8px;
+        }
+
+        .footer-exclusivo-coluna ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 14px;
+        }
+
+        .footer-exclusivo-coluna ul li a:hover {
+        text-decoration: underline;
+        }
+
+        .footer-exclusivo-form {
+        display: flex;
+        margin-top: 10px;
+        }
+
+        .footer-exclusivo-form input {
+        padding: 8px;
+        border: none;
+        outline: none;
+        flex: 1;
+        }
+
+        .footer-exclusivo-form button {
+        padding: 8px 12px;
+        background: #fff;
+        color: #000;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        }
+
+        .footer-exclusivo-form button:hover {
+        background: #f0c040;
+        }
+
+        .footer-exclusivo-bottom {
+        text-align: center;
+        margin-top: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 15px;
+        font-size: 13px;
+        }
+
+        .footer-exclusivo-bottom a {
+        color: #fff;
+        text-decoration: none;
+        }
+
+        .footer-exclusivo-bottom a:hover {
+        text-decoration: underline;
+        }
 
 /* ajustes responsivos */
 
