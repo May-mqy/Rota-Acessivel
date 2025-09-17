@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Partiu Explorar Mais</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../CSS/leitordosite.css">
     <link rel="shortcut icon" href="../Img/Logo.png" type="image/x-icon">
 
     <style>
@@ -1473,5 +1474,31 @@ body {
         });
 
     </script>
+
+        <!-- inicio da api de libras-->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+      <!--fim da API de libras-->
+
+      <!-- Botão de acessibilidade -->
+    <div class="leitor-tela-container">
+      <button id="abrirLeitor" class="leitor-toggle">🔊 Leitor de Tela</button>
+      <div class="leitor-controles">
+        <button id="lerPagina" class="leitor-btn">▶️ Ler página</button>
+        <button id="pausarAudio" class="leitor-btn">⏸ Pausar</button>
+        <button id="retomarAudio" class="leitor-btn">▶️ Retomar</button>
+      </div>
+    </div>
+    <!--Web speech API do navegador-->
+    <script src="assets/js/leitordosite.js"></script>
+    <!-- Fim do botão de acessibilidade -->
 </body>
 </html>

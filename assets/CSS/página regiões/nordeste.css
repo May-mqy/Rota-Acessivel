@@ -279,9 +279,8 @@ body {
 }
 
 /*FOOTER*/
-
 footer{
-  font-family: var(--fonte-OpenSans);
+  font-family: "Open Sans", sans-serif;
 }
 
         .footer-exclusivo {
