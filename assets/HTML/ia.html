@@ -2,20 +2,40 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rota Acessivel</title>
-    <link rel="stylesheet" href="../CSS/ia.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="shortcut icon" href="../Img/Logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="../CSS/leitordosite.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rota Acessivel</title>
+  <link rel="stylesheet" href="../CSS/ia.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="shortcut icon" href="../Img/Logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="../CSS/leitordosite.css">
 
 </head>
 
 <body>
 
-  <header>
-    <nav style="background-color: red; height: 5vh; width: 100%;"></nav>
+  <header id="nav_bar">
+    <a href="../../home.html"><img src="../Img/Logo.png" alt=""></a>
+
+    <button class="hamburger" aria-label="menu hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <nav id="nav_list">
+
+      <ul>
+        <li><a class="nav_links" href="Regioes.html">Regiões</a></li>
+        <li><a class="nav_links" href="">Parceiros</a></li>
+        <li><a class="nav_links" href="Comunidade.html">Comunidade</a></li>
+        <li><a class="nav_links" href="Sobre.html">Sobre</a></li>
+
+        <li><a class="nav_botao" href="ia.html"> <img src="../Img/logo_gemini.png" alt="">Planeje sua Viagem</a></li>
+        <li><a class="nav_botao" href=""> Login/Cadastro </a></li>
+
+      </ul>
+    </nav>
   </header>
 
 
@@ -74,11 +94,11 @@
       <div class="footer-exclusivo-coluna">
         <h4>Mapa do Site</h4>
         <ul>
-          <li><a href="#">Página Inicial</a></li>
-          <li><a href="#">Regiões</a></li>
+          <li><a href="../../home.html">Página Inicial</a></li>
+          <li><a href="Regioes.html">Regiões</a></li>
           <li><a href="#">Parceiros</a></li>
-          <li><a href="#">Comunidade</a></li>
-          <li><a href="#">Sobre</a></li>
+          <li><a href="Comunidade.html">Comunidade</a></li>
+          <li><a href="Sobre.html">Sobre</a></li>
         </ul>
       </div>
 
@@ -101,33 +121,29 @@
 
     <div class="footer-exclusivo-bottom">
       <p><a href="#">Política de Privacidade</a></p>
-      <p>© 2025 Central de Viagens Brasil. Todos os direitos reservados.</p>
+      <p>&copy; 2025 Central de Viagens Brasil. Todos os direitos reservados.</p>
     </div>
   </footer>
 
+  <script src="../JS/nav.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="../JS/ia.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3fAIwnI8xO_gWfTfbz0mExkey7S63qd8&callback=initMap"
     async defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="../JS/ia.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3fAIwnI8xO_gWfTfbz0mExkey7S63qd8&callback=initMap" async defer></script>
 
-    <!-- inicio da api de libras-->
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
     </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
-      <!--fim da API de libras-->
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
 
-      <!-- Botão de acessibilidade -->
-    <div class="leitor-tela-container">
+
+  <div class="leitor-tela-container">
       <button id="abrirLeitor" class="leitor-toggle">🔊 Leitor de Tela</button>
       <div class="leitor-controles">
         <button id="lerPagina" class="leitor-btn">▶️ Ler página</button>
@@ -135,9 +151,6 @@
         <button id="retomarAudio" class="leitor-btn">▶️ Retomar</button>
       </div>
     </div>
-    <!--Web speech API do navegador-->
-    <script src="assets/js/leitordosite.js"></script>
-    <!-- Fim do botão de acessibilidade -->
+    <script src="../JS/leitordosite.js"></script>
 </body>
-
 </html>
