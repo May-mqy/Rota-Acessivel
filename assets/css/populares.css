@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
+
+
+.conteudo__sembarreira{
+    margin-top: 50px;
+}
+
+.conteudo__populares--container{
+    display: flex;
+    justify-content: space-around;
+}
+.conteudo__populares--card{
+    width: 300px;
+    border-radius: 10px;
+}
+
+.conteudo__populares--img{
+    width: 270px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.conteudo__populares--titulo{
+   margin: 10px 0 30px 60px;
+    font-size: 32px;
+    color: var(--verde);
+    font-family: Oswald;
+    font-weight: 700;
+}
+
+.conteudo__populares--txt{
+    margin-bottom: 20px;
+    color:#0D2642;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.conteudo__card--titulo{
+    margin: 10px 0;
+    color: #0D2642;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 1024px){
+    .conteudo__populares--container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .conteudo__populares--container{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

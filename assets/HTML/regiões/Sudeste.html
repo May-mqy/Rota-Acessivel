@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regiões Sudeste</title>
+    <link rel="stylesheet" href="../../css/página regiões/sudeste.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="../../Img/Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/leitordosite.css">
+    <script src="../../JS/regiões.js" type="text/javascript"></script>
+    <script src="../../JS/regiõesnav.js" type="text/javascript"></script>
+</head>
+<body>
+    <!--Espaço Cabeçalho-->
+<!--Espaço Cabeçalho-->
+     <header id="nav_bar">
+    <a href="../../../index.html" id="Logo-text"><img src="../../Img/Logo.png" alt=""  > <img src="../../Img/nomeLogo.png" id="logonome" alt=""></a>
+
+    <button class="hamburger" aria-label="menu hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <nav id="nav_list"> 
+  <ul>
+    <li onmouseover="exibe_regioes()" onmouseout="some_regioes()">
+      <a class="nav_links" href="../Regioes.html">Regiões</a>
+      <ul id="sub_menu">
+        <li><a href="Norte.html" class="nav_links">Norte</a></li>
+        <li><a href="Nordeste.html" class="nav_links">Nordeste</a></li>
+        <li><a href="Centro.html" class="nav_links">Centro-Oeste</a></li>
+        <li><a href="Sudeste.html" class="nav_links">Sudeste</a></li>
+        <li><a href="Sul.html" class="nav_links">Sul</a></li>
+      </ul>
+    </li>
+
+    <li><a class="nav_links" href="Parceiros.html">Parceiros</a></li>
+    <li><a class="nav_links" href="Comunidade.html">Comunidade</a></li>
+    <li><a class="nav_links" href="Sobre.html">Sobre</a></li>
+
+    <li><a class="nav_botao" href="ia.html"> 
+      <img src="../../Img/logo_gemini.png" alt="">Planeje sua Viagem</a>
+    </li>
+    <li><a class="nav_botao" href=""> Login/Cadastro </a></li>
+  </ul>
+</nav>
+  </header>
+    <!--Seção Inical-->
+    <section class ="inicio">
+        <div class="bloco1">
+            <h1 class>REGIÃO SUDESTE</h1>
+            <div class="caixa-nome-local">Rio de Janeiro (RJ)</div>
+        </div>
+    </section>
+
+    <!--Seção Texto-->
+    <section id="texto-inicial">
+
+      <p>Entre no ritmo das grandes metrópoles, conheça praias famosas, museus e centros históricos. O Sudeste combina cultura, economia e lazer em destinos cheios de vida!  <br><span class="destaque1">Aqui te oferecemos um guia inicial sobre turismo da Região Sudeste.</span> </p>
+    </section>
+
+    <section id="caixa-destinos">
+      <p ><span class="destaque1">Principais Destinos Acessíveis!</span><br>Clique em cima das imagens para descobrir mais sobre as cidades!
+      </p>
+
+      <section class="containers">
+        <!--caixa São Paulo-->
+        <div class="card" onclick="toggleCidade('Regiao1')">
+          <img src="img/Sudeste/São Paulo.png" alt="Paisagem Cidade São Paulo">
+
+          <h4>São Paulo (SP)</h4>
+          <br>
+          <p>Cultura, lazer e mobilidade urbana adaptados para todos. </p>
+        </div>
+        <!--caixa Rio de Janeiro-->
+        <div class="card" id="card2" onclick="toggleCidade('Regiao2')">
+          <img src="img/Sudeste/Rio de Janeiro.png" alt="Paisagem Cidade Rio de Janeiro">
+
+          <h4>Rio de Janeiro (RJ)</h4>
+          <br>
+          <p>Praias e pontos turísticos preparados para receber todos os visitantes.</p>
+        </div>
+        <!--caixa Palmas-->
+        <div class="card" id="card3" onclick="toggleCidade('Regiao3')">
+          <img src="img/Sudeste/São Paulo.png" alt="Paisagem Cidade Palmas em Tocantis">
+
+          <h4>Belo Horizonte</h4>
+          <br>
+          <p>Espaços culturais, parques e serviços com acessibilidade garantida.</p>
+        </div>
+      </section>
+
+    <!--São Paulo-->
+      <section class="containers-cidade" id="Regiao1">
+        <section class="texto-cidade">
+          <p> <span class="destaque1">São Paulo, a maior cidade do Brasil, vem ampliando a acessibilidade em espaços culturais, turísticos e de lazer. </span> Locais como o Parque Ibirapuera, a Avenida Paulista e o Museu do Futebol contam com rampas, pisos táteis, elevadores e recursos adaptados. <span class="destaque1">A mobilidade urbana também tem recebido melhorias, com transporte público acessível e serviços inclusivos que garantem autonomia aos visitantes.</span></p>
+        </section>
+
+      <section class="containers-fotos" id="fotos-manaus">
+        <div>
+          <img src="img/Sudeste/Parque do Ibirapuera.png" alt="Uma vista aérea do Parque Ibirapuera, um dos maiores parques urbanos de São Paulo. A foto, tirada de um ângulo alto, mostra um grande lago no centro, rodeado por uma vasta área de gramado e árvores, com muitas vias e carros passando. Ao fundo, o horizonte da cidade se estende com dezenas de arranha-céus sob um céu azul e claro.">
+          <p>Parque Ibirapuera</p>
+        </div>
+        <div>
+          <img src="img/Sudeste/il Sordo Gelato.png" alt="Fachada de uma sorveteria chamada Il Sordo. O nome está em um grande letreiro amarelo, em uma parede de tijolos brancos. Na placa, há um ícone de duas mãos, uma em cima da outra, que é o símbolo da sorveteria. Ao lado, em letras menores, está escrito Em outras palavras: Il Sordo. A fachada é moderna, com grandes janelas de vidro.">
+          <p>Il Sordo Gelato</p>
+        </div>
+        <div>
+          <img src="img/Sudeste/MASP.png" alt="Mostra a fachada do MASP (Museu de Arte de São Paulo Assis Chateaubriand), à noite. O prédio tem uma arquitetura icônica, sustentado por grandes colunas vermelhas que dão a impressão de que o volume central, de vidro e concreto, está suspenso. No chão, abaixo do prédio, há um espaço vazio. A rua em frente ao museu está cheia de carros e com rastros de luz de seus faróis, indicando o movimento intenso do local.">
+          <p>MASP</p>
+        </div>
+        <div>
+          <img src="img/Sudeste/Museu do Futebol.png" alt="Mostra o interior de uma galeria ou museu, com paredes inteiramente cobertas por dezenas de quadros de diferentes tamanhos, todos com molduras douradas. No centro da sala, dois homens estão de pé. O homem à esquerda veste um casaco prateado e segura uma bengala branca. O homem à direita está com uma camiseta vermelha e tem a mão no braço do outro. A cena sugere uma visita cultural guiada, possivelmente para pessoas com deficiência visual.">
+          <p>Museu do Futubol</p>
+        </div>
+      </section>
+      </section>
+
+      <!--Rio de Janeiro-->
+      <section class="containers-cidade" id="Regiao2">
+        <section class="texto-cidade">
+          <p> <span class="destaque1">O Rio de Janeiro alia paisagens naturais com iniciativas inclusivas. </span> As praias de Copacabana, Ipanema e Barra da Tijuca contam com projetos de cadeiras anfíbias e rampas de acesso, enquanto pontos turísticos como o Pão de Açúcar e o Cristo Redentor oferecem elevadores e passagens adaptadas. <span class="destaque1">A cidade busca garantir que todos possam vivenciar sua beleza e energia vibrante.</span> </p>
+        </section>
+
+      <section class="containers-fotos" id="fotos-bélem">
+        <div>
+          <img src="img/Sudeste/Cristo Redentor.png" alt="Vista panorâmica do Cristo Redentor. A estátua branca e imponente de Cristo, com os braços abertos, domina o primeiro plano, no topo de um morro. Abaixo da estátua, a área está lotada de pessoas, que parecem pequenas formigas de tão longe. Ao fundo, a cidade do Rio de Janeiro se estende com uma lagoa, a praia, o mar e outras montanhas sob um céu azul e claro.">
+          <p> Cristo Redenter</p>
+        </div>
+        <div>
+          <img src="img/Sudeste/Museu do Amanhã.png" alt="Um edifício, de cor branca e com um design moderno e futurista, se destaca contra um céu noturno. A arquitetura angular e a estrutura alongada dão ao prédio a impressão de uma nave espacial. A iluminação interna do museu destaca a sua fachada, e a área externa ao redor está em tons de azul escuro.">
+          <p>Museu do Amanhã</p>
+        </div>
+        <div>
+          <img src="img/Sudeste/Pão de Açúcar.png" alt="Mostra o teleférico do Pão de Açúcar ao pôr do sol. A foto foi tirada do alto, e o teleférico, uma cabine escura com detalhes azuis, aparece no centro, pendurado em cabos que se estendem do canto superior esquerdo até o canto inferior direito. O sol se põe atrás das montanhas, criando um céu em tons vibrantes de laranja e amarelo. Abaixo do teleférico, é possível ver a Baía de Guanabara e a cidade do Rio de Janeiro.">
+          <p>Bondinho <br> Pão de Açúcar</p>
+        </div>
+      
+        </div>
+      </section>
+      </section>
+
+      <!--Belo Horizonte-->
+      <section class="containers-cidade" id="Regiao3">
+        <section class="texto-cidade">
+          <p> <span class="destaque1">Belo Horizonte tem investido em acessibilidade em espaços culturais e turísticos, </span> como o Circuito Cultural Praça da Liberdade e o Mercado Central, que oferecem rampas, banheiros adaptados e áreas de circulação inclusivas. Além disso, parques como a Pampulha e o Mangabeiras <span class="destaque1"> contam com infraestrutura adaptada, promovendo experiências mais acolhedoras para todos.</span></p>
+        </section>
+
+      <section class="containers-fotos" id="fotos-bélem">
+        <div>
+          <img src="img/Sudeste/Praça da Liberdade e Circuito Cultural.png" alt="">
+          <p>Praça da Liberdade</p>
+        </div>
+        <div>
+          <img src="img/Sudeste/Mercado Central de BH.png" alt="">  
+          <p>Mercado Central</p>
+        </div>
+        <div>
+          <img src="img/Sudeste/Parque Municipal Américo Renné Giannetti.png" alt="">
+          <p>Parque <br> Renné Giannetti</p>
+        </div>
+        <div>
+        </div>
+      </section>
+      </section>
+    </section>
+
+     <section class="foz">
+
+      <h4>Campos do Jordão</h4>
+
+      <video controls> 
+        
+      </video>
+      <p id="textfoz">Canal: JÔ DA SCOOTER No mundo</p>
+      <p id="textfoz"> O vídeo, que conta com a participação de <span class="destaque1"> Joana Bergamaschi</span>, documenta uma viagem de carro para Campos do Jordão, em São Paulo, com foco na acessibilidade e inclusão para pessoas com deficiência, mostrando como Joana, que utiliza uma scooter, navega e desfruta das atrações da cidade. <span class="destaque1"><br><br>A acessibilidade em Campos do Jordão é um tema de crescente importância, com a cidade buscando se tornar mais inclusiva para todos os visitantes, incluindo pessoas com deficiência e mobilidade reduzida. </span></span></p>
+    </section>
+
+    <!--noticias-->
+    <section class="containers-news">
+      <div class="news">
+        <h4>Secretaria de Turismo investe em capacitação e inclusão</h4>
+        <p>Evento tem como objetivo promover a inclusão social e o desenvolvimento do turismo acessível no estado. </p>
+
+      <div class="elementos-caixa">
+        <div class="elementos">
+          <img src="./svg/pessoa.svg" alt="simbolo de uma pessoa">
+          <p>Giulia Jardim</p>
+        </div>
+
+        <div class="elementos">
+          <img src="./svg/calendario.svg" alt="Simbolo Calendário">
+          <p>27 de Maio, 2025</p>
+        </div>
+
+        <div class="elementos">
+          <img src="./svg/relogio.svg" alt="Simbolo Calendário">
+          <p>2 min</p>
+        </div>
+      </div>
+
+      <a href="https://www.mercadoeeventos.com.br/feiras-e-eventos/com-presenca-no-forum-de-turismo-60-setur-sp-investe-em-capacitacao-e-inclusao/?utm_source=chatgpt.com" class="but-news"  target="_blank">Ler Artigo Completo  &rarr;</a>
+      </div>
+
+
+      <div class="news">
+        <h4>Campos do Jordão para turistas com deficiência</h4>
+        <p>Desbravar as belezas dos destinos brasileiros envolve enfrentar os desafios acerca da acessibilidade no nosso país.</p>
+
+      <div class="elementos-caixa">
+        <div class="elementos">
+          <img src="./svg/pessoa.svg" alt="simbolo de uma pessoa">
+          <p>Amanda Brito</p>
+        </div>
+
+         <div class="elementos">
+          <img src="./svg/relogio.svg" alt="Simbolo Calendário">
+          <p>13 de junho, 2019</p>
+        </div>
+
+      </div>
+
+      <a href="https://inclusi-on.com/2019/06/13/campos-do-jordao-para-turistas-com-deficiencia/" class="but-news"  target="_blank">Ler Blog Completo  &rarr;</a>
+      </div>
+
+    </section>
+
+    <footer class="footer-exclusivo">
+  <div class="footer-exclusivo-container">
+    
+    <!-- Coluna 1 - Logo e Redes -->
+    <div class="footer-exclusivo-coluna">
+       <h3 class="footer-exclusivo-logo"><img src="../../Img/Logo.png" alt=""></h3>
+      <p class="footer-exclusivo-subtitulo">Siga nossas redes</p>
+      <div class="footer-exclusivo-redes">
+        <a href="#"><i class="bx bxl-tiktok"></i></a>
+        <a href="#"><i class="bx bxl-instagram"></i></a>
+        <a href="#"><i class="bx bxl-twitter"></i></a>
+        <a href="#"><i class="bx bxl-facebook"></i></a>
+        <a href="#"><i class="bx bxl-youtube"></i></a>
+      </div>
+      <div class="footer-exclusivo-contato">
+        <p>Entre em Contato</p>
+        <p>(11) 3818-1763</p>
+        <p>contato@centra.brasil.com</p>
+      </div>
+    </div>
+
+    <!-- Coluna 2 - Mapa do site -->
+    <div class="footer-exclusivo-coluna">
+      <h4>Mapa do Site</h4>
+      <ul>
+        <li><a href="../../../index.html">Página Inicial</a></li>
+        <li><a href="../Regioes.html">Regiões</a></li>
+        <li><a href="../Parceiros.html">Parceiros</a></li>
+        <li><a href="../Comunidade.html">Comunidade</a></li>
+        <li><a href="../Sobre.html">Sobre</a></li>
+      </ul>
+    </div>
+
+    <!-- Coluna 3 - Ferramenta -->
+    <div class="footer-exclusivo-coluna">
+      <h4>Ferramenta</h4>
+      <ul>
+        <li><a href="../ia.html">Planejador de Viagem</a></li>
+      </ul>
+    </div>
+
+    <!-- Coluna 4 - Newsletter -->
+    <div class="footer-exclusivo-coluna">
+      <h4>Newsletter</h4>
+      <p>Quer receber conteúdos de viagem diariamente?<br>
+      Se inscreva no nosso Newsletter!</p>
+      <form class="footer-exclusivo-form">
+        <input type="email" placeholder="E-mail" required>
+        <button type="submit">INSCREVER</button>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="footer-exclusivo-bottom">
+    <p><a href="#">Política de Privacidade</a></p>
+    <p>© 2025 Central de Viagens Brasil. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- inicio da api de libras-->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+      <!--fim da API de libras-->
+
+      <!-- Botão de acessibilidade -->
+    <div class="leitor-tela-container">
+      <button id="abrirLeitor" class="leitor-toggle">🔊 Leitor de Tela</button>
+      <div class="leitor-controles">
+        <button id="lerPagina" class="leitor-btn">▶️ Ler página</button>
+        <button id="pausarAudio" class="leitor-btn">⏸ Pausar</button>
+        <button id="retomarAudio" class="leitor-btn">▶️ Retomar</button>
+      </div>
+    </div>
+    <!--Web speech API do navegador-->
+    <script src="../../JS/leitordosite.js"></script>
+    <!-- Fim do botão de acessibilidade -->
+</body>
+</html>

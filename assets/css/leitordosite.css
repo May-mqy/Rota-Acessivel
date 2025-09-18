@@ -1,0 +1,53 @@
+.leitor-tela-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  font-family: Arial, sans-serif;
+}
+
+.leitor-tela-container * {
+    font-weight: normal !important;
+}
+
+.leitor-toggle {
+  background-color: #0050A1;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s;
+}
+
+.leitor-toggle:hover {
+  background-color: #117ae2;
+}
+
+.leitor-controles {
+  margin-top: 10px;
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.leitor-controles.ativo {
+  display: flex;
+}
+
+.leitor-btn {
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.leitor-btn:hover {
+  background-color: #333;
+}

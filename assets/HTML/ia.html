@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rota Acessivel</title>
+  <link rel="stylesheet" href="../css/ia.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="shortcut icon" href="../Img/Logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="../css/leitordosite.css">
+  <script src="../JS/regiõesnav.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+   <!--Espaço Cabeçalho-->
+     <header id="nav_bar">
+    <a href="../../../index.html" id="Logo-text"><img src="../Img/Logo.png" alt=""  > <img src="../Img/nomeLogo.png" id="logonome" alt=""></a>
+
+    <button class="hamburger" aria-label="menu hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <nav id="nav_list"> 
+  <ul>
+    <li onmouseover="exibe_regioes()" onmouseout="some_regioes()">
+      <a class="nav_links" href="Regioes.html">Regiões</a>
+      <ul id="sub_menu">
+        <li><a href="regiões/Norte.html" class="nav_links">Norte</a></li>
+        <li><a href="regiões/Nordeste.html" class="nav_links">Nordeste</a></li>
+        <li><a href="regiões/Centro.html" class="nav_links">Centro-Oeste</a></li>
+        <li><a href="regiões/Sudeste.html" class="nav_links">Sudeste</a></li>
+        <li><a href="regiões/Sul.html" class="nav_links">Sul</a></li>
+      </ul>
+    </li>
+
+    <li><a class="nav_links" href="Parceiros.html">Parceiros</a></li>
+    <li><a class="nav_links" href="Comunidade.html">Comunidade</a></li>
+    <li><a class="nav_links" href="Sobre.html">Sobre</a></li>
+
+    <li><a class="nav_botao" href="ia.html"> 
+      <img src="../../Img/logo_gemini.png" alt="">Planeje sua Viagem</a>
+    </li>
+    <li><a class="nav_botao" href=""> Login/Cadastro </a></li>
+  </ul>
+</nav>
+
+  </header>
+
+
+  <main>
+
+    <div class="chat">
+
+      <div class="chat-header">
+        <h2>Seu próximo destino <br>começa aqui!</h2>
+        <p>O que mais te anima ao planejar sua viagem: conhecer destinos adaptados, aproveitar hospedagens confortáveis
+          ou compartilhar suas próprias experiências de viagem?</p>
+      </div>
+
+      <div id="chat-mensagens">
+        <div class="message bot-message">Olá! Estou pronto para te ajudar a encontrar lugares e rotas que sejam
+          acessíveis. Onde você gostaria de ir?</div>
+      </div>
+
+      <form id="chat-form">
+        <textarea type="text" id="chat-input" placeholder="Digite sua mensagem..."></textarea>
+        <button type="submit">
+          <img src="../Img/ia/Vector.png" alt="Enviar">
+        </button>
+        <button id="botao-voz">
+          <img src="../Img/ia/voz.png" alt="Botao para entrada de audio">
+        </button>
+        <button id="botao-pause">
+          <img id="icone-pause" src="../Img/ia/pause.png" alt="">
+        </button>
+      </form>
+    </div>
+
+    <div id="maps"></div>
+
+  </main>
+
+  <footer class="footer-exclusivo">
+    <div class="footer-exclusivo-container">
+      <div class="footer-exclusivo-coluna">
+        <img class="footer-exclusivo-logo" src="../Img/Logo.png">
+        <p class="footer-exclusivo-subtitulo">Siga nossas redes</p>
+        <div class="footer-exclusivo-redes">
+          <a href="#"><i class="bx bxl-tiktok"></i></a>
+          <a href="#"><i class="bx bxl-instagram"></i></a>
+          <a href="#"><i class="bx bxl-twitter"></i></a>
+          <a href="#"><i class="bx bxl-facebook"></i></a>
+          <a href="#"><i class="bx bxl-youtube"></i></a>
+        </div>
+        <div class="footer-exclusivo-contato">
+          <p>Entre em Contato</p>
+          <p>(11) 3818-1763</p>
+          <p>contato@centra.brasil.com</p>
+        </div>
+      </div>
+
+      <div class="footer-exclusivo-coluna">
+        <h4>Mapa do Site</h4>
+        <ul>
+          <li><a href="../../index.html">Página Inicial</a></li>
+          <li><a href="Regioes.html">Regiões</a></li>
+          <li><a href="Parceiros.html">Parceiros</a></li>
+          <li><a href="Comunidade.html">Comunidade</a></li>
+          <li><a href="Sobre.html">Sobre</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-exclusivo-coluna">
+        <h4>Ferramenta</h4>
+        <ul>
+          <li><a href="ia.html">Planejador de Viagem</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-exclusivo-coluna">
+        <h4>Newsletter</h4>
+        <p>Quer receber conteúdos de viagem diariamente?<br> Se inscreva no nosso Newsletter!</p>
+        <form class="footer-exclusivo-form">
+          <input type="email" placeholder="E-mail" required>
+          <button type="submit">INSCREVER</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-exclusivo-bottom">
+      <p><a href="#">Política de Privacidade</a></p>
+      <p>&copy; 2025 Central de Viagens Brasil. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="../JS/nav.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="../JS/ia.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3fAIwnI8xO_gWfTfbz0mExkey7S63qd8&callback=initMap"
+    async defer></script>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+
+  <div class="leitor-tela-container">
+      <button id="abrirLeitor" class="leitor-toggle">🔊 Leitor de Tela</button>
+      <div class="leitor-controles">
+        <button id="lerPagina" class="leitor-btn">▶️ Ler página</button>
+        <button id="pausarAudio" class="leitor-btn">⏸ Pausar</button>
+        <button id="retomarAudio" class="leitor-btn">▶️ Retomar</button>
+      </div>
+    </div>
+    <script src="../JS/leitordosite.js"></script>
+</body>
+</html>

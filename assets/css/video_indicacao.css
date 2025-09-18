@@ -1,0 +1,36 @@
+.conteudo__videosindicacao{
+    margin: 40px 0;
+}
+
+.conteudo__videosindicacao--titulo{
+    text-transform: uppercase;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.amarelo{
+    color: var(--amarelo);
+    font-size: 45px;
+    font-weight: bold;
+    font-family: Oswald;
+}
+
+.azul{
+    color: var(--azul-claro);
+    font-size: 45px;
+    font-weight: bold;
+    font-family: Oswald;
+}
+
+.verde{
+    color: var(--verde-claro);
+    font-size: 45px;
+    font-weight: bold;
+    font-family: Oswald;
+}
+
+@media screen and (max-width: 450px){
+    .verde, .azul, .amarelo{
+        font-size: 25px;
+    }
+}

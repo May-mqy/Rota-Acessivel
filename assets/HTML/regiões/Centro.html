@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regiões Centro-Oeste</title>
+    <link rel="stylesheet" href="../../css/página regiões/centro.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="../../Img/Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/leitordosite.css">
+    <script src="../../JS/regiões.js" type="text/javascript"></script>
+    <script src="../../JS/regiõesnav.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <!--Espaço Cabeçalho-->
+     <header id="nav_bar">
+    <a href="../../../index.html" id="Logo-text"><img src="../../Img/Logo.png" alt=""  > <img src="../../Img/nomeLogo.png" id="logonome" alt=""></a>
+
+    <button class="hamburger" aria-label="menu hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <nav id="nav_list"> 
+  <ul>
+    <li onmouseover="exibe_regioes()" onmouseout="some_regioes()">
+      <a class="nav_links" href="../Regioes.html">Regiões</a>
+      <ul id="sub_menu">
+        <li><a href="Norte.html" class="nav_links">Norte</a></li>
+        <li><a href="Nordeste.html" class="nav_links">Nordeste</a></li>
+        <li><a href="Centro.html" class="nav_links">Centro-Oeste</a></li>
+        <li><a href="Sudeste.html" class="nav_links">Sudeste</a></li>
+        <li><a href="Sul.html" class="nav_links">Sul</a></li>
+      </ul>
+    </li>
+
+    <li><a class="nav_links" href="../Parceiros.html">Parceiros</a></li>
+    <li><a class="nav_links" href="../Comunidade.html">Comunidade</a></li>
+    <li><a class="nav_links" href="../Sobre.html">Sobre</a></li>
+
+    <li><a class="nav_botao" href="../ia.html"> 
+      <img src="../../Img/logo_gemini.png" alt="">Planeje sua Viagem</a>
+    </li>
+    <li><a class="nav_botao" href=""> Login/Cadastro </a></li>
+  </ul>
+</nav>
+
+  </header>
+
+    <!--Seção Inical-->
+    <section class ="inicio">
+        <div class="bloco1">
+            <h1 class="titulo">REGIÃO <br> CENTRO-OESTE</h1>
+            <div class="caixa-nome-local">Brasília (DF) </div>
+        </div>
+    </section>
+
+    <!--Seção Texto-->
+    <section id="texto-inicial">
+
+      <p>Viva aventuras no Pantanal, conheça o Cerrado e encante-se com a natureza única da região. O Centro-Oeste também revela cidades modernas e cheias de história. 
+          <br> <span class="destaque1">Aqui te oferecemos um guia inicial sobre turismo da Região Centro-Oeste.</span> </p>
+    </section>
+
+    <section id="caixa-destinos">
+      <p ><span class="destaque1">Principais Destinos Acessíveis!</span><br>Clique em cima das imagens para descobrir mais sobre as cidades!
+      </p>
+
+      <section class="containers">
+        <!--caixa Brasília-->
+        <div class="card" onclick="toggleCidade('Regiao1')">
+          <img src="../../HTML/regiões/img/Centro-Oeste/Brasília.png" alt="Paisagem Cidade Brasília no Distrito Federal">
+
+          <h4>Brasília (DF)</h4>
+          <br>
+          <p>Patrimônio Cultural da Humanidade, Brasília impressiona pela arquitetura modernista de Oscar Niemeyer e monumentos como a Catedral Metropolitana. </p>
+        </div>
+        <!--caixa Campo Grande-->
+        <div class="card" id="card2" onclick="toggleCidade('Regiao2')">
+          <img src="../../HTML/regiões/img/Centro-Oeste/Campo Grande.png" alt="Paisagem Cidade Bélem do Pará">
+
+          <h4>Campo Grande (MS) </h4>
+          <br>
+          <p>Conhecida como “Cidade Morena”, é porta de entrada para o Pantanal e destaca-se por parques urbanos e vida cultural.</p>
+        </div>
+        <!--caixa Goiânia-->
+        <div class="card" id="card3" onclick="toggleCidade('Regiao3')">
+          <img src="../../HTML/regiões/img/Centro-Oeste/Goiania.png" alt="Paisagem Cidade Palmas em Tocantis">
+
+          <h4>Goiânia (GO)</h4>
+          <br>
+          <p>Reconhecida por sua música sertaneja, Goiânia também oferece parques urbanos, feiras tradicionais e ótima gastronomia.</p>
+        </div>
+      </section>
+
+      <!--Brasília-->
+      <section class="containers-cidade" id="Regiao1">
+        <section class="texto-cidade">
+          <p> <span class="destaque1">Brasília, conhecida por sua arquitetura única, vem fortalecendo a acessibilidade em espaços culturais e turísticos.</span>  Locais como a Esplanada dos Ministérios, a Catedral Metropolitana e o Museu Nacional oferecem rampas, elevadores e sinalização adequada, garantindo que pessoas com deficiência possam vivenciar a capital com autonomia e segurança. </span> </p>
+        </section>
+
+      <section class="containers-fotos" id="fotos-manaus">
+        <div>
+          <img src="img/Centro-Oeste/Memorial JK.png" alt="Memorial JK, em Brasília, com estátua de Juscelino Kubitschek em pedestal alto em forma de arco. Na frente, escultura de casal sentado em homenagem ao ex-presidente e sua esposa.">
+          <p>Memorial JK</p>
+        </div>
+        <div>
+          <img src="img/Centro-Oeste/Planetário.png" alt="Interior do Planetário de Brasília, túnel iluminado com imagens de galáxias e estrelas no teto, onde visitantes observam e apontam para as projeções.">
+          <p>Planetário de Brasília</p>
+        </div>
+        <div>
+          <img src="img/Centro-Oeste/Praça dos 3 Poderes.png" alt="Praça dos Três Poderes, em Brasília, com a escultura “Os Guerreiros” (ou Dois Candangos), de Bruno Giorgi, em bronze, e ao fundo o Palácio do Planalto, sede do Poder Executivo.">
+          <p>Praça dos Três Poderes</p>
+
+        </div>
+    
+      </section>
+      </section>
+
+      <!--Campo Grande (MS)-->
+      <section class="containers-cidade" id="Regiao2">
+        <section class="texto-cidade">
+          <p> <span class="destaque1">Campo Grande, porta de entrada do Pantanal, tem investido em acessibilidade em espaços como o   e a Orla Morena, com rampas, áreas adaptadas e estrutura inclusiva. </span> A cidade proporciona que pessoas com deficiência explorem sua biodiversidade, cultura e tradições com mais conforto.</p>
+        </section>
+
+      <section class="containers-fotos" id="fotos-bélem">
+        <div>
+          <img src="img/Centro-Oeste/Museu de Arte Contemporânea (MARCO).png" alt="Fachada do Museu de Arte Contemporânea (MARCO), prédio moderno de cor clara, com uma árvore de ipê-amarelo florida em destaque na entrada." >
+          <p id="museu">Museu Arte Contemporânea</p>
+        </div>
+        <div>
+          <img src="img/Centro-Oeste/Museu Lídia Baís.png" alt="Prédio histórico Morada dos Baís, em Campo Grande, de dois andares na cor amarela com janelas e portas vermelhas em arco, estilo colonial restaurado.">
+          <p>Museu Lídia Baís</p>
+        </div>
+        <div>
+          <img src="img/Centro-Oeste/Praça Ary Coelho.png" alt="Fonte central da Praça Ary Coelho, em Campo Grande, com jatos de água e revestimento em azulejo azul, cercada por árvores e área de convivência.">
+          <p>Praça Ary Coelho</p>
+        </div>
+        <div>
+      
+        </div>
+      </section>
+      </section>
+
+      <!--Goiania-->
+      <section class="containers-cidade" id="Regiao3">
+        <section class="texto-cidade">
+          <p> <span class="destaque1">Goiânia tem ampliado seus espaços acessíveis, principalmente em áreas de lazer como o Parque Flamboyant e o Bosque dos Buritis, que contam com rampas, pisos táteis e banheiros adaptados. </span> A capital goiana busca integrar natureza, cultura e inclusão, oferecendo experiências acolhedoras para todos os visitantes.</p>
+        </section>
+
+      <section class="containers-fotos" id="fotos-bélem">
+        <div>
+          <img src="img/Centro-Oeste/Bosque dos Buritis.png" alt="Entrada do Bosque dos Buritis, em Goiânia, com placa de tijolos aparentes e o nome do parque ao lado de um lago com fonte d’água e árvores ao fundo.">
+          <p>Bosque dos Buritis</p>
+        </div>
+        <div>
+          <img src="img/Centro-Oeste/Lago das Rosas.png" alt=" A segunda imagem é uma foto aérea vibrante de um parque urbano com um lago no formato de um S curvo. As margens do lago são cercadas por uma densa vegetação e árvores altas e verdes. Do outro lado do lago, em contraste com a natureza do parque, está o horizonte de uma cidade com muitos edifícios e arranha-céus, que se estendem até o fundo da imagem. O céu é azul e tem algumas nuvens brancas, o que ilumina a cena. A imagem representa o equilíbrio entre a vida urbana e a natureza.">
+          <p>Lago das Rosas</p>
+        </div>
+        <div>
+          <img src="img/Centro-Oeste/Museu do Cerrado.png" alt=" foto panorâmica de um edifício de um andar com telhado de telha e janelas grandes. Em frente ao edifício, há uma área gramada com um caminho de cimento que leva a ele. Ao longo do caminho e na grama, estão várias esculturas coloridas de mulheres carregando potes na cabeça. Elas parecem representar a cultura e a história afro-brasileira. No fundo, o céu está com tons alaranjados e cinzentos, indicando o nascer ou o pôr do sol. A imagem sugere um espaço cultural, possivelmente um museu ou um memorial.">
+          <p>Museu do Cerrado</p>
+        </div>
+       
+        <div>
+        </div>
+      </section>
+      </section>
+    </section>
+
+    <!--noticias-->
+    <section class="containers-news">
+      <div class="news">
+        <h4>Turismo acessível ganha força em Rio Verde e MS reforça compromisso com a inclusão</h4>
+        <p>Descubra os destinos nordestinos que estão transformando o turismo com acessibilidade para todos.</p>
+
+      <div class="elementos-caixa">
+        <div class="elementos">
+          <img src="./svg/pessoa.svg" alt="simbolo de uma pessoa">
+          <p>Débora Bordin</p>
+        </div>
+
+        <div class="elementos">
+          <img src="./svg/calendario.svg" alt="Simbolo Calendário">
+          <p>12 de Junho, 2025</p>
+        </div>
+
+      </div>
+
+      <a href="https://www.turismo.ms.gov.br/turismo-acessivel-ganha-forca-em-rio-verde-e-ms-reforca-compromisso-com-a-inclusao/#:~:text=Turismo%20acess%C3%ADvel%20ganha%20for%C3%A7a%20em%20Rio%20Verde,inclus%C3%A3o%20*%2012%20jun%202025.%20*%20Categorias:Acessibilidade." class="but-news"  target="_blank">Ler Artigo Completo  &rarr;</a>
+      </div>
+
+
+      <div class="news">
+        <h4>Programa Brasília Turismo Acessível</h4>
+        <p>A Secretaria de Turismo em conjunto com a Unidade Nacional de Acessibilidade preparou o primeiro roteiro de turismo acessível de Brasília. </p>
+
+      <div class="elementos-caixa">
+        <div class="elementos">
+          <img src="./svg/pessoa.svg" alt="simbolo de uma pessoa">
+          <p> SETUR</p>
+        </div>
+
+        <div class="elementos">
+          <img src="./svg/calendario.svg" alt="Simbolo Calendário">
+          <p> 11 de Setembro, 2025</p>
+        </div>
+
+      </div>
+
+      <a href="https://www.turismo.df.gov.br/programa-brasilia-turismo-acessivel#:~:text=Guia%20Arquitet%C3%B4nico%20de%20Turismo%20Acess%C3%ADvel,cidade%20agregadora%2C%20inclusiva%20e%20democr%C3%A1tica." class="but-news"  target="_blank">Ler Artigo Completo  &rarr;</a>
+      </div>
+
+    </section>
+
+    <footer class="footer-exclusivo">
+  <div class="footer-exclusivo-container">
+    
+    <!-- Coluna 1 - Logo e Redes -->
+    <div class="footer-exclusivo-coluna">
+       <h3 class="footer-exclusivo-logo"><img src="../../Img/Logo.png" alt=""></h3>
+      <p class="footer-exclusivo-subtitulo">Siga nossas redes</p>
+      <div class="footer-exclusivo-redes">
+        <a href="#"><i class="bx bxl-tiktok"></i></a>
+        <a href="#"><i class="bx bxl-instagram"></i></a>
+        <a href="#"><i class="bx bxl-twitter"></i></a>
+        <a href="#"><i class="bx bxl-facebook"></i></a>
+        <a href="#"><i class="bx bxl-youtube"></i></a>
+      </div>
+      <div class="footer-exclusivo-contato">
+        <p>Entre em Contato</p>
+        <p>(11) 3818-1763</p>
+        <p>contato@centra.brasil.com</p>
+      </div>
+    </div>
+
+    <!-- Coluna 2 - Mapa do site -->
+    <div class="footer-exclusivo-coluna">
+      <h4>Mapa do Site</h4>
+      <ul>
+        <li><a href="../../../index.html">Página Inicial</a></li>
+        <li><a href="../Regioes.html">Regiões</a></li>
+        <li><a href="../Parceiros.html">Parceiros</a></li>
+        <li><a href="../Comunidade.html">Comunidade</a></li>
+        <li><a href="../Sobre.html">Sobre</a></li>
+      </ul>
+    </div>
+
+    <!-- Coluna 3 - Ferramenta -->
+    <div class="footer-exclusivo-coluna">
+      <h4>Ferramenta</h4>
+      <ul>
+        <li><a href="../ia.html">Planejador de Viagem</a></li>
+      </ul>
+    </div>
+
+    <!-- Coluna 4 - Newsletter -->
+    <div class="footer-exclusivo-coluna">
+      <h4>Newsletter</h4>
+      <p>Quer receber conteúdos de viagem diariamente?<br>
+      Se inscreva no nosso Newsletter!</p>
+      <form class="footer-exclusivo-form">
+        <input type="email" placeholder="E-mail" required>
+        <button type="submit">INSCREVER</button>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="footer-exclusivo-bottom">
+    <p><a href="#">Política de Privacidade</a></p>
+    <p>© 2025 Central de Viagens Brasil. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- inicio da api de libras-->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+      <!--fim da API de libras-->
+
+      <!-- Botão de acessibilidade -->
+    <div class="leitor-tela-container">
+      <button id="abrirLeitor" class="leitor-toggle">🔊 Leitor de Tela</button>
+      <div class="leitor-controles">
+        <button id="lerPagina" class="leitor-btn">▶️ Ler página</button>
+        <button id="pausarAudio" class="leitor-btn">⏸ Pausar</button>
+        <button id="retomarAudio" class="leitor-btn">▶️ Retomar</button>
+      </div>
+    </div>
+    <!--Web speech API do navegador-->
+    <script src="../../JS/leitordosite.js"></script>
+    <!-- Fim do botão de acessibilidade -->
+</body>
+</html>

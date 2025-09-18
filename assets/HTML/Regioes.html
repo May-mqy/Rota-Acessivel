@@ -1,0 +1,1731 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partiu Explorar Mais</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/leitordosite.css">
+    <link rel="shortcut icon" href="../Img/Logo.png" type="image/x-icon">
+    <script src="../JS/regiõesnav.js" type="text/javascript"></script>
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Área para a Navbar */
+#nav_bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 12vh;
+    background-color: #0d2c49;
+    padding: 0 2%;
+    position: relative;
+}
+
+#nav_bar img {
+
+    height: 100px;
+    width: auto;
+    transition: .3s;
+
+  }
+  
+
+#Logo-text {
+  
+    text-decoration: none;
+    color: #D9D9D9;
+    
+    p{
+      margin-top: -70px;
+      margin-left: 100px;
+    }
+}
+
+#nav_bar img:hover {
+
+    transform: scale(1.1);
+
+}
+
+#nav_list ul {
+
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    gap: 50px;
+
+}
+
+#nav_list img {
+
+    height: 40px;
+    width: auto;
+
+}
+
+.nav_links {
+    color: white;
+    text-decoration: none;
+}
+
+.nav_links:hover {
+
+    color: #F39C12;
+    transition: all 0.3s;
+
+}
+
+.nav_botao {
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--branco);
+    padding: 30px;
+    border-radius: 30px;
+    height: 20px;
+    border: 1px solid #ffff;
+    color: #fff;
+    text-decoration: none;
+
+}
+
+.nav_botao:hover {
+
+    background-color: #D9D9D9;
+    color: #000;
+    transition: all 0.3s;
+
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 100;
+}
+
+.hamburger .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+}
+
+/* Garante que o submenu fique escondido inicialmente */
+  #sub_menu {
+    display: none;
+    position: absolute; /* fica solto abaixo do item pai */
+    color: #D9D9D9;
+    background: #0d2642d5;
+    border: 5px solid #ddd;
+    list-style: none;
+    padding: 10px;
+    margin-top: 20px;
+    z-index: 1000;
+  }
+
+  #sub_menu li {
+    margin: 5px 0;
+  }
+
+  #sub_menu a {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #D9D9D9;
+  }
+
+  #sub_menu a:hover {
+    background:var(--destaque2);
+  }
+
+/*notebook*/
+@media screen and (min-width: 1500px) and (max-width: 2000px) {
+  #nav_bar {
+    height: 12vh;
+    font-size: 20px;
+}
+
+#nav_bar img {
+
+    height: 60px;
+  }
+
+#nav_list img {
+
+    height: 30px;
+    width: auto;
+}
+.nav_botao {
+    padding: 20px;
+}
+}
+
+
+#partiu-header-principal {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, transparent 100%);
+    padding: 30px 60px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    transition: background 0.3s ease;
+}
+
+.partiu-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.partiu-header-logo {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    img{
+        margin-left: -60px;
+        height: 110px;
+        width: 130px;
+    }
+}
+
+.partiu-header-nav {
+    display: flex;
+    gap: 40px;
+}
+
+.partiu-header-nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    transition: opacity 0.3s;
+}
+
+.partiu-header-nav-link:hover {
+    opacity: 0.8;
+}
+
+.partiu-header-login {
+    font-weight: 600;
+    cursor: pointer;
+
+    a{
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
+.partiu-secao-hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../Img/Regioes/fundoRJ.jpg) center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: background 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    overflow: hidden; /* adicionado para não quebrar tela */
+}
+
+.partiu-hero-conteudo {
+    text-align: left;
+    max-width: 900px;
+    padding: 0 60px;
+    margin-right: auto;
+}
+
+.partiu-hero-titulo {
+    font-size: 128px;
+    font-weight: 900;
+    line-height: 1;
+    margin-left: 30px;
+    letter-spacing: 2px;
+    line-height: 130px;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+}
+
+#titulo-black {
+    color: black;
+}
+
+.partiu-hero-destino {
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    font-size: 24px;
+    font-weight: 500;
+    background-color: #0D2642;
+    width: 300px;
+    padding: 10px;
+    border-radius: 40px 0px 0px 0px;
+}
+
+/* ========================= */
+/* NOVO BLOCO DE VARIÁVEIS   */
+/* ========================= */
+:root {
+    --partiu-card-w: 230px;     /* largura do .partiu-card */
+    --partiu-card-gap: 20px;    /* gap entre cards */
+    --partiu-half: calc((var(--partiu-card-w) + var(--partiu-card-gap)) / 0.8); /* meio card */
+}
+
+/* regra alterada */
+.partiu-cards-container {
+    position: absolute;
+    bottom: 130px;
+    right: 0;
+    display: flex;
+    gap: var(--partiu-card-gap);
+    transition: transform 0.8s ease, right 0.8s ease;
+    transform: translateX(var(--partiu-half)); /* mostra 3,5 cards */
+    will-change: transform;
+    max-width: none;
+}
+
+/* ESTILOS PARA O EFEITO DE CARD COM DUAS FACES */
+.partiu-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.partiu-card-ativo .partiu-card-inner {
+    transform: rotateY(180deg);
+    transition: transform 0.8s ease 2s;
+}
+
+.partiu-card-front, .partiu-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.partiu-card-back {
+    background: linear-gradient(135deg, #0D2642 0%, #1a3d63 100%);
+    transform: rotateY(180deg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.partiu-card-back h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.partiu-card-back p {
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.partiu-card-back .partiu-card-temp {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+    background-color: white;
+    color: #0D2642;
+    border-radius: 5px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.partiu-card {
+    transition: all 5s ease, transform 2s ease;
+    width: 230px;
+    height: 320px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.partiu-card:hover {
+    transform: translateY(-5px);
+    border-color: #fff;
+}
+
+.partiu-card-ativo {
+    border-color: #ffffffef;
+    transform: translateY(-30px);
+}
+
+.partiu-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.texto-claro {
+    color: #ffffffcd;
+}
+
+.texto-escuro {
+    color: #000;
+}
+
+/* ajustes responsivos novos */
+@media (max-width: 1200px) {
+    .partiu-cards-container {
+        transform: translateX(calc(var(--partiu-half) * 0.8));
+        bottom: 100px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .partiu-hero-titulo {
+        font-size: 80px;
+    }
+
+    #partiu-header-principal {
+        padding: 25px 40px;
+    }
+
+    .partiu-header-nav {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .partiu-hero-titulo {
+        font-size: 40px;
+        text-align: center;
+        line-height: 50px;
+        display: none;
+    }
+
+    #partiu-header-principal {
+        padding: 20px;
+    }
+
+    .partiu-header-nav {
+        display: none;
+    }
+
+    .partiu-header-login {
+        display: none;
+    }
+
+    .partiu-hero-destino {
+        bottom: 20px;
+        display: none;
+    }
+
+    .partiu-card {
+        position:absolute ;
+        display: none;
+        right: 0px;
+        top: 0px;
+        margin-right: 6px;
+        width: 400px;
+        height: 100px;
+    }
+    .partiu-card-ativo{
+        display: flex;
+        
+    }
+    .partiu-card-back h3{
+        margin-bottom: 5px;
+        font-size: 20px;
+    }
+    .partiu-card-back p{
+        font-size: 15px;
+    }
+    .partiu-card-back .partiu-card-temp{
+        font-size: 15px;
+        margin-top: 5px;
+        display: none;
+
+    }
+    .partiu-card-back{
+        padding: 30px;
+    }
+
+    
+    .partiu-cards-container {
+        transform: none;
+        justify-content: center;
+        margin-top: 18px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    
+}
+
+
+
+#hamburger-menu {
+    display: none; /* visível só no mobile */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+#hamburger-menu span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Tela cheia do menu */
+.partiu-header-nav.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0D2642; /* ou qualquer cor */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+/* Links grandes para mobile */
+.partiu-header-nav.fullscreen a {
+    font-size: 24px;
+}
+
+/* Transformar Hamburger em X */
+#hamburger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(3px, 8px);
+}
+
+#hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+#hamburger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -12px);
+}
+
+/* Mostrar hamburger no mobile e esconder nav padrão */
+@media (max-width: 768px) {
+    #hamburger-menu {
+        display: flex;
+    }
+    .partiu-header-nav {
+        display: none;
+    }
+
+    #nav_list img {
+    height: 10px;
+}
+}
+
+
+
+        /*SEÇÂO REGIOES*/
+
+.explore-regioes-secao {
+    padding: 80px 20px;
+    background-color: #f8f9fa;
+}
+
+.explore-regioes-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.explore-regioes-titulo {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    color: #0D2642;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.explore-regioes-descricao {
+    font-size: 18px;
+    text-align: center;
+    color: #0D2642;
+    margin-bottom: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* Container do carrossel - ESSENCIAL */
+.carrossel-container {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 10px 50px; /* Espaço para as setas */
+}
+
+/* Grid transformado em flex para o carrossel */
+.explore-regioes-grid {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
+/* Cards - LARGURA FIXA como desejado */
+.card-regioes-img {
+    
+    background-color: #e5e3e0;
+    width: 330px; /* Largura fixa como no seu código */
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 0 0 auto; /* Impede que os cards flexíveis se estiquem */
+    margin: 0 55px; /* Espaçamento entre os cards */
+}
+
+.card-regioes-img img {
+    border-radius: 12px 12px 0 0;
+    height: 150px;
+    width: 100%; /* Agora 100% da largura do card */
+    object-fit: cover;
+}
+
+.card-regioes-img:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.311);
+}
+
+.explore-regioes-card {
+    overflow: hidden;
+    padding: 25px;
+}
+
+.explore-regioes-card-titulo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0D2642;
+    margin-bottom: 15px;
+}
+
+.explore-regioes-card-descricao {
+    font-size: 16px;
+    color:#0D2642;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.explore-regioes-card-conteudo {
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+
+
+.explore-regioes-card-subtitulo {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0D2642;
+    margin-bottom: 12px;
+}
+
+/* ---- Destinos em horizontal ---- */
+.explore-regioes-card-lista.destinos {
+    list-style: none;      /* tira as bolinhas */
+    
+    margin-right: 5px;
+    display: flex;         /* coloca os <li> na horizontal */
+    gap: 10px;   
+}
+
+.explore-regioes-card-lista.destinos li {
+    color: #fff;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+/* ---- Destaques em vertical ---- */
+.explore-regioes-card-lista.destaques {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.explore-regioes-card-destaques{
+    margin-top: 20px;
+}
+.explore-regioes-card-lista.destaques li {
+    font-size: 14px;
+    position: relative;
+    line-height: 20px;
+    color: #0D2642;
+    padding-left: 16px;
+}
+
+/* Bolinha personalizada */
+.explore-regioes-card-lista.destaques li::before {
+    content: "•";
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* ============================= */
+/* 🎨 Cores por card (via ID)    */
+/* ============================= */
+
+/* Região Norte */
+#regiao-norte .explore-regioes-card-lista.destinos li {
+    background: #1f5c23; /* verde */
+}
+#regiao-norte .explore-regioes-card-lista.destaques li::before {
+    color: #1f5c23;
+}
+#regiao-norte .explore-regioes-card-botao{
+    background: #1f5c23;
+}
+
+
+#regiao-nordeste .explore-regioes-card-lista.destinos li {
+    background: #2a9a2f; /* verde */
+}
+#regiao-nordeste .explore-regioes-card-lista.destaques li::before {
+    color: #2a9a2f;
+}
+#regiao-nordeste .explore-regioes-card-botao{
+    background: #2a9a2f;
+}
+
+
+
+/* Região Centro-Oeste */
+#regiao-centro-oeste .explore-regioes-card-lista.destinos li {
+    background: #efa020; /* amarelo */
+}
+#regiao-centro-oeste .explore-regioes-card-lista.destaques li::before {
+    color: #efa020;
+}
+#regiao-centro-oeste .explore-regioes-card-botao{
+    background: #efa020;
+}
+
+
+#regiao-centro-sudeste .explore-regioes-card-lista.destinos li {
+    background: #3487DB;; /* amarelo */
+}
+#regiao-centro-sudeste .explore-regioes-card-lista.destaques li::before {
+    color: #3487DB;
+}
+#regiao-centro-sudeste .explore-regioes-card-botao{
+    background: #3487DB;
+}
+
+
+/* Região Sul */
+#regiao-sul .explore-regioes-card-lista.destinos li {
+    background: #0e519d; /* azul */
+}
+#regiao-sul .explore-regioes-card-lista.destaques li::before {
+    color: #0e519d;
+}
+#regiao-sul .explore-regioes-card-botao{
+    background: #0e519d;
+}
+
+.explore-regioes-card-botao {
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    font-size: 16px;
+}
+
+
+.explore-regioes-card-botao:hover {
+    background-color: #1a3d63;
+}
+
+/* Botões de navegação - MELHORADOS */
+.carrossel-btn {
+    margin: 0px 8px;
+    position: absolute;
+    top: 40%; /* Ajustado para centralizar verticalmente nos cards */
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.95);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.carrossel-btn img{
+    width: 20px;
+}
+.carrossel-btn:hover {
+    background-color: white;
+    transform: translateY(-50%) scale(1.05);
+}
+
+.carrossel-btn.prev {
+    left: 0;
+}
+.carrossel-btn.prev  img{
+   
+    transform: scaleX(-1);
+    margin-right: 3px;
+}
+.carrossel-btn.next {
+    right: 0;
+}
+.carrossel-btn.next img{
+    margin-left: 3px;
+}
+
+/* Indicadores */
+.carrossel-indicadores {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.indicador {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicador.ativo {
+    background-color: #0D2642;
+    transform: scale(1.2);
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .card-regioes-img {
+        width: 220px; /* Ligeira redução para tablets */
+    }
+    
+    .carrossel-container {
+        padding: 0 45px;
+    }
+
+     #nav_bar {
+    height: 18vh;
+}
+
+  #nav_bar img {
+    display: flex;
+    flex-direction: row;
+    height:70px;
+
+  }
+}
+
+
+@media (max-width: 768px) {
+    .explore-regioes-secao {
+        padding: 60px 15px;
+    }
+    
+    .explore-regioes-titulo {
+        font-size: 28px;
+    }
+    
+    .explore-regioes-descricao {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+    
+    .card-regioes-img {
+        width: 250px; /* Mantém a largura em mobile */
+        margin: 0 50px;
+    }
+    
+    .carrossel-container {
+        padding: 0 40px;
+    }
+    
+    .carrossel-btn {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .explore-regioes-card-conteudo {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+      #nav_bar {
+    height: 15vh;
+}
+
+  #nav_bar img {
+    display: flex;
+    flex-direction: row;
+    height:50px;
+    width: auto;
+    transition: .3s;
+
+  }
+}
+
+
+@media (max-width: 480px) {
+    .explore-regioes-titulo {
+        font-size: 24px;
+    }
+    
+    .card-regioes-img {
+        width: 280px; /* Cards um pouco mais largos em mobile muito pequeno */
+    }
+    
+    .explore-regioes-card {
+        padding: 20px;
+    }
+    
+    .explore-regioes-card-titulo {
+        font-size: 20px;
+    }
+    
+    .carrossel-container {
+        padding: 0 0px;
+    }
+
+     #nav_bar {
+    height: 15vh;
+}
+
+  #nav_bar img {
+    display: flex;
+    flex-direction: row;
+    height:30px;
+    width: auto;
+    transition: .3s;
+
+  }
+}
+
+
+
+        /*FOOTER*/
+
+        footer {
+    font-family: "Open Sans", sans-serif;
+}
+
+.footer-exclusivo {
+    background-color: #223345;
+    color: #fff;
+    padding: 40px 20px 20px;
+}
+
+.footer-exclusivo-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-exclusivo-logo {
+
+    height: 60px;
+    width: auto;
+
+}
+
+.footer-exclusivo-subtitulo {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer-exclusivo-redes a {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.footer-exclusivo-redes a:hover {
+    color: #f0c040;
+}
+
+.footer-exclusivo-contato p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footer-exclusivo-coluna h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.footer-exclusivo-coluna p {
+    font-size: 14px;
+}
+
+.footer-exclusivo-coluna ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-exclusivo-coluna ul li {
+    margin-bottom: 8px;
+}
+
+.footer-exclusivo-coluna ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-exclusivo-coluna ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-exclusivo-form {
+    display: flex;
+    margin-top: 10px;
+    align-items: stretch;
+}
+
+.footer-exclusivo-form input {
+    padding: 8px;
+    border: none;
+    outline: none;
+    flex: 1;
+    margin-right: 5px;
+}
+
+.footer-exclusivo-form button {
+    padding: 8px 12px;
+    background: #fff;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.footer-exclusivo-form button:hover {
+    background: #f0c040;
+}
+
+.footer-exclusivo-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 15px;
+    font-size: 13px;
+}
+
+.footer-exclusivo-bottom a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-exclusivo-bottom a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 728px) {
+    .footer-exclusivo-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-exclusivo-form {
+        flex-direction: column;
+    }
+
+    .footer-exclusivo-form input {
+        width: 100%;
+        margin-bottom: 10px;
+        margin-right: 0;
+        box-sizing: border-box;
+    }
+
+    .footer-exclusivo-form button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <!--Espaço Cabeçalho-->
+     <header id="nav_bar">
+    <a href="../../index.html" id="Logo-text"><img src="../Img/Logo.png" alt=""  > <img src="../Img/nomeLogo.png" id="logonome" alt=""></a>
+
+    <button class="hamburger" aria-label="menu hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <nav id="nav_list"> 
+  <ul>
+    <li onmouseover="exibe_regioes()" onmouseout="some_regioes()">
+      <a class="nav_links" href="Regioes.html">Regiões</a>
+      <ul id="sub_menu">
+        <li><a href="regiões/Norte.html" class="nav_links">Norte</a></li>
+        <li><a href="regiões/Nordeste.html" class="nav_links">Nordeste</a></li>
+        <li><a href="regiões/Centro.html" class="nav_links">Centro-Oeste</a></li>
+        <li><a href="regiões/Sudeste.html" class="nav_links">Sudeste</a></li>
+        <li><a href="regiões/Sul.html" class="nav_links">Sul</a></li>
+      </ul>
+    </li>
+
+    <li><a class="nav_links" href="Parceiros.html">Parceiros</a></li>
+    <li><a class="nav_links" href="Comunidade.html">Comunidade</a></li>
+    <li><a class="nav_links" href="Sobre.html">Sobre</a></li>
+
+    <li><a class="nav_botao" href="ia.html"> 
+      <img src="../Img/logo_gemini.png" alt="">Planeje sua Viagem</a>
+    </li>
+    <li><a class="nav_botao" href="#"> Login/Cadastro </a></li>
+  </ul>
+</nav>
+
+  </header>
+
+    <main id="partiu-main-conteudo">
+        <section class="partiu-secao-hero">
+            <div class="partiu-hero-conteudo">
+                <h1 class="partiu-hero-titulo texto-claro">PARTIU<br>EXPLORAR<br>MAIS?</h1>
+            </div>
+            
+            <p class="partiu-hero-destino">Rio de Janeiro (RJ)</p>
+            
+            <div class="partiu-cards-container">
+                <div class="partiu-card partiu-card-ativo" data-bg="../Img/Regioes/fundoRJ.jpg" data-estado="Pão de Açúcar (RJ)" data-text="light">
+                    <img src="../Img/Regioes/fundoRJ.jpg" alt="Rio de Janeiro">
+                </div>
+                <div class="partiu-card" data-bg="../Img/Regioes/fundorecife.jpg" data-estado="Rua do Bom Jesus (PE)" data-text="light">
+                    <img src="../Img/Regioes/fundorecife.jpg" alt="Pernambuco">
+                </div>
+                <div class="partiu-card" data-bg="../Img/Regioes/fundolguacu.jpg" data-estado="Foz do Iguaçu (PR)" data-text="light">
+                    <img src="../Img/Regioes/fundolguacu.jpg" alt="Paraná">
+                </div>
+                <div class="partiu-card" data-bg="../Img/Regioes/fundoSP.jpg" data-estado="São Paulo (SP)" data-text="light">
+                    <img src="../Img/Regioes/fundoSP.jpg" alt="São Paulo">
+                </div>
+            </div>
+        </section>
+    </main>
+    <section class="explore-regioes-secao">
+    <div class="explore-regioes-container">
+        <h2 class="explore-regioes-titulo">EXPLORE AS REGIÕES DO BRASIL SEM MEDO!</h2>
+        <p class="explore-regioes-descricao">Descubra as cinco regiões brasileiras com informações detalhadas sobre acessibilidade e infraestrutura adaptada.</p>
+        
+        <div class="carrossel-container">
+    <button class="carrossel-btn prev"><img src="../Img/Regioes/setaD.png" alt=""></button>
+    <button class="carrossel-btn next"><img src="../Img/Regioes/setaD.png" alt=""></button>
+
+    <div class="explore-regioes-grid">
+       <div class="card-regioes-img" id="regiao-norte">
+                <img src="../Img/Regioes/Norte.jpg" alt="" >
+                <div class="explore-regioes-card">
+                
+                <h3 class="explore-regioes-card-titulo">Região Norte</h3>
+                <p class="explore-regioes-card-descricao">Explore a Amazônia com trilhas acessíveis, passeios de barco adaptados e hospedagens incríveis.</p>
+                
+                <div class="explore-regioes-card-conteudo" id="regiao-norte">
+                    <div class="explore-regioes-card-destinos">
+                        <h4 class="explore-regioes-card-subtitulo">Principais Destinos</h4>
+                        <ul class="explore-regioes-card-lista destinos">
+                            <li>Manaus</li>
+                            <li>Belém</li>
+                            <li>Palmas</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="explore-regioes-card-destaques">
+                        <h4 class="explore-regioes-card-subtitulo">Destaques</h4>
+                        <ul class="explore-regioes-card-lista destaques">
+                            <li>Trilhas adaptadas</li>
+                            <li>Barcos acessíveis</li>
+                            <li>Hotéis inclusivos</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <button class="explore-regioes-card-botao">Explorar Região</button>
+            </div>
+            </div>
+            
+            <div class="card-regioes-img" id="regiao-nordeste">
+                <img src="../Img/Regioes/recife.jpg" alt="">
+            <div class="explore-regioes-card">
+                            <h3 class="explore-regioes-card-titulo">Região Nordeste</h3>
+                            <p class="explore-regioes-card-descricao">Praias com acesso facilitado, centros históricos adaptados e rica cultura acessível a todos.</p>
+                            
+                            <div class="explore-regioes-card-conteudo" id="regiao-nordeste">
+                                <div class="explore-regioes-card-destinos">
+                                    <h4 class="explore-regioes-card-subtitulo">Principais Destinos</h4>
+                                    <ul class="explore-regioes-card-lista destinos">
+                                        <li>Salvador</li>
+                                        <li>Recife</li>
+                                        <li>Fortaleza</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="explore-regioes-card-destaques">
+                                    <h4 class="explore-regioes-card-subtitulo">Destaques</h4>
+                                    <ul class="explore-regioes-card-lista destaques">
+                                        <li>Praias acessíveis</li>
+                                        <li>Transporte adaptado</li>
+                                        <li>Guias em Libras</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <button class="explore-regioes-card-botao">Explorar Região</button>
+                        </div>
+            </div>
+            
+        <div class="card-regioes-img" id="regiao-centro-oeste">
+            <img src="../Img/Regioes/pantanal.jpg" alt="">
+        <div class="explore-regioes-card">
+                        <h3 class="explore-regioes-card-titulo">Região Centro Oeste</h3>
+                        <p class="explore-regioes-card-descricao">Pantanal com passarelas elevadas, observação de fauna adaptada e ecoturismo inclusivo.</p>
+                        
+                        <div class="explore-regioes-card-conteudo" id="regiao-centro-oeste">
+                            <div class="explore-regioes-card-destinos">
+                                <h4 class="explore-regioes-card-subtitulo">Principais Destinos</h4>
+                                <ul class="explore-regioes-card-lista destinos">
+                                    <li>Pantanal</li>
+                                    <li>Brasília</li>
+                                    <li>Cuiabá</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="explore-regioes-card-destaques">
+                                <h4 class="explore-regioes-card-subtitulo">Destaques</h4>
+                                <ul class="explore-regioes-card-lista destaques">
+                                    <li>Passarelas elevadas</li>
+                                    <li>Observatórios adaptados</li>
+                                    <li>Mergulho assistido</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <button class="explore-regioes-card-botao">Explorar Região</button>
+                    </div>
+        </div>    
+            <div class="card-regioes-img" id="regiao-centro-sudeste">
+            <img src="../Img/Regioes/paulista.jpg" alt="">
+        <div class="explore-regioes-card">
+                        <h3 class="explore-regioes-card-titulo">Região Sudeste</h3>
+                        <p class="explore-regioes-card-descricao">Grandes centros urbanos com infraestrutura acessível, museus adaptados e praias inclusivas.</p>
+                        
+                        <div class="explore-regioes-card-conteudo" id="regiao-centro-sudeste">
+                            <div class="explore-regioes-card-destinos">
+                                <h4 class="explore-regioes-card-subtitulo">Principais Destinos</h4>
+                                <ul class="explore-regioes-card-lista destinos">
+                                    <li>Rio de Janeiro</li>
+                                    <li>São Paulo</li>
+                                    <li>Belo Horizonte</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="explore-regioes-card-destaques">
+                                <h4 class="explore-regioes-card-subtitulo">Destaques</h4>
+                                <ul class="explore-regioes-card-lista destaques">
+                                    <li>Metrô acessível</li>
+                                    <li>Museus adaptados</li>
+                                    <li>Teatros inclusivos</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <button class="explore-regioes-card-botao">Explorar Região</button>
+                    </div>
+        </div>    
+        <div class="card-regioes-img" id="regiao-sul">
+            <img src="../Img/Regioes/curitiba.jpg" alt="">
+        <div class="explore-regioes-card">
+                        <h3 class="explore-regioes-card-titulo">Região Sul</h3>
+                        <p class="explore-regioes-card-descricao">Serra gaúcha com elevadores panorâmicos, vinícolas acessíveis e turismo rural inclusivo.</p>
+                        
+                        <div class="explore-regioes-card-conteudo" id="regiao-sul">
+                            <div class="explore-regioes-card-destinos">
+                                <h4 class="explore-regioes-card-subtitulo">Principais Destinos</h4>
+                                <ul class="explore-regioes-card-lista destinos">
+                                    <li>Curitiba</li>
+                                    <li>Gramado</li>
+                                    <li>Florianópolis</p></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="explore-regioes-card-destaques">
+                                <h4 class="explore-regioes-card-subtitulo">Destaques</h4>
+                                <ul class="explore-regioes-card-lista destaques">
+                                    <li>Teleféricos adaptados</li>
+                                    <li>Vinícolas acessíveis</li>
+                                    <li>Hotéis familiares</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <button class="explore-regioes-card-botao">Explorar Região</button>
+                    </div>
+        </div>    
+    </div>
+    
+    <div class="carrossel-indicadores">
+        <!-- Os indicadores serão gerados pelo JavaScript -->
+    </div>
+</div>
+        
+    </div>
+</section>
+    <footer class="footer-exclusivo">
+    <div class="footer-exclusivo-container">
+      <div class="footer-exclusivo-coluna">
+        <img class="footer-exclusivo-logo" src="../Img/Logo.png">
+        <p class="footer-exclusivo-subtitulo">Siga nossas redes</p>
+        <div class="footer-exclusivo-redes">
+          <a href="#"><i class="bx bxl-tiktok"></i></a>
+          <a href="#"><i class="bx bxl-instagram"></i></a>
+          <a href="#"><i class="bx bxl-twitter"></i></a>
+          <a href="#"><i class="bx bxl-facebook"></i></a>
+          <a href="#"><i class="bx bxl-youtube"></i></a>
+        </div>
+        <div class="footer-exclusivo-contato">
+          <p>Entre em Contato</p>
+          <p>(11) 3818-1763</p>
+          <p>contato@centra.brasil.com</p>
+        </div>
+      </div>
+
+      <div class="footer-exclusivo-coluna">
+        <h4>Mapa do Site</h4>
+        <ul>
+          <li><a href="../../home.html">Página Inicial</a></li>
+          <li><a href="Regioes.html">Regiões</a></li>
+          <li><a href="Parceiros.html">Parceiros</a></li>
+          <li><a href="Comunidade.html">Comunidade</a></li>
+          <li><a href="Sobre.html">Sobre</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-exclusivo-coluna">
+        <h4>Ferramenta</h4>
+        <ul>
+          <li><a href="#">Planejador de Viagem</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-exclusivo-coluna">
+        <h4>Newsletter</h4>
+        <p>Quer receber conteúdos de viagem diariamente?<br> Se inscreva no nosso Newsletter!</p>
+        <form class="footer-exclusivo-form">
+          <input type="email" placeholder="E-mail" required>
+          <button type="submit">INSCREVER</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-exclusivo-bottom">
+      <p><a href="#">Política de Privacidade</a></p>
+      <p>&copy; 2025 Central de Viagens Brasil. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+    <script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const Cards = document.querySelectorAll('.partiu-card');
+        const heroSection = document.querySelector('.partiu-secao-hero');
+        const destinoElement = document.querySelector('.partiu-hero-destino');
+        const titulos = document.querySelectorAll('.partiu-hero-titulo');
+        const cardsContainer = document.querySelector('.partiu-cards-container');
+        let currentIndex = 0;
+        let autoSlide;
+
+        function ativarCard(index) {
+        cards.forEach(c => c.classList.remove('partiu-card-ativo'));
+        
+        // Primeiro aplica a transição suave de fundo
+        const card = cards[index];
+        const newBg = card.getAttribute('data-bg');
+        heroSection.style.background = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('${newBg}') center/cover no-repeat`;
+        
+        const estado = card.getAttribute('data-estado');
+        destinoElement.textContent = estado;
+        
+        const textMode = card.getAttribute('data-text');
+        titulos.forEach(titulo => {
+            titulo.classList.remove('texto-claro', 'texto-escuro');
+            titulo.classList.add(textMode === "light" ? 'texto-claro' : 'texto-escuro');
+        });
+        
+        // Aplica a classe ativo após um pequeno delay para sincronizar com a transição de fundo
+        setTimeout(() => {
+            card.classList.add('partiu-card-ativo');
+        }, 300);
+    }
+
+        function reorganizarCards() {
+            // Move o primeiro card para o final do container
+            const primeiroCard = cardsContainer.firstElementChild;
+            cardsContainer.appendChild(primeiroCard);
+            
+            // Atualiza a lista de cards após reorganização
+            const novosCards = document.querySelectorAll('.partiu-card');
+            return novosCards;
+        }
+
+        function proximoCard() {
+            if (currentIndex === cards.length - 4) {
+                // Quando chegar no último card, reorganiza os cards
+                cards = reorganizarCards();
+                currentIndex = 0;
+            } else {
+                currentIndex++;
+            }
+            ativarCard(currentIndex);
+        }
+
+        function iniciarAutoSlide() {
+            autoSlide = setInterval(proximoCard, 8500); // troca a cada 4s
+        }
+
+        function pararAutoSlide() {
+            clearInterval(autoSlide);
+        }
+
+        // Precisa ser redeclarada como let para poder ser atualizada
+        let cards = document.querySelectorAll('.partiu-card');
+        
+        cards.forEach((card, index) => {
+            card.addEventListener('click', function() {
+                pararAutoSlide();
+                currentIndex = index;
+                ativarCard(currentIndex);
+                iniciarAutoSlide();
+            });
+        });
+
+        // Inicia no primeiro card automaticamente
+        ativarCard(currentIndex);
+        iniciarAutoSlide();
+
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('partiu-header-principal');
+            if (window.scrollY > 50) {
+                header.style.background = 'linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, transparent 100%)';
+            } else {
+                header.style.background = 'linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, transparent 100%)';
+            }
+        });
+    });
+    // Dados para as informações dos cards (substitua com seus próprios dados)
+        const cardData = {
+            "Pão de Açúcar (RJ)": {
+                title: "Rio de Janeiro",
+                description: "Do icônico Pão de Açúcar às suas praias vibrantes, um espetáculo inesquecível.",
+                temperature: "Região Sudeste"
+            },
+            "Rua do Bom Jesus (PE)": {
+                title: "Recife",
+                description: "Conheça a Rua do Bom Jesus eleita uma das ruas mais belas do mundo.",
+                temperature: "Região Nordeste"
+            },
+            "Foz do Iguaçu (PR)": {
+                title: "Paraná",
+                description: "Famosa pelas Cataratas do Iguaçu, uma das 7 maravilhas naturais do mundo.",
+                temperature: "Região Sul"
+            },
+            "São Paulo (SP)": {
+                title: "São Paulo",
+                description: "Maior cidade do Brasil, centro financeiro e diversidade cultural.",
+                temperature: "Região Sudeste"
+            }
+        };
+
+        // Modifique o HTML dos cards para incluir a estrutura de duas faces
+        document.querySelectorAll('.partiu-card').forEach(card => {
+            const estado = card.getAttribute('data-estado');
+            const data = cardData[estado];
+            
+            card.innerHTML = `
+                <div class="partiu-card-inner">
+                    <div class="partiu-card-front">
+                        <img src="${card.getAttribute('data-bg')}" alt="${estado}">
+                    </div>
+                    <div class="partiu-card-back">
+                        <h3>${data.title}</h3>
+                        <p>${data.description}</p>
+                        <div class="partiu-card-temp">${data.temperature}</div>
+                    </div>
+                </div>
+            `;
+        });
+
+        
+    document.addEventListener('DOMContentLoaded', function() {
+            const carrossel = document.querySelector('.explore-regioes-grid');
+            const cards = document.querySelectorAll('.card-regioes-img');
+            const btnPrev = document.querySelector('.carrossel-btn.prev');
+            const btnNext = document.querySelector('.carrossel-btn.next');
+            const indicadoresContainer = document.querySelector('.carrossel-indicadores');
+            
+            let currentIndex = 0;
+            let startX = 0;
+            let currentX = 0;
+            let isDragging = false;
+            let dragStartTransform = 0;
+            
+            // Criar indicadores
+            for (let i = 0; i < cards.length; i++) {
+                const indicador = document.createElement('div');
+                indicador.classList.add('indicador');
+                if (i === 0) indicador.classList.add('ativo');
+                indicador.addEventListener('click', () => irParaSlide(i));
+                indicadoresContainer.appendChild(indicador);
+            }
+            
+            // Event listeners para os botões
+            btnPrev.addEventListener('click', () => navegar(-1));
+            btnNext.addEventListener('click', () => navegar(1));
+            
+            // Event listeners para arrastar
+            carrossel.addEventListener('mousedown', dragStart);
+            carrossel.addEventListener('touchstart', dragStart, { passive: true });
+            
+            carrossel.addEventListener('mousemove', dragMove);
+            carrossel.addEventListener('touchmove', dragMove, { passive: true });
+            
+            carrossel.addEventListener('mouseup', dragEnd);
+            carrossel.addEventListener('touchend', dragEnd);
+            carrossel.addEventListener('mouseleave', dragEnd);
+            
+            window.addEventListener('resize', function() {
+                location.reload();
+            });
+            
+            function dragStart(e) {
+                // Verificar se é um evento de mouse ou toque
+                const clientX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
+                
+                isDragging = true;
+                startX = clientX;
+                currentX = clientX;
+                
+                // Salvar a posição atual do carrossel
+                const transformMatrix = window.getComputedStyle(carrossel).transform;
+                if (transformMatrix && transformMatrix !== 'none') {
+                    const matrix = new DOMMatrixReadOnly(transformMatrix);
+                    dragStartTransform = matrix.m41; // Valor do translateX
+                } else {
+                    dragStartTransform = 0;
+                }
+                
+                carrossel.classList.add('dragging');
+                e.preventDefault();
+            }
+            
+            function dragMove(e) {
+                if (!isDragging) return;
+                
+                const clientX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
+                currentX = clientX;
+                
+                const diffX = currentX - startX;
+                
+                // Calcular o novo deslocamento
+                const cardStyle = window.getComputedStyle(cards[0]);
+                const cardWidth = cards[0].offsetWidth + 
+                                 parseInt(cardStyle.marginLeft) + 
+                                 parseInt(cardStyle.marginRight);
+                
+                const carrosselWidth = cards.length * cardWidth;
+                const containerWidth = carrossel.parentElement.offsetWidth;
+                const maxDeslocamento = Math.max(0, carrosselWidth - containerWidth);
+                
+                let newTransform = dragStartTransform + diffX;
+                
+                // Limitar o arraste aos limites do carrossel
+                newTransform = Math.min(0, Math.max(-maxDeslocamento, newTransform));
+                
+                // Aplicar o transform
+                carrossel.style.transform = `translateX(${newTransform}px)`;
+            }
+            
+            function dragEnd() {
+                if (!isDragging) return;
+                
+                isDragging = false;
+                carrossel.classList.remove('dragging');
+                
+                const diffX = currentX - startX;
+                
+                // Se o arraste for significativo, mudar o slide
+                if (Math.abs(diffX) > 50) {
+                    if (diffX > 0) {
+                        navegar(-1); // Arrastou para a direita (avança para o anterior)
+                    } else {
+                        navegar(1); // Arrastou para a esquerda (avança para o próximo)
+                    }
+                } else {
+                    // Se não foi significativo, voltar para a posição atual
+                    atualizarCarrossel();
+                }
+            }
+            
+            function navegar(direcao) {
+                const containerWidth = carrossel.parentElement.offsetWidth;
+                const cardStyle = window.getComputedStyle(cards[0]);
+                const cardWidth = cards[0].offsetWidth + 
+                                 parseInt(cardStyle.marginLeft) + 
+                                 parseInt(cardStyle.marginRight);
+                
+                const cardsVisiveis = Math.floor(containerWidth / cardWidth);
+                const maxIndex = Math.max(0, cards.length - cardsVisiveis);
+                
+                currentIndex += direcao;
+                
+                if (currentIndex < 0) {
+                    currentIndex = maxIndex;
+                } else if (currentIndex > maxIndex) {
+                    currentIndex = 0;
+                }
+                
+                atualizarCarrossel();
+            }
+            
+            function irParaSlide(indice) {
+                const containerWidth = carrossel.parentElement.offsetWidth;
+                const cardStyle = window.getComputedStyle(cards[0]);
+                const cardWidth = cards[0].offsetWidth + 
+                                 parseInt(cardStyle.marginLeft) + 
+                                 parseInt(cardStyle.marginRight);
+                
+                const cardsVisiveis = Math.floor(containerWidth / cardWidth);
+                const maxIndex = Math.max(0, cards.length - cardsVisiveis);
+                
+                currentIndex = Math.min(indice, maxIndex);
+                atualizarCarrossel();
+            }
+            
+            function atualizarCarrossel() {
+                const cardStyle = window.getComputedStyle(cards[0]);
+                const cardWidth = cards[0].offsetWidth + 
+                                 parseInt(cardStyle.marginLeft) + 
+                                 parseInt(cardStyle.marginRight);
+                
+                const carrosselWidth = cards.length * cardWidth;
+                const containerWidth = carrossel.parentElement.offsetWidth;
+                const maxDeslocamento = Math.max(0, carrosselWidth - containerWidth);
+                
+                let deslocamento = -currentIndex * cardWidth;
+                deslocamento = Math.min(0, Math.max(-maxDeslocamento, deslocamento));
+                
+                carrossel.style.transform = `translateX(${deslocamento}px)`;
+                
+                document.querySelectorAll('.indicador').forEach((indicador, index) => {
+                    if (index === currentIndex) {
+                        indicador.classList.add('ativo');
+                    } else {
+                        indicador.classList.remove('ativo');
+                    }
+                });
+            }
+        });
+
+
+        const hamburger = document.getElementById('hamburger-menu');
+        const nav = document.querySelector('.partiu-header-nav');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active'); // transforma em X
+            nav.classList.toggle('fullscreen');   // abre o menu fullscreen
+        });
+
+    </script>
+
+        <!-- inicio da api de libras-->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+      <!--fim da API de libras-->
+
+      <!-- Botão de acessibilidade -->
+    <div class="leitor-tela-container">
+      <button id="abrirLeitor" class="leitor-toggle">🔊 Leitor de Tela</button>
+      <div class="leitor-controles">
+        <button id="lerPagina" class="leitor-btn">▶️ Ler página</button>
+        <button id="pausarAudio" class="leitor-btn">⏸ Pausar</button>
+        <button id="retomarAudio" class="leitor-btn">▶️ Retomar</button>
+      </div>
+    </div>
+    <!--Web speech API do navegador-->
+    <script src="assets/js/leitordosite.js"></script>
+    <!-- Fim do botão de acessibilidade -->
+</body>
+</html>

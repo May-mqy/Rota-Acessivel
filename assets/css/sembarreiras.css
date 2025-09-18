@@ -1,0 +1,144 @@
+.conteudo__sembarreira{
+    background: linear-gradient(
+  215deg,
+  #1a2738 0%,
+  #1a2738 20%,
+  #22324a 20%,
+  #22324a 85%,   
+  #2e4060 85%,
+  #2e4060 100%   
+);
+}
+
+.conteudo__sembarreira{
+    display: flex;
+    justify-content: space-around;
+}
+
+.conteudo__sembarreira--titulo{
+    width: 500px;
+    margin: 60px 0 20px 100px;
+    color: var(--branco-cinza);
+    font-size: 32px;
+    font-family: Oswald;
+    font-weight: bold;
+}
+
+.conteudo__sembarreira--txt{
+    width: 400px;
+    margin-left: 100px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 24px;
+    color: var(--branco-cinza);
+}
+
+.conteudo__sembarreira--negrito{
+    font-weight: bold;
+}
+
+.conteudo__sembarreira--img{
+    width: 500px;
+    margin: 100px auto -3px 80px;
+
+    & img{
+    margin-left: 60px;
+    }
+}
+
+.item__txt{
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transform: translateX(-50%);
+    background-color: #3498DB;
+    color: var(--branco-cinza);
+    
+    height: 50px;
+    font-size: 16px;
+    font-family: "Sans Open", sans-serif;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+@media screen and (max-width:1700px){
+    .conteudo__sembarreira{
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .conteudo__sembarreira--img{
+        margin-top: 50px;
+    }
+
+    .conteudo__sembarreira--container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .conteudo__sembarreira{
+        flex-direction: column;
+    }
+
+    .conteudo__sembarreira--container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+
+    .conteudo__sembarreira--txt, .conteudo__sembarreira--titulo{
+        margin: 0;
+    }
+
+    .conteudo__sembarreira{
+        flex-direction: column;
+    }
+
+    .conteudo__sembarreira--titulo{
+        margin-top: 30px;
+    }
+
+   .conteudo__sembarreira--img{
+    margin-top: 60px;
+   }
+
+    .conteudo__sembarreira--container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+        
+
+    .conteudo__sembarreira--img{
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 375px){
+
+    .conteudo__sembarreira--titulo{
+        width: 250px;
+    }
+
+    .conteudo__sembarreira--txt{
+        width: 250px;
+    }
+
+    .conteudo__sembarreira--img{
+        width: 300px;
+    }
+}
