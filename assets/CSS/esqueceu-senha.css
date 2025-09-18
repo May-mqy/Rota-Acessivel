@@ -1,0 +1,24 @@
+main{
+
+    margin-top: 5%;
+
+}
+
+#lado-login header{
+
+    margin-bottom: 2rem;
+    margin-left: 5%;
+
+
+}
+
+#componentes a{
+    text-decoration: none;
+    color: #000;
+}
+
+@media screen and (max-width: 1280px) {
+    
+
+
+}

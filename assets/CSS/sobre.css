@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
+
+*{
+    padding: 0;
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+main{
+
+    background-color: #D9D9D9;
+
+}
+
+header nav {
+    background-color: #0D2642;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    height: 116px;
+}
+
+
+#entenda{
+    
+    height: 550px;
+    display: flex;
+    flex-direction: row;
+    color: #061A31;
+    background-color: #3498DB;
+
+}
+
+#entenda div{
+
+    margin-left: 30px;
+    margin-top: 5%;
+    width: 80%;
+    margin: auto;
+
+}
+
+#entenda div h1{
+
+    font-family: "Oswald";
+    font-size: 50px;
+    font-weight: bold;
+
+}
+
+#entenda div h3{
+
+    margin-top: 50px;
+    font-weight: normal;
+    width: 50%;
+    color: #0D2642;
+    font-size: 35px;
+
+}
+
+
+#entenda #pol01{
+
+    height: 350px;
+    width: 350px;
+    position: absolute;
+    left: 65%;
+    top: 25%;
+
+}
+
+
+#entenda #pol02{
+
+    height: 350px;
+    width: 350px;
+    position: absolute;
+    left: 72%;
+    top: 55%;
+
+}
+
+
+#proposito{
+
+    background-color: #fff;
+
+}
+
+
+#proposito #missao{
+    width: 70%;
+    margin-left: 5%;
+    margin-top: 10%;
+
+}
+
+#proposito #missao h1{
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 50px;
+
+}
+
+#proposito #missao p{
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    line-height: 40px;
+
+}
+
+
+#visao {
+  display: flex;
+  flex-direction: row; /* imagem e texto lado a lado */
+  align-items: center; /* alinha verticalmente */
+  justify-content: space-between;
+  gap: 40px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.visao-img img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.visao-texto {
+ width: 70%;
+    margin-left: 5%;
+
+
+}
+
+.visao-texto h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.visao-texto p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  line-height: 40px;
+}
+
+#proposito #valores{
+    width: 70%;
+    margin-left: 5%;
+    margin-bottom: 80px;
+
+}
+
+#proposito #valores h1{
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 50px;
+
+}
+
+#proposito #valores p{
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    line-height: 40px;
+
+}
+
+    #equipe {
+    margin: 30px;
+    padding-left: 70px;
+    padding-right: 70px;    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    background-color: #D9D9D9;
+    height: auto;
+    padding-bottom: 30px;
+    }
+
+    #equipe2 {
+    margin-top: 30px;
+    padding-left: 98px;
+    padding-right: 98px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    background-color: #D9D9D9;
+    height: auto;
+    padding-bottom: 30px;
+    }
+
+    .card {
+    width: 200px;
+    height: 280px;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    transform: rotate(3deg);
+    transition: transform 0.3s ease;
+    }
+
+
+
+    #lucas {
+    transform: rotate(-3deg);
+    }
+
+    #lucas:hover {
+    transform: rotate(0deg); /* volta ao normal ao passar o mouse */
+    }
+
+    #nicolas {
+    transform: rotate(3deg);
+    }
+
+    #nicolas:hover {
+    transform: rotate(0deg);
+    }
+
+
+    .card:hover {
+    transform: rotate(0deg) scale(1.03);
+    }
+
+    .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+    }
+
+    .card p {
+    margin: 5px 0 5px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #061A31;
+    }
+
+    .card .icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    }
+
+    .card .icons a {
+    color: #0D2642;
+    font-size: 18px;
+    text-decoration: none;
+    }
+
+@media screen and (max-width: 1080px) {
+    
+#entenda img{
+    display: none;
+}
+
+#entenda div{
+
+    margin-left: 30px;
+    margin-top: 5%;
+    width: 100%;
+    margin: auto;
+
+}
+
+#entenda div h1{
+
+    font-family: "Oswald";
+    font-size: 50px;
+    font-weight: bold;
+    margin-left: 50px;
+
+}
+
+#entenda div h3{
+
+    margin-left: 50px;
+    margin-top: 50px;
+    font-weight: normal;
+    width: 100%;
+    color: #0D2642;
+    font-size: 35px;
+
+}
+}
+
+@media screen and (max-width: 500px) {
+
+#entenda div{
+
+    margin-left: 30px;
+    margin-top: 5%;
+    width: 100%;
+    margin: auto;
+
+}
+
+#entenda div h1{
+
+
+    font-size: 30px;
+
+}
+
+#entenda div h3{
+
+    margin-left: 50px;
+    margin-top: 50px;
+    font-weight: normal;
+    width: 80%;
+    color: #0D2642;
+    font-size: 24px;
+
+}
+
+
+#proposito #missao{
+    width: 70%;
+    margin-left: 5%;
+    margin-top: 10%;
+
+}
+
+#proposito #missao h1{
+    font-size: 30px;
+}
+
+#proposito #missao p{
+    font-size: 18px;
+}
+
+
+.visao-img img {
+    display: none;
+}
+
+
+.visao-texto h1 {
+  font-size: 30px;
+}
+
+.visao-texto p {
+  font-size: 18px;
+}
+
+#proposito #valores h1{
+    font-size: 30px;
+}
+
+#proposito #valores p{
+    font-size: 18px;
+}
+
+}

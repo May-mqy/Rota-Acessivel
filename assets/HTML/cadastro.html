@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../CSS/login.css" type="text/css">
+    <link rel="stylesheet" href="../CSS/cadastro.css" type="text/css">    
+    <link rel="stylesheet" href="../CSS/leitordosite.css">
+    <script src="JS/function.js" type="text/javascript"></script>
+    <title>Cadastro</title>
+</head>
+<body>
+
+    <main>
+
+        <section id="lado-imagem">  
+
+            <img src="../img/cadastro-sem-fundo.png" alt="imagem">
+
+        </section>        
+
+        <section id="lado-login">
+
+        <header><a href="../../index.html"><img src="../Img/Logo.png" alt="logo-temp" style="height: 120px;"></a></header>            
+
+            <div id="componentes">
+
+                <h1>Cadastro</h1>
+
+                <p id="text-inicio">"Crie sua conta e descubra destinos acessíveis pelo Brasil — sua jornada começa aqui!</p>
+
+                
+           <form id="cadastro-form" action="#" method="POST">
+  <div class="input-row">
+    <div class="form-group2">
+      <input type="text" id="first-name" class="text-input" placeholder="Primeiro Nome" required>
+      <label for="first-name" class="label">Primeiro Nome</label>
+    </div>
+    <div class="form-group2">
+      <input type="text" id="last-name" class="text-input" placeholder="Sobrenome" required>
+      <label for="last-name" class="label">Sobrenome</label>
+    </div>
+  </div>
+
+              <div class="input-row">
+                <div class="form-group2">
+                  <input type="email" id="email" class="text-input" placeholder="E-mail" required>
+                  <label for="email" class="label">E-mail</label>
+                </div>
+                <div class="form-group2">
+                  <input type="text" id="phone" class="text-input" placeholder="Número de Telefone" required>
+                  <label for="phone" class="label">Número de Telefone</label>
+                </div>
+              </div>
+            
+              <div class="form-group">
+                <input type="password" name="password" class="text-input" placeholder="Senha" id="senha" required>
+                <label for="senha" class="label">Senha</label>
+                <span class="toggle-password" onclick="togglePassword('senha', 'icone-olho')">
+                  <i id="icone-olho" class="fa-solid fa-eye"></i>
+                </span>
+              </div>
+            
+              <div class="form-group">
+                <input type="password" name="confirm-password" class="text-input" placeholder="Confirmar a Senha" id="confirm-senha" required>
+                <label for="confirm-senha" class="label">Confirmar a Senha</label>
+                <span class="toggle-password" onclick="togglePassword('confirm-senha', 'icone-olho-confirm')">
+                  <i id="icone-olho-confirm" class="fa-solid fa-eye"></i>
+                </span>
+              </div>
+            
+              <div id="confirmacao">
+                <label class="checkbox-group">
+                  <input type="checkbox" name="caixa" id="caixa" required>
+                  <p>Concordo com todos os <a href="#">Termos</a> e <a href="#">Políticas de Privacidade</a></p>
+                </label>
+              </div>
+            
+               <button type="submit" id="login-btn">CRIAR CONTA</button>
+            </form>
+
+
+                 <div id="confirmacao" style="margin-left: 170px;">
+                <label class="checkbox-group">
+                  <p>Já tem conta? <a href="login.html">Login</a></a></p>
+                </label>
+              </div>
+            
+
+                
+      
+
+                <div id="login-esqueceu">
+
+                
+
+                </div>
+
+                <div class="linha-ou">
+                  <div class="linha"></div>
+                  <span class="texto">Ou entre com</span>
+                  <div class="linha"></div>
+                </div>
+
+                
+                <div class="social-login">
+                <button id="facebook" class="social-btn" style="color: #1877f2;"><i class="fa-brands fa-facebook fa-2x"></i></button> 
+                <button id="google" class="social-btn" style="color: #ea4335;"><i class="fa-brands fa-google fa-2x"></i></button> 
+                <button id="apple" class="social-btn" style="color: #000;"><i class="fa-brands fa-apple fa-2x"></i></button>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+    </main>
+    
+    <!-- inicio da api de libras-->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+      <!--fim da API de libras-->
+
+      <!-- Botão de acessibilidade -->
+    <div class="leitor-tela-container">
+      <button id="abrirLeitor" class="leitor-toggle">🔊 Leitor de Tela</button>
+      <div class="leitor-controles">
+        <button id="lerPagina" class="leitor-btn">▶️ Ler página</button>
+        <button id="pausarAudio" class="leitor-btn">⏸ Pausar</button>
+        <button id="retomarAudio" class="leitor-btn">▶️ Retomar</button>
+      </div>
+    </div>
+    <!--Web speech API do navegador-->
+    <script src="assets/js/leitordosite.js"></script>
+    <!-- Fim do botão de acessibilidade -->
+</body>
+</html>

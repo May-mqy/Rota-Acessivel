@@ -1,0 +1,423 @@
+*{
+
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+
+}
+
+main{
+
+    background-color: red;
+    height: 500px;
+
+}
+
+#inicio{
+
+    
+    text-align: center;
+    height: 550px;
+    background-color: #2C3E50;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+
+}
+
+#inicio .group-button{
+    margin-top: 2%;
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+}
+
+#inicio h1{
+
+    font-family: "Oswald";
+    font-size: 60px;
+    font-weight: bold;
+    margin-left: 10%;
+    color: #fff;
+
+
+}
+
+#inicio p{
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    margin-left: 10%;
+    text-align: left;
+    width: 60%;
+
+}
+
+#inicio .config-button{
+
+    width: 240px;
+    height: 48px;
+    cursor: pointer;
+    border: 1px;
+    border-radius: 8px;
+    transform: transform 0.8s ease-in-out;
+    font-size: 16px;
+    font-weight: 600;
+
+}
+
+.config-button-dif{
+
+    width: 120px;
+    height: 36px;
+    cursor: pointer;
+    border: 1px;
+    border-radius: 8px;
+    transform: transform 0.8s ease-in-out;
+    font-size: 14px;
+    font-weight: 600;
+
+}
+
+
+#inicio .config-button:hover,.config-button-dif:hover{
+
+    transform: scale(1.1);
+
+}
+
+#faca{
+    color: #061A31;
+    background-color: rgb(255, 255, 255, 0.5);
+
+}
+
+#comece{
+    color: #fff;
+    background-color: #061a31;
+
+}
+
+#destino{
+    color: #fff;
+    background-color: rgb(52, 152, 219, 0.5);
+
+}
+
+#dica{
+
+    color: #fff;
+    background-color: rgb(39, 174, 96, 0.5);
+
+
+
+}
+
+#Avaliacoes{
+    color: #fff;
+    background-color: rgb(243, 156, 18, 0.5);
+
+
+}
+
+#informacoes{
+
+    text-align: center;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+#informacoes .group-img-linha{
+
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#informacoes .group-img-linha .group-img-coluna img{
+
+  margin-bottom: 5%;
+
+}
+
+#informacoes .group-img-linha .group-img-coluna h1{
+
+    font-family: "Oswald";
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 5%;
+
+}
+
+#informacoes .group-img-linha .group-img-coluna p{
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    margin-left: 10%;
+    width: 80%;
+
+    }
+
+
+#depoimentos{
+
+    text-align: center;
+    background-color: #3498DB;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+#depoimentos .group-card{
+
+    margin-top: 2%;
+    gap: 50px;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+}
+
+#depoimentos .group-card .card{
+    
+    background-color: #fff;
+    width: 369.32px;
+    height: 362.5px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: box-shadow 2s ease-in-out;
+}
+
+#depoimentos .group-card .card:hover{
+
+    box-shadow:     
+    0 0 15px 5px  rgb(243, 156, 18),
+    0 0 30px 10px  rgb(243, 156, 18),
+    0 10px 20px  rgb(243, 156, 18);
+
+
+}
+
+#depoimentos .group-card .card p{
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 5%;
+    width: 90%;
+
+}
+
+#depoimentos .group-card .card h1{
+
+    font-family: "Oswald";
+    font-size: 23px;
+    font-weight: bold;
+
+}
+
+#depoimentos .group-card .card .circle{
+
+  width: 126.05px;
+  height: 129.47px;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 25%;
+
+}
+
+#leia{
+
+    color: white;
+    background-color: #27AE60;
+    border: 3px #fff solid;
+    border-radius: 30px;
+    margin: auto;
+    width: 186.21px;
+    height: 54.77px;
+    margin-top: 15%;
+    font-size: 25px;
+    font-weight: 400;
+
+}
+
+.background-container {
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #3498DB, #fff); /* Gradiente azul do claro para o escuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.background-container h1 {
+    font-size: 2em;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.field-group {
+    margin-bottom: 1.5em;
+    position: relative;
+}
+
+.field-group label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+    color: #555;
+}
+
+.field-group-row {
+    display: flex;
+    gap: 1em;
+    margin-bottom: 1.5em;
+}
+
+.field-group-row .field-group {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1em;
+    background-color: #f9f9f9;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.highlight {
+    color: #007bff;
+    font-weight: 700;
+}
+
+.send-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: #555;
+}
+
+.send-button svg {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.send-button:hover svg {
+    transform: translateX(5px);
+}
+
+.terms-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2em;
+}
+
+.terms-group input[type="checkbox"] {
+    margin-right: 0.5em;
+}
+
+.terms-group label {
+    font-weight: normal;
+    color: #555;
+    flex-grow: 1;
+}
+
+.icons svg {
+    margin-left: 1em;
+    color: #888;
+}
+
+#social-midia{
+
+     text-align: center;
+    background-color: #fff;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#social-midia h1{
+
+    font-family: "Oswald";
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 1%
+
+
+}
+
+#social-midia p{
+    
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    margin-bottom: 1%;
+
+}
+
+#social-media .group-icon{
+
+    gap: 50px;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+}
+
+footer{
+
+   margin-top: 160%;
+}

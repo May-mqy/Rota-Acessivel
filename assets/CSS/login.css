@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+
+main{
+
+    margin: auto;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+#lado-login{
+
+    margin: auto;
+    margin-right: 20%;
+
+}
+
+#lado-login header {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+#lado-login #componentes{
+    width: 80%;
+    max-width: 512px;
+    margin: auto;
+
+}
+
+#lado-login #componentes h1{
+ 
+    font-size: 40px;
+    font-weight: 600px;
+    margin-bottom: 1.5rem;
+}
+
+#lado-login #componentes #text-inicio{
+
+    font-size: 16px;
+    font-weight: normal;
+    width: 80%;
+    margin-bottom: 20px;
+
+
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.form-group {
+    width: 512px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  width: 512px;
+  margin: 0 auto 20px auto;
+  gap: 20px;
+}
+
+.form-group2 {
+  width: calc(50% - 10px); /* Divide igualmente considerando o gap */
+  position: relative;
+}
+
+
+.text-input {
+  padding: .8rem;
+  width: 100%;
+  border: 2px solid #000;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1em;
+  background-color: white;
+  box-sizing: border-box; /* essencial */
+}
+
+.label {
+    position: absolute;
+    left: 12px;
+    top: 14px;
+    transition: all .2s;
+    padding: 0 4px;
+    color: #777;
+    background-color: white;
+    pointer-events: none;
+}
+
+/* Aqui está o truque */
+.text-input:focus + .label,
+.text-input:not(:placeholder-shown) + .label {
+    top: -10px;
+    left: 8px;
+    font-size: 0.8em;
+    color: #000;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  user-select: none;
+}
+
+#lado-login #confirmacao {
+    display: flex;
+    justify-content: space-between; /* Alinha os dois lados */
+    align-items: center;
+    margin-bottom: 20px;
+    width: 512px; /* Garante alinhamento com os inputs */
+}
+
+#lado-login #confirmacao #left-text {
+    text-decoration: none;
+    color: #000;
+}
+
+#lado-login #caixa{
+
+    width: 15px;
+    height: 15px;
+
+}
+
+#lado-login #login-btn{
+
+    margin-top: 5%;
+    margin-bottom: 2%;
+    background-color: #515DEF;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    width: 512px;
+    height: 48px;
+
+}
+
+#lado-login #login-esqueceu p{
+
+    width: 512px;
+    margin: auto;
+    margin-left: 30%;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 30px;
+
+}
+
+#lado-login #login-esqueceu a{
+
+    text-decoration: none;
+
+}
+
+#lado-login #login-esqueceu span{
+    color: #FF8682;
+}
+
+
+#login-btn a{
+
+  text-decoration: none;
+  color: white;
+
+}
+
+.linha-ou {
+    width: 512px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.linha {
+  flex: 1;
+  height: 1px;
+  background-color: #ccc;
+  margin: 0 10px;
+}
+
+.texto {
+  color: #999;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.social-login {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* espaçamento entre os botões */
+  width: 512px;
+  margin-top: 20px;
+}
+
+.social-btn {
+  flex: 0 0 33%;
+  
+  height: 60px;
+  border: 1.5px solid #a4b0f5; /* azul claro */
+  border-radius: 10px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  background-color: #eef0ff;
+  transform: scale(1.05);
+}
+
+
+
+
+#lado-imagem {
+  width: 80%;
+  height: auto; /* ou uma altura mais realista, como 300px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes flutuar {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px); /* sobe */
+  }
+  100% {
+    transform: translateY(0); /* volta */
+  }
+}
+
+#lado-imagem img{
+
+    animation: flutuar 3s ease-in-out infinite;
+    height: 78%;
+
+}
+
+@media screen {
+  
+}
+
+
+@media screen and (max-width: 1100px) {
+
+  #lado-imagem{
+
+    display: none;
+
+  }
+
+  #lado-login{
+
+    margin: auto;
+
+}
+
+  
+}

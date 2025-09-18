@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/comunidade.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../CSS/home.css" type="text/css">
+    <link rel="stylesheet" href="../CSS/leitordosite.css" type="text/css">
+    <title>Comunidade</title>
+</head>
+<body>
+
+    <main>
+
+        <header id="nav_bar">
+    <a href="../../index.html" id="Logo-text"><img src="../Img/Logo.png" alt=""  ><img src="../Img/nomeLogo.png" id="logonome" alt=""></a>
+
+    <button class="hamburger" aria-label="menu hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <nav id="nav_list"> 
+  <ul>
+    <li onmouseover="exibe_regioes()" onmouseout="some_regioes()">
+      <a class="nav_links" href="../HTML/Regioes.html">Regiões</a>
+      <ul id="sub_menu">
+        <li><a href="../HTML/regiões/Norte.html" class="nav_links">Norte</a></li>
+        <li><a href="../HTML/regiões/Nordeste.html" class="nav_links">Nordeste</a></li>
+        <li><a href="../HTML/regiões/Centro.html" class="nav_links">Centro-Oeste</a></li>
+        <li><a href="../HTML/regiões/Sudeste.html" class="nav_links">Sudeste</a></li>
+        <li><a href="../HTML/regiões/Sul.html" class="nav_links">Sul</a></li>
+      </ul>
+    </li>
+
+    <li><a class="nav_links" href="../HTML/Comunidade.html">Comunidade</a></li>
+    <li><a class="nav_links" href="../HTML/Sobre.html">Sobre</a></li>
+
+    <li><a class="nav_botao" href="../HTML/ia.html"> 
+      <img src="../Img/logo_gemini.png" alt="">Planeje sua Viagem</a>
+    </li>
+    <li><a class="nav_botao" href=""> Login/Cadastro </a></li>
+  </ul>
+</nav>
+
+  </header>
+
+        <section id="inicio">
+
+            <h1>BEM VINDOS À COMUNIDADE</h1>
+            <p>Acreditamos que viajar é para todos! Aqui nossa comunidade compartilha histórias, dicas e inspirações!</p>
+          
+            <div class="group-button">
+                    <button id="faca" class="config-button">Faça Parte</button>
+                    <button id="comece" class="config-button">Comece a Explorar</button>
+            </div>
+
+            <div class="group-button">
+                    <button class="config-button-dif" id="destino">Destinos</button>
+                    <button class="config-button-dif" id="dica">Dicas de Viagem</button>
+                    <button class="config-button-dif" id="Avaliacoes">Avaliações</button>  
+            </div>    
+
+        </section>
+
+        <section id="informacoes">
+
+            <div class="group-img-linha">
+                <div class="group-img-coluna">
+                    <img src="img/img-informacoes-1.png" alt="" class="geral-img">
+                    <h1>Faça sua reserva</h1>
+                    <p>Escolha entre diversas hospedagens de nossos parceiros e reserve com segurança em poucos cliques.</p>
+                </div>
+                <div class="group-img-coluna">
+                    <img src="img/img-informacoes-2.png" alt="" class="geral-img">
+                    <h1>Curta sua viagem</h1>
+                    <p>Hospede-se na propriedade escolhida, aproveite o conforto e os serviços oferecidos por nossos parceiros.</p>
+                </div>
+                <div class="group-img-coluna">
+                    <img src="img/img-informacoes-3.png" alt="" class="geral-img">
+                    <h1>Compartilhe sua avaliação</h1>
+                    <p>Após a estadia, deixe sua opinião sobre sua experiência para ajudar outros viajantes e valorizar nossos parceiros de hospedagem.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="depoimentos">
+
+            <div class="group-card">
+                <div class="card">
+                    <p>"Como deficiente visual, já tive muitas dificuldades em viagens. Aqui encontrei relatos de outros viajantes e dicas de serviços que realmente funcionam. Me senti representada."</p>
+                    <h1> Juliana Ferreira Curitiba (PR)</h1>
+                <div class="circle"><img src="img/pessoa-1.png" alt=""></div>
+                </div>
+
+                <div class="card">
+                    <p>"Sou cadeirante e sempre tive receio de viajar sozinha. Com as dicas do Rota Acessível, consegui escolher um hotel preparado para me receber e visitar pontos turísticos sem preocupação. Foi libertador!"</p>
+                    <h1>Patrícia Oliveira Porto Alegre (RS)</h1>
+                <div class="circle"><img src="img/pessoa-2.png" alt=""></div>
+                </div>
+
+                <div class="card">
+                    <p>"Sempre achei que algumas cidades não teriam estrutura para receber pessoas com mobilidade reduzida. Com o Rota Acessível, encontrei passeios adaptados em Salvador que me surpreenderam muito."</p>
+                    <h1>André Luiz Brasília (DF)</h1>
+                <div class="circle"><img src="img/pessoa-3.png" alt=""></div>
+                </div>  
+            </div>
+
+            <button id="leia">Leia mais</button>
+
+        </section>
+
+      <div class="background-container">
+        <div class="form-container">
+            <h1>COMPARTILHE SUA HISTÓRIA</h1>
+            <form action="#" method="post">
+                <div class="field-group">
+                    <label for="name">Nome*</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="field-group-row">
+                    <div class="field-group email-field">
+                        <label for="email">E-mail*</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="field-group city-field">
+                        <label for="city">Cidade</label>
+                        <input type="text" id="city" name="city">
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <label for="experience">Conte sobre sua Experiência com o <span class="highlight">Rota Acessível</span></label>
+                    <textarea id="experience" name="experience" rows="10" required></textarea>
+                    <button type="submit" class="send-button">
+                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    </button>
+                </div>
+
+                <div class="terms-group">
+                    <input type="checkbox">
+                    <label for="terms">Concordo com os termos</label>
+                    <div class="icons">
+                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M15 15l-4 4-2-2"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path></svg>
+                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path><path d="M12 16L12 8"></path><path d="M15 11L12 8l-3 3"></path></svg>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <section id="social-midia">
+
+        <h1>SIGA NOSSAS REDES</h1>
+        <p>#RotaAcessível #TurismoParaTodos</p>
+        <div id="group-icon">
+            <i class="fa-brands fa-tiktok fa-2x"></i>
+            <i class="fa-brands fa-instagram fa-2x"></i>
+            <i class="fa-brands fa-x-twitter fa-2x"></i>
+            <i class="fa-brands fa-facebook fa-2x"></i>
+            <i class="fa-brands fa-youtube fa-2x"></i> 
+        </div>
+
+
+    </section>
+
+    </main>
+
+    <footer class="footer-exclusivo">
+    <div class="footer-exclusivo-container">
+      <div class="footer-exclusivo-coluna">
+        <img class="footer-exclusivo-logo" src="../Img/Logo.png">
+        <p class="footer-exclusivo-subtitulo">Siga nossas redes</p>
+        <div class="footer-exclusivo-redes">
+          <a href="#"><i class="bx bxl-tiktok"></i></a>
+          <a href="#"><i class="bx bxl-instagram"></i></a>
+          <a href="#"><i class="bx bxl-twitter"></i></a>
+          <a href="#"><i class="bx bxl-facebook"></i></a>
+          <a href="#"><i class="bx bxl-youtube"></i></a>
+        </div>
+        <div class="footer-exclusivo-contato">
+          <p>Entre em Contato</p>
+          <p>(11) 3818-1763</p>
+          <p>contato@centra.brasil.com</p>
+        </div>
+      </div>
+
+      <div class="footer-exclusivo-coluna">
+        <h4>Mapa do Site</h4>
+        <ul>
+          <li><a href="../../index.html">Página Inicial</a></li>
+          <li><a href="Regioes.html">Regiões</a></li>
+          <li><a href="Comunidade.html">Comunidade</a></li>
+          <li><a href="Sobre.html">Sobre</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-exclusivo-coluna">
+        <h4>Ferramenta</h4>
+        <ul>
+          <li><a href="ia.html">Planejador de Viagem</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-exclusivo-coluna">
+        <h4>Newsletter</h4>
+        <p>Quer receber conteúdos de viagem diariamente?<br> Se inscreva no nosso Newsletter!</p>
+        <form class="footer-exclusivo-form">
+          <input type="email" placeholder="E-mail" required>
+          <button type="submit">INSCREVER</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-exclusivo-bottom">
+      <p><a href="#">Política de Privacidade</a></p>
+      <p>&copy; 2025 Central de Viagens Brasil. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+
+     <!-- inicio da api de libras-->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+      <!--fim da API de libras-->
+
+      <!-- Botão de acessibilidade -->
+    <div class="leitor-tela-container">
+      <button id="abrirLeitor" class="leitor-toggle">🔊 Leitor de Tela</button>
+      <div class="leitor-controles">
+        <button id="lerPagina" class="leitor-btn">▶️ Ler página</button>
+        <button id="pausarAudio" class="leitor-btn">⏸ Pausar</button>
+        <button id="retomarAudio" class="leitor-btn">▶️ Retomar</button>
+      </div>
+    </div>
+    <!--Web speech API do navegador-->
+    <script src="assets/js/leitordosite.js"></script>
+    <!-- Fim do botão de acessibilidade -->
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/carrosel.js"></script>
+    <script src="assets/js/carrosel_descubra.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../CSS/login.css" type="text/css">
+    <link rel="stylesheet" href="../CSS/esqueceu-senha.css" type="text/css">
+    <link rel="stylesheet" href="../CSS/leitordosite.css">
+    <script src="JS/function.js" type="text/javascript"></script>
+    <title>Login</title>
+</head>
+<body>
+
+    <main>
+
+        
+
+        <section id="lado-login">
+
+        <header><a href="../../index.html"><img src="../Img/Logo.png" alt="logo-temp" style="height: 120px;"></a></header>            
+
+            <div id="componentes">
+
+                <a href="login.html"><p><i class="fa-solid fa-arrow-left"></i>Volte para o Login</p></a>
+
+                <h1>Esqueceu sua senha?</h1>
+
+                <p id="text-inicio">Não se preocupe, isso acontece com todos nós. Insira seu e-mail abaixo para recuperar sua senha.</p>
+                <form id="login-form" action="#" method="POST">
+                        <div class="form-group">
+                          <input type="text" id="email" autocomplete="off" class="text-input" placeholder="E-mail" required>
+                          <label for="email" class="label">E-mail</label>
+                        </div>
+                    
+                        <script>
+
+                            document.getElementById('login-form').addEventListener('submit', function(e) {
+                            e.preventDefault();
+                                                      
+                            const email = document.getElementById('email');
+                                                      
+                            if (!email.value.trim()) {
+                              alert('Por favor, insira um e-mail válido.');
+                              email.focus();
+                              return;
+                            }
+                        
+                            // Se tudo OK, redireciona:
+                            window.location.href = 'verificar.html';
+                            });
+                            
+
+                        </script>
+
+                    
+                        <button type="submit" id="login-btn">Enviar</button>
+                    </form>
+
+                <div class="linha-ou">
+                  <div class="linha"></div>
+                  <span class="texto">Ou entre com</span>
+                  <div class="linha"></div>
+                </div>
+
+                
+                <div class="social-login">
+                <button id="facebook" class="social-btn" style="color: #1877f2;"><i class="fa-brands fa-facebook fa-2x"></i></button> 
+                <button id="google" class="social-btn" style="color: #ea4335;"><i class="fa-brands fa-google fa-2x"></i></button> 
+                <button id="apple" class="social-btn" style="color: #000;"><i class="fa-brands fa-apple fa-2x"></i></button>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="lado-imagem">
+
+            <img src="../img/senha-sem-fundo.png" alt="imagem">
+
+        </section>
+
+    </main>
+    
+    <!-- inicio da api de libras-->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+      <!--fim da API de libras-->
+
+      <!-- Botão de acessibilidade -->
+    <div class="leitor-tela-container">
+      <button id="abrirLeitor" class="leitor-toggle">🔊 Leitor de Tela</button>
+      <div class="leitor-controles">
+        <button id="lerPagina" class="leitor-btn">▶️ Ler página</button>
+        <button id="pausarAudio" class="leitor-btn">⏸ Pausar</button>
+        <button id="retomarAudio" class="leitor-btn">▶️ Retomar</button>
+      </div>
+    </div>
+    <!--Web speech API do navegador-->
+    <script src="assets/js/leitordosite.js"></script>
+    <!-- Fim do botão de acessibilidade -->
+</body>
+</html>
