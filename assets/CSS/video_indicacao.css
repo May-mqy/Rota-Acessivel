@@ -12,18 +12,21 @@
     color: var(--amarelo);
     font-size: 45px;
     font-weight: bold;
+    font-family: Oswald;
 }
 
 .azul{
     color: var(--azul-claro);
     font-size: 45px;
     font-weight: bold;
+    font-family: Oswald;
 }
 
 .verde{
     color: var(--verde-claro);
     font-size: 45px;
     font-weight: bold;
+    font-family: Oswald;
 }
 
 @media screen and (max-width: 450px){

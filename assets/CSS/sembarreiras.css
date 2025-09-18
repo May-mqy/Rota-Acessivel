@@ -19,15 +19,17 @@
     width: 400px;
     margin: 40px 0 0 50px;
     color: var(--branco-cinza);
-    font-size: 26px;
+    font-size: 30px;
+    font-family: Oswald;
     font-weight: bold;
 }
 
 .conteudo__sembarreira--txt{
     width: 400px;
     margin-left: 50px;
+    font-family: Alumni;
+    font-size: 24px;
     color: var(--branco-cinza);
-    font-size: 20px;
 }
 
 .conteudo__sembarreira--negrito{
@@ -49,6 +51,8 @@
     transform: translateX(-50%);
     background-color: var(--branco-cinza);
     text-align: center;
+    font-size: 22px;
+    font-family: Alumni;
 }
 
 

@@ -19,12 +19,15 @@
 
 .conteudo__populares--titulo{
     margin: 0 0 10px 40px;
-    font-size: 22px;
+    font-size: 24px;
     color: var(--verde);
+    font-family: Oswald;
 }
 
 .conteudo__populares--txt{
     margin-bottom: 20px;
+    font-family: Alumni;
+    font-size: 20px;
 }
 
 .conteudo__card--titulo{

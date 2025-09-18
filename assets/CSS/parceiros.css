@@ -16,15 +16,17 @@ padding: 30px 0;
     text-transform: uppercase;
     font-weight: bold;
     width: 400px;
-    font-size: 30px;
+    font-size: 33px;
     color: var(--azul-escuro);
+    font-family: Oswald;
 }
 
 .conteudo__parceiros--txt{
     width: 220px;
-    font-size: 24px;
+    font-size: 26px;
     text-align: center;
     margin-bottom: 20px;
+    font-family: Alumni;
 }
 
 .conteudo__parceiros--item{
@@ -55,6 +57,8 @@ padding: 30px 0;
     color: var(--branco);
     border-radius: 20px;
     border: 1px solid white;
+    font-family: Alumni;
+    font-size: 22px;
     cursor: pointer;
 }
 
