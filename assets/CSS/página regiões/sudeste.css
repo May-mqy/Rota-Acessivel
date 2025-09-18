@@ -28,7 +28,11 @@ body {
   font-family: var(--fonte-OpenSans);
   font-style:normal;
   color: var(--cor-branco);
+<<<<<<< HEAD
+  font-size: 28px;
+=======
   font-size: 30px;
+>>>>>>> bf46181895d970cfbc38997bf0d8c89bfbb4f051
 
 }
 
@@ -39,7 +43,11 @@ body {
 .inicio {
   position: relative;
   height: 100vh;
+<<<<<<< HEAD
+  background: url("../../HTML/regiões/img/Sudeste/Rio\ Fundo.jpg") no-repeat center center/cover;
+=======
   background: url("../../HTML/regiões/img/Centro-Oeste/fundo\ inicial.png") no-repeat center center/cover;
+>>>>>>> bf46181895d970cfbc38997bf0d8c89bfbb4f051
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
@@ -207,6 +215,61 @@ body {
   }
 }
 
+<<<<<<< HEAD
+.foz{
+  color: var(--cor-principal-escura);
+  background-color: #FFF;
+  box-shadow: 0 4px 8px #061a313a;
+  width: 79%;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: 25px;
+  margin: auto;
+  margin-top: 50px;
+  padding: 30px;
+  font-size: 20px;
+
+  & h4{
+    font-size: 25px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  & p{
+    font-size:20px ;
+    text-align: justify;
+    margin-top: 30px;
+  }
+
+  img{
+    width: 400px;
+    height: 60px;
+    margin: 40px auto 20px auto;
+    display: flex;
+    justify-items: center;
+    
+  }
+}
+
+& video{
+    width: 50%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    margin: auto;
+    display: flex;
+    justify-items: center;
+    
+  }
+
+#textfoz{
+  color: #061a31c4;
+  text-align: center;
+}
+
+  /*Caixa com notícias*/
+=======
+>>>>>>> bf46181895d970cfbc38997bf0d8c89bfbb4f051
 .containers-news{
   position: relative;
   width: 85%;
@@ -417,7 +480,11 @@ footer{
   
   .containers{
     width: 80%;
+<<<<<<< HEAD
+    height: 440px;
+=======
     height: 500px;
+>>>>>>> bf46181895d970cfbc38997bf0d8c89bfbb4f051
     margin:40px;
     align-items: center;
     gap: 30px;
@@ -460,6 +527,36 @@ footer{
     }
   }
 
+<<<<<<< HEAD
+  .foz{
+  color: var(--cor-principal-escura);
+  background-color: #FFF;
+  box-shadow: 0 4px 8px #061a313a;
+  width: 80%;
+
+  & p{
+    font-size:16px ;
+  }
+
+  img{
+    width: 300px;
+    height: 40px;
+  }
+}
+
+& video{
+    width: 80%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    margin: auto;
+    display: flex;
+    justify-items: center;
+    
+  }
+
+=======
+>>>>>>> bf46181895d970cfbc38997bf0d8c89bfbb4f051
   .containers-news{
     margin-top: -50px;
     width: 90%;
@@ -483,7 +580,12 @@ body{
   }
 
   .bloco1 h1 {
+<<<<<<< HEAD
+  font-size: 50px;
+  margin-left: 20px;
+=======
   font-size: 62px;
+>>>>>>> bf46181895d970cfbc38997bf0d8c89bfbb4f051
 }
 
 .caixa-nome-local {
@@ -493,7 +595,11 @@ body{
   
   .containers{
     width: 80%;
+<<<<<<< HEAD
+    height: 445px;
+=======
     height: 500px;
+>>>>>>> bf46181895d970cfbc38997bf0d8c89bfbb4f051
     margin:20px auto auto auto;
 
     align-items: center;
@@ -537,6 +643,37 @@ body{
     }
   }
 
+<<<<<<< HEAD
+  foz{
+  color: var(--cor-principal-escura);
+  background-color: #FFF;
+  box-shadow: 0 4px 8px #061a313a;
+  width: 80%;
+
+  
+  img{
+    width: 200px;
+    height: 30px;
+  }
+}
+#textfoz{
+  font-size:15px ;
+
+}
+
+video{
+    width: 400px;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    margin: auto;
+    display: flex;
+    justify-items: center;
+    
+  }
+
+=======
+>>>>>>> bf46181895d970cfbc38997bf0d8c89bfbb4f051
   .containers-news{
     
     width: 90%;

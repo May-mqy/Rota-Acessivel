@@ -9,28 +9,50 @@
     <link rel="shortcut icon" href="../../Img/Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../../CSS/leitordosite.css">
     <script src="../../JS/regiões.js" type="text/javascript"></script>
+    <script src="../../JS/regiõesnav.js" type="text/javascript"></script>
 </head>
 <body>
 
     <!--Espaço Cabeçalho-->
-    <header class="navbar">
-    <div class="logo">LOGO</div>
-    <nav>
-      <ul>
-        <li><a href="#">Regiões</a></li>
-        <li><a href="#">Parceiros</a></li>
-        <li><a href="#">Comunidade</a></li>
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Português BR ></a></li>
+     <header id="nav_bar">
+    <a href="../../home.html" id="Logo-text"><img src="../../Img/Logo.png" alt=""  > <img src="../../Img/nomeLogo.png" id="logonome" alt=""></a>
+
+    <button class="hamburger" aria-label="menu hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <nav id="nav_list"> 
+  <ul>
+    <li onmouseover="exibe_regioes()" onmouseout="some_regioes()">
+      <a class="nav_links" href="../Regioes.html">Regiões</a>
+      <ul id="sub_menu">
+        <li><a href="Norte.html" class="nav_links">Norte</a></li>
+        <li><a href="Nordeste.html" class="nav_links">Nordeste</a></li>
+        <li><a href="Centro.html" class="nav_links">Centro-Oeste</a></li>
+        <li><a href="Sudeste.html" class="nav_links">Sudeste</a></li>
+        <li><a href="Sul.html" class="nav_links">Sul</a></li>
       </ul>
-    </nav>
-    <button class="btn-viagem">✈ Planeje sua Viagem</button>
+    </li>
+
+    <li><a class="nav_links" href="Parceiros.html">Parceiros</a></li>
+    <li><a class="nav_links" href="Comunidade.html">Comunidade</a></li>
+    <li><a class="nav_links" href="Sobre.html">Sobre</a></li>
+
+    <li><a class="nav_botao" href="ia.html"> 
+      <img src="../../Img/logo_gemini.png" alt="">Planeje sua Viagem</a>
+    </li>
+    <li><a class="nav_botao" href=""> Login/Cadastro </a></li>
+  </ul>
+</nav>
+
   </header>
 
     <!--Seção Inical-->
     <section class ="inicio">
         <div class="bloco1">
-            <h1 class>REGIÃO CENTRO-OESTE</h1>
+            <h1 class>REGIÃO <br> CENTRO-OESTE</h1>
             <div class="caixa-nome-local">Brasília (DF) </div>
         </div>
     </section>
@@ -49,7 +71,7 @@
       <section class="containers">
         <!--caixa Brasília-->
         <div class="card" onclick="toggleCidade('Regiao1')">
-          <img src="../../HTML/regiões/img/Centro-Oeste/Brasília.png" alt="Paisagem Cidade Manaus no Amazonas">
+          <img src="../../HTML/regiões/img/Centro-Oeste/Brasília.png" alt="Paisagem Cidade Brasília no Distrito Federal">
 
           <h4>Brasília (DF)</h4>
           <br>
@@ -81,16 +103,17 @@
 
       <section class="containers-fotos" id="fotos-manaus">
         <div>
-          <img src="img/Nordeste/Elevador Lacerda.png" alt="O Elevador Lacerda, ícone de Salvador, aparece em primeiro plano com sua estrutura bege ligando a Cidade Alta à Cidade Baixa. Ao fundo, o mar azul da Baía de Todos-os-Santos com vários barcos, o Mercado Modelo e o Forte de São Marcelo. Possui um icone sinalizando que é acessível para deficientes visuais, pois possui Sistema Braille">
-          <p>Elevador Lacerda</p>
+          <img src="img/Centro-Oeste/Memorial JK.png" alt="Memorial JK, em Brasília, com estátua de Juscelino Kubitschek em pedestal alto em forma de arco. Na frente, escultura de casal sentado em homenagem ao ex-presidente e sua esposa.">
+          <p>Memorial JK</p>
         </div>
         <div>
-          <img src="img/Nordeste/Mercado Modelo Salvador.png" alt="Vista aérea do Mercado Modelo, prédio histórico amarelo com telhado de duas águas, em Salvador. Ao fundo, barcos e iates coloridos ancorados no mar azul-turquesa da Baía de Todos-os-Santos. A cena é cercada por prédios altos e árvores. Possui um icone sinalizando que é acessível para deficientes físico">
-          <p>Mercado Modelo</p>
+          <img src="img/Centro-Oeste/Planetário.png" alt="Interior do Planetário de Brasília, túnel iluminado com imagens de galáxias e estrelas no teto, onde visitantes observam e apontam para as projeções.">
+          <p>Planetário de Brasília</p>
         </div>
         <div>
-          <img src="img/Nordeste/Praia Itapuã.png" alt="Vista da Praia de Itapuã, em Salvador, com céu azul, nuvens brancas e mar verde-azulado com pequenas ondas. À esquerda, coqueiros inclinados pelo vento e um calçadão de pedras brancas. Algumas pessoas aproveitam a praia sob guarda-sóis coloridos e cadeiras na areia.">
-          <p>Praia de Itapuã</p>
+          <img src="img/Centro-Oeste/Praça dos 3 Poderes.png" alt="Praça dos Três Poderes, em Brasília, com a escultura “Os Guerreiros” (ou Dois Candangos), de Bruno Giorgi, em bronze, e ao fundo o Palácio do Planalto, sede do Poder Executivo.">
+          <p>Praça dos Três Poderes</p>
+
         </div>
     
       </section>
@@ -104,16 +127,16 @@
 
       <section class="containers-fotos" id="fotos-bélem">
         <div>
-          <img src="img/Nordeste/Marco zero.png" alt="">
-          <p>Marco Zero</p>
+          <img src="img/Centro-Oeste/Museu de Arte Contemporânea (MARCO).png" alt="Fachada do Museu de Arte Contemporânea (MARCO), prédio moderno de cor clara, com uma árvore de ipê-amarelo florida em destaque na entrada." >
+          <p id="museu">Museu Arte Contemporânea</p>
         </div>
         <div>
-          <img src="img/Nordeste/Recife antigo.png" alt="">
-          <p>Recife Antigo</p>
+          <img src="img/Centro-Oeste/Museu Lídia Baís.png" alt="Prédio histórico Morada dos Baís, em Campo Grande, de dois andares na cor amarela com janelas e portas vermelhas em arco, estilo colonial restaurado.">
+          <p>Museu Lídia Baís</p>
         </div>
         <div>
-          <img src="img/Nordeste/Praia Boa Viagem.png" alt="">
-          <p>Praia Boa Viagem</p>
+          <img src="img/Centro-Oeste/Praça Ary Coelho.png" alt="Fonte central da Praça Ary Coelho, em Campo Grande, com jatos de água e revestimento em azulejo azul, cercada por árvores e área de convivência.">
+          <p>Praça Ary Coelho</p>
         </div>
         <div>
       
@@ -129,21 +152,18 @@
 
       <section class="containers-fotos" id="fotos-bélem">
         <div>
-          <img src="img/Nordeste/Teatro Jose Alencar.png" alt="">
-          <p>Teatro José de Alencar</p>
+          <img src="img/Centro-Oeste/Bosque dos Buritis.png" alt="Entrada do Bosque dos Buritis, em Goiânia, com placa de tijolos aparentes e o nome do parque ao lado de um lago com fonte d’água e árvores ao fundo.">
+          <p>Bosque dos Buritis</p>
         </div>
         <div>
-          <img src="img/Nordeste/Centro Dragão.png" alt="">
-          <p>Centro Dragão do Mar</p>
+          <img src="img/Centro-Oeste/Lago das Rosas.png" alt=" A segunda imagem é uma foto aérea vibrante de um parque urbano com um lago no formato de um S curvo. As margens do lago são cercadas por uma densa vegetação e árvores altas e verdes. Do outro lado do lago, em contraste com a natureza do parque, está o horizonte de uma cidade com muitos edifícios e arranha-céus, que se estendem até o fundo da imagem. O céu é azul e tem algumas nuvens brancas, o que ilumina a cena. A imagem representa o equilíbrio entre a vida urbana e a natureza.">
+          <p>Lago das Rosas</p>
         </div>
         <div>
-          <img src="img/Nordeste/Praia do Futuro.png" alt="">
-          <p>Praia do Futuro</p>
+          <img src="img/Centro-Oeste/Museu do Cerrado.png" alt=" foto panorâmica de um edifício de um andar com telhado de telha e janelas grandes. Em frente ao edifício, há uma área gramada com um caminho de cimento que leva a ele. Ao longo do caminho e na grama, estão várias esculturas coloridas de mulheres carregando potes na cabeça. Elas parecem representar a cultura e a história afro-brasileira. No fundo, o céu está com tons alaranjados e cinzentos, indicando o nascer ou o pôr do sol. A imagem sugere um espaço cultural, possivelmente um museu ou um memorial.">
+          <p>Museu do Cerrado</p>
         </div>
-        <div>
-          <img src="img/Nordeste/Praia Acessivel.png" alt="">
-          <p>Praia Acessível</p>
-        </div>
+       
         <div>
         </div>
       </section>
@@ -153,44 +173,44 @@
     <!--noticias-->
     <section class="containers-news">
       <div class="news">
-        <h4>Nordeste Acessível: Praias e Cidades Inclusivas Reveladas!</h4>
+        <h4>Turismo acessível ganha força em Rio Verde e MS reforça compromisso com a inclusão</h4>
         <p>Descubra os destinos nordestinos que estão transformando o turismo com acessibilidade para todos.</p>
 
       <div class="elementos-caixa">
         <div class="elementos">
           <img src="./svg/pessoa.svg" alt="simbolo de uma pessoa">
-          <p>Jr Blitz</p>
+          <p>Débora Bordin</p>
         </div>
 
         <div class="elementos">
           <img src="./svg/calendario.svg" alt="Simbolo Calendário">
-          <p>04 de Abril, 2025</p>
+          <p>12 de Junho, 2025</p>
         </div>
 
       </div>
 
-      <a href="https://www.vivala.com.br/turismo-no-norte-do-brasil" class="but-news"  target="_blank">Ler Artigo Completo  &rarr;</a>
+      <a href="https://www.turismo.ms.gov.br/turismo-acessivel-ganha-forca-em-rio-verde-e-ms-reforca-compromisso-com-a-inclusao/#:~:text=Turismo%20acess%C3%ADvel%20ganha%20for%C3%A7a%20em%20Rio%20Verde,inclus%C3%A3o%20*%2012%20jun%202025.%20*%20Categorias:Acessibilidade." class="but-news"  target="_blank">Ler Artigo Completo  &rarr;</a>
       </div>
 
 
       <div class="news">
-        <h4>Roteiro de turismo no nordeste para pessoas PCD!</h4>
-        <p>Com paisagens paradisíacas, cultura diversificada e culinária marcante, o local também vem ganhando destaque no cenário de viagem acessível no Nordeste.</p>
+        <h4>Programa Brasília Turismo Acessível</h4>
+        <p>A Secretaria de Turismo em conjunto com a Unidade Nacional de Acessibilidade preparou o primeiro roteiro de turismo acessível de Brasília. </p>
 
       <div class="elementos-caixa">
         <div class="elementos">
           <img src="./svg/pessoa.svg" alt="simbolo de uma pessoa">
-          <p> Amanda Oliveirai</p>
+          <p> SETUR</p>
         </div>
 
         <div class="elementos">
           <img src="./svg/calendario.svg" alt="Simbolo Calendário">
-          <p> 05 de julho, 2025</p>
+          <p> 11 de Setembro, 2025</p>
         </div>
 
       </div>
 
-      <a href="https://terrabrasilnoticias.com/2025/07/roteiro-de-turismo-no-nordeste-para-pessoas-pcd/" class="but-news"  target="_blank">Ler Artigo Completo  &rarr;</a>
+      <a href="https://www.turismo.df.gov.br/programa-brasilia-turismo-acessivel#:~:text=Guia%20Arquitet%C3%B4nico%20de%20Turismo%20Acess%C3%ADvel,cidade%20agregadora%2C%20inclusiva%20e%20democr%C3%A1tica." class="but-news"  target="_blank">Ler Artigo Completo  &rarr;</a>
       </div>
 
     </section>

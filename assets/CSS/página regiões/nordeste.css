@@ -28,7 +28,11 @@ body {
   font-family: var(--fonte-OpenSans);
   font-style:normal;
   color: var(--cor-branco);
+<<<<<<< HEAD
+  font-size: 28px;
+=======
   font-size: 30px;
+>>>>>>> bf46181895d970cfbc38997bf0d8c89bfbb4f051
 
 }
 
@@ -483,7 +487,12 @@ body{
   }
 
   .bloco1 h1 {
+<<<<<<< HEAD
+  margin-left: 20px;
+  font-size: 60px;
+=======
   font-size: 62px;
+>>>>>>> bf46181895d970cfbc38997bf0d8c89bfbb4f051
 }
 
 .caixa-nome-local {
