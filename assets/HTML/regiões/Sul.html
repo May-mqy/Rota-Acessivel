@@ -9,38 +9,50 @@
     <link rel="shortcut icon" href="../../Img/Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../../CSS/leitordosite.css">
     <script src="../../JS/regiões.js" type="text/javascript"></script>
+    <script src="../../JS/regiõesnav.js" type="text/javascript"></script>
 </head>
 <body>
     <!--Espaço Cabeçalho-->
-<<<<<<< HEAD
-     <header>
-      
-     </header>
-=======
-     <header class="navbar">
-    <div class="logo">LOGO</div>
-    <nav>
-      <ul>
-        <li><a href="#">Regiões</a></li>
-        <li><a href="#">Parceiros</a></li>
-        <li><a href="#">Comunidade</a></li>
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Português BR ></a></li>
+<!--Espaço Cabeçalho-->
+     <header id="nav_bar">
+    <a href="../../../index.html" id="Logo-text"><img src="../../Img/Logo.png" alt=""  > <img src="../../Img/nomeLogo.png" id="logonome" alt=""></a>
+
+    <button class="hamburger" aria-label="menu hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <nav id="nav_list"> 
+  <ul>
+    <li onmouseover="exibe_regioes()" onmouseout="some_regioes()">
+      <a class="nav_links" href="../Regioes.html">Regiões</a>
+      <ul id="sub_menu">
+        <li><a href="Norte.html" class="nav_links">Norte</a></li>
+        <li><a href="Nordeste.html" class="nav_links">Nordeste</a></li>
+        <li><a href="Centro.html" class="nav_links">Centro-Oeste</a></li>
+        <li><a href="Sudeste.html" class="nav_links">Sudeste</a></li>
+        <li><a href="Sul.html" class="nav_links">Sul</a></li>
       </ul>
-    </nav>
-    <button class="btn-viagem">✈ Planeje sua Viagem</button>
+    </li>
+
+    <li><a class="nav_links" href="../Parceiros.html">Parceiros</a></li>
+    <li><a class="nav_links" href="../Comunidade.html">Comunidade</a></li>
+    <li><a class="nav_links" href="../Sobre.html">Sobre</a></li>
+
+    <li><a class="nav_botao" href="../ia.html"> 
+      <img src="../../Img/logo_gemini.png" alt="">Planeje sua Viagem</a>
+    </li>
+    <li><a class="nav_botao" href=""> Login/Cadastro </a></li>
+  </ul>
+</nav>
   </header>
->>>>>>> bf46181895d970cfbc38997bf0d8c89bfbb4f051
 
     <!--Seção Inical-->
     <section class ="inicio">
         <div class="bloco1">
             <h1 class>REGIÃO SUL</h1>
-<<<<<<< HEAD
             <div class="caixa-nome-local">Curitiba (PR) </div>
-=======
-            <div class="caixa-nome-local">Cidade (XX) </div>
->>>>>>> bf46181895d970cfbc38997bf0d8c89bfbb4f051
         </div>
     </section>
 
@@ -55,7 +67,6 @@
       </p>
 
       <section class="containers">
-<<<<<<< HEAD
         <!--caixa Curitiba-->
         <div class="card" onclick="toggleCidade('Regiao1')">
           <img src="./img/Sul/Curitiba.png" alt="Paisagem Cidade Curitiba">
@@ -86,43 +97,11 @@
       <section class="containers-cidade" id="Regiao1">
         <section class="texto-cidade">
           <p> <span class="destaque1">Curitiba é referência em urbanismo e também vem avançando em acessibilidade. </span>  Pontos como o Jardim Botânico e o Museu Oscar Niemeyer oferecem rampas, pisos táteis e espaços adaptados. O transporte público da cidade também conta com veículos acessíveis,<span class="destaque1"> garantindo que visitantes com deficiência explorem sua cultura e áreas verdes com conforto.</span> </p>
-=======
-        <!--caixa Manaus-->
-        <div class="card" onclick="toggleCidade('Regiao1')">
-          <img src="../../HTML/regiões/img/Norte/manausfigma.png" alt="Paisagem Cidade Manaus no Amazonas">
-
-          <h4>Manaus (AM)</h4>
-          <br>
-          <p>Maior cidade da Amazónia, destacada por sua arquitetura histórica, rica gastronomia e a beleza natural da Floresta Amazônica. </p>
-        </div>
-        <!--caixa Bélem-->
-        <div class="card" id="card2" onclick="toggleCidade('Regiao2')">
-          <img src="../../HTML/regiões/img/Norte/Bélem.png" alt="Paisagem Cidade Bélem do Pará">
-
-          <h4>Bélem (PA) </h4>
-          <br>
-          <p>Um importante centro histórico, cultural e econômico, reconhecida por sua riqueza natural e culinária típica. </p>
-        </div>
-        <!--caixa Palmas-->
-        <div class="card" id="card3" onclick="toggleCidade('Regiao3')">
-          <img src="../../HTML/regiões/img/Norte/Palmas.png" alt="Paisagem Cidade Palmas em Tocantis">
-
-          <h4>Palmas (TO)</h4>
-          <br>
-          <p>Capital planejada e moderna, Palmas atrai visitantes com suas praias fluviais e áreas verdes  naturais no entorno da cidade.</p>
-        </div>
-      </section>
-
-      <!--Manaus-->
-      <section class="containers-cidade" id="Regiao1">
-        <section class="texto-cidade">
-          <p> <span class="destaque1">Manaus tem se tornado cada vez mais inclusiva no turismo</span>, investindo em acessibilidade em pontos culturais e naturais. O Teatro Amazonas, por exemplo, conta com rampas e estrutura adaptada, e espaços como o Bosque da Ciência e o Museu da Amazônia oferecem recursos para garantir uma experiência acolhedora a todos os visitantes. <span class="destaque1">A cidade avança para que pessoas com deficiência possam vivenciar de perto suas riquezas culturais e ambientais com autonomia e conforto.</span> </p>
->>>>>>> bf46181895d970cfbc38997bf0d8c89bfbb4f051
         </section>
 
       <section class="containers-fotos" id="fotos-manaus">
         <div>
-<<<<<<< HEAD
+
           <img src="img/Sul/Bosque Alemão.png" alt="foto noturna do Museu Oscar Niemeyer (MON), conhecido como Museu do Olho. O edifício principal é uma estrutura horizontal e branca, com uma rampa que leva a uma construção central em formato de cubo. Sobre essa base, está a icônica estrutura em forma de olho, que é feita de vidro escuro e metal, refletindo as luzes do ambiente. Abaixo do olho, há uma fonte dágua iluminada. O céu, ao fundo, está com tons de laranja, roxo e azul escuro, indicando o anoitecer.">
           <p>Bosque Alemão</p>
         </div>
@@ -137,7 +116,6 @@
         <div>
           <img src="img/Sul/Estação das Docas.png" alt=" A foto exibe duas estruturas de madeira marrom escura. À esquerda, uma capela de madeira com um telhado em formato de cúpula. À direita, uma construção mais baixa, que parece uma torre, também de madeira. Em frente às construções, na grama, estão duas grandes esculturas em forma de ovos decorados com padrões coloridos e folclóricos. ">
           <p>Parque Tingui</p>
-=======
           <img src="img/Norte/Teatro Amazonas.png" alt="Imagem áerea do Teatro Amazonas, acessível para deficientes auditivos">
           <p>Teatro Amazonas</p>
         </div>
@@ -152,27 +130,21 @@
         <div>
           <img src="img/Norte/Museu Amazonas.png" alt="Vista do Museu Amazonas, conhecido como Musa possui também um Jardim Botânico as visitas permitem uma estreita intimidade com a floresta. Possui um icone sinalizando que é acessível para deficientes físico ">
           <p>Museu Amazonas</p>
->>>>>>> bf46181895d970cfbc38997bf0d8c89bfbb4f051
+
         </div>
       </section>
       </section>
 
-<<<<<<< HEAD
+
       <!--Florianópolis-->
       <section class="containers-cidade" id="Regiao2">
         <section class="texto-cidade">
           <p> <span class="destaque1">Florianópolis, a “Ilha da Magia”, tem buscado tornar suas praias e pontos turísticos mais inclusivos. </span> A Praia de Canasvieiras e a Joaquina contam com projetos de cadeiras anfíbias e acessibilidade no acesso à areia. <span class="destaque1">Além disso, espaços culturais e históricos no centro da cidade oferecem recursos adaptados para todos os visitantes.</span> </p>
-=======
-      <!--Bélem-->
-      <section class="containers-cidade" id="Regiao2">
-        <section class="texto-cidade">
-          <p> <span class="destaque1">Belém, porta de entrada da Amazônia, vem ampliando a acessibilidade em pontos turísticos</span>, como o Mangal das Garças e a Estação das Docas, que contam com rampas, banheiros adaptados e áreas de fácil circulação. <span class="destaque1">A cidade busca oferecer experiências inclusivas, para que todos possam vivenciar sua rica história, gastronomia e tradições culturais.</span> </p>
->>>>>>> bf46181895d970cfbc38997bf0d8c89bfbb4f051
         </section>
 
       <section class="containers-fotos" id="fotos-bélem">
         <div>
-<<<<<<< HEAD
+
           <img src="img/Sul/Praia Acessível (Projeto do CBMSC).png" alt="A foto mostra um grupo de oito pessoas em uma praia ensolarada. A areia é clara e o mar está calmo ao fundo. No primeiro plano, há três cadeiras de rodas especiais com rodas grandes e largas, feitas para andar na areia. Em duas dessas cadeiras, estão sentadas uma criança e um adulto, sorrindo e acenando para a câmera. Ao lado deles, estão dois salva-vidas uniformizados com camisetas amarelas e bermudas vermelhas, também sorrindo e acenando. Outras pessoas, incluindo uma mulher e uma criança, estão de pé ao redor das cadeiras, participando da foto. A cena transmite uma sensação de alegria e acessibilidade na praia.">
           <p>Praia Acessível</p>
         </div>
@@ -180,7 +152,6 @@
           <img src="img/Sul/Museu da Udesc.png" alt="A foto mostra um grande e elegante edifício de dois andares com uma fachada de cor rosa-clara, com detalhes brancos. O prédio tem uma arquitetura clássica, com várias colunas brancas e altas que sustentam a parte superior. Há janelas grandes e simétricas, e a porta de entrada principal é acessada por uma escadaria. A rua em frente é de paralelepípedos. A luz do sol está baixa, iluminando suavemente a fachada e dando um brilho quente à cena.">
           <p>Museu da Udesc</p>
         </div>
-=======
           <img src="img/Norte/Mangal das Garças.png" alt="Vista aérea do parque Mangal das Garças, em Belém, com lagos cercados por árvores, passarela de madeira e visitantes caminhando em meio à natureza. Possui icone indicando que é acessivel para deficientes físicos.">
           <p>Mangal das Garças</p>
         </div>
@@ -200,22 +171,15 @@
       </section>
       </section>
 
-<<<<<<< HEAD
       <!--Gramado-->
       <section class="containers-cidade" id="Regiao3">
         <section class="texto-cidade">
           <p> <span class="destaque1">Gramado, conhecida pelo charme europeu e eventos como o Natal Luz, tem se estruturado para o turismo acessível. </span> Suas ruas centrais contam com rampas e calçadas adaptadas, enquanto atrações como o Mini Mundo e o Snowland oferecem recursos inclusivos. A cidade busca garantir que a magia da Serra Gaúcha seja vivida por todos. </p>
-=======
-      <!--Palmas-->
-      <section class="containers-cidade" id="Regiao3">
-        <section class="texto-cidade">
-          <p> <span class="destaque1">Palmas tem se estruturado para receber visitantes com mais inclusão, </span> oferecendo calçadões e praças acessíveis, como na Praia da Graciosa. O Parque Cesamar e outros espaços de lazer da capital contam com rampas e áreas adaptadas, <span class="destaque1"> garantindo que pessoas com deficiência possam aproveitar a natureza e a cultura local com conforto e segurança.</span> </p>
->>>>>>> bf46181895d970cfbc38997bf0d8c89bfbb4f051
         </section>
 
       <section class="containers-fotos" id="fotos-bélem">
         <div>
-<<<<<<< HEAD
+
           <img src="img/Sul/Lago Negro.png" alt="A imagem mostra a paisagem de um parque com um lago em um dia ensolarado. No primeiro plano, o canto direito é preenchido por um grande arbusto com flores azuis. A frente do arbusto está em foco. No lago, vários pedalinhos em forma de cisne branco navegam, com pessoas sentadas dentro deles. Há também um barco de madeira. As margens do lago são cercadas por árvores altas e verdes, e a grama do parque está bem cuidada. O céu, ao fundo, é azul e limpo.">
           <p>Lago Negro</p>
         </div>
@@ -226,18 +190,6 @@
         <div>
           <img src="img/Sul/Praça Major Nicoletti.png" alt="A foto mostra uma praça em um dia de sol. A praça tem grama verde e um caminho de cimento. Perto do centro da foto, há um poste de luz com três globos. Ao redor da praça, há árvores com folhas em tons de rosa e vermelho, que criam um belo contraste com o verde da grama. No lado direito, há uma placa de madeira com a inscrição Pç. Major Nicoletti. Algumas pessoas estão sentadas em bancos de madeira, aproveitando o dia ensolarado.">
           <p>Praça Major Nicoletti</p>
-=======
-          <img src="img/Norte/Praia Graciosa.png" alt="Paisagem da praia Graciosa com o sol se pondo ao fundo, o mar bem cristalido reflete o sol, algumas pessoas sentadas na área e lado delas um guarda sol grande feito de palha, na praia também possui alguns coqueiros.">
-          <p>Praia Graciosa</p>
-        </div>
-        <div>
-          <img src="img/Norte/Parque Cesamar.png" alt="A imagem do parque Cesamar possui muitas árvores, o chão com gramado bem verdinho, flores rosas e vermelhas espalhadas em arbustos e algumas lixeiras">
-          <p>Parque Cesamar</p>
-        </div>
-        <div>
-          <img src="img/Norte/Praça dos Girassóis.png" alt="Praça dos Girassóis: por mais que o nome se remeta a girassóis, essa praça não possui nenhum girassól, porém muitas árvores, gramado bem verde, bancos. A praça, eleita símbolo da capital possui no chão cinza, o símbolo de uma rosa dos ventos.">
-          <p>Praça dos Girassóis</p>
->>>>>>> bf46181895d970cfbc38997bf0d8c89bfbb4f051
         </div>
         <div>
         </div>
@@ -245,7 +197,6 @@
       </section>
     </section>
 
-<<<<<<< HEAD
     <section class="foz">
 
       <h4>Foz do Iguaçu</h4>
@@ -263,150 +214,89 @@
       <div class="news">
         <h4>Turismo Acessível e Esporte de Aventura</h4>
         <p>Evento tem como objetivo promover a inclusão social e o desenvolvimento do turismo acessível no estado. </p>
-=======
-    <!--noticias-->
-    <section class="containers-news">
-      <div class="news">
-        <h4>Turismo no norte do Brasil: os 17 melhores lugares para conhecer</h4>
-        <p>Para quem busca vivências únicas e profundas encontra no Norte um território onde o tempo corre diferente e cada encontro se transforma em aprendizado.</p>
->>>>>>> bf46181895d970cfbc38997bf0d8c89bfbb4f051
+
 
       <div class="elementos-caixa">
         <div class="elementos">
           <img src="./svg/pessoa.svg" alt="simbolo de uma pessoa">
-<<<<<<< HEAD
+
           <p>Secretaria do Turismo</p>
-=======
-          <p>Vivalá</p>
->>>>>>> bf46181895d970cfbc38997bf0d8c89bfbb4f051
         </div>
 
         <div class="elementos">
           <img src="./svg/calendario.svg" alt="Simbolo Calendário">
-<<<<<<< HEAD
+
           <p>18 de Maio, 2025</p>
-=======
-          <p>30 de Julho, 2025</p>
->>>>>>> bf46181895d970cfbc38997bf0d8c89bfbb4f051
+
         </div>
 
         <div class="elementos">
           <img src="./svg/relogio.svg" alt="Simbolo Calendário">
-<<<<<<< HEAD
           <p>10 min</p>
         </div>
       </div>
 
       <a href="https://setur.rs.gov.br/forum-nacional-de-turismo-acessivel-e-esporte-de-aventura-promove-inclusao-e-debate-politicas-publicas-em-tres-coroas" class="but-news"  target="_blank">Ler Artigo Completo  &rarr;</a>
-=======
-          <p>35 min</p>
-        </div>
-      </div>
-
-      <a href="https://www.vivala.com.br/turismo-no-norte-do-brasil" class="but-news"  target="_blank">Ler Artigo Completo  &rarr;</a>
->>>>>>> bf46181895d970cfbc38997bf0d8c89bfbb4f051
       </div>
 
 
       <div class="news">
-<<<<<<< HEAD
         <h4>CATARATAS DO IGUAÇU ACESSÍVEL</h4>
         <p>Declarada Patrimônio Mundial pela UNESCO e uma das 7 Maravilhas Naturais do Mundo, as Cataratas atraem milhões de visitantes do mundo todo.</p>
-=======
-        <h4>Turismo acessível em Manaus. Destino para ser explorado!</h4>
-        <p>Mostra como a cidade pode ser desfrutada por todos, destacando atrações adaptadas, dicas de mobilidade e inclusão para visitantes com deficiência.</p>
->>>>>>> bf46181895d970cfbc38997bf0d8c89bfbb4f051
 
       <div class="elementos-caixa">
         <div class="elementos">
           <img src="./svg/pessoa.svg" alt="simbolo de uma pessoa">
-<<<<<<< HEAD
           <p>Turismo Acessível</p>
         </div>
 
          <div class="elementos">
           <img src="./svg/relogio.svg" alt="Simbolo Calendário">
           <p>10 min</p>
-=======
-          <p>Ricardo Shimosakai</p>
-        </div>
-
-        <div class="elementos">
-          <img src="./svg/calendario.svg" alt="Simbolo Calendário">
-          <p>03 de Maio, 2020</p>
->>>>>>> bf46181895d970cfbc38997bf0d8c89bfbb4f051
         </div>
 
       </div>
 
-<<<<<<< HEAD
       <a href="https://turismoacessivel.com/producto-cataratas-iguacu-brasil-acessivel-cadeirante" class="but-news"  target="_blank">Ler Artigo Completo  &rarr;</a>
-=======
-      <a href="https://ricardoshimosakai.com.br/turismo-acessivel-em-manaus/" class="but-news"  target="_blank">Ler Artigo Completo  &rarr;</a>
->>>>>>> bf46181895d970cfbc38997bf0d8c89bfbb4f051
       </div>
 
     </section>
 
-    <footer class="footer-exclusivo">
-  <div class="footer-exclusivo-container">
-    
-    <!-- Coluna 1 - Logo e Redes -->
-    <div class="footer-exclusivo-coluna">
-       <h3 class="footer-exclusivo-logo"><img src="../../Img/Logo.png" alt=""></h3>
-      <p class="footer-exclusivo-subtitulo">Siga nossas redes</p>
-      <div class="footer-exclusivo-redes">
-        <a href="#"><i class="bx bxl-tiktok"></i></a>
-        <a href="#"><i class="bx bxl-instagram"></i></a>
-        <a href="#"><i class="bx bxl-twitter"></i></a>
-        <a href="#"><i class="bx bxl-facebook"></i></a>
-        <a href="#"><i class="bx bxl-youtube"></i></a>
-      </div>
-      <div class="footer-exclusivo-contato">
-        <p>Entre em Contato</p>
-        <p>(11) 3818-1763</p>
-        <p>contato@centra.brasil.com</p>
-      </div>
-    </div>
+    <!--Espaço Cabeçalho-->
+     <header id="nav_bar">
+    <a href="../../../index.html" id="Logo-text"><img src="../../Img/Logo.png" alt=""  > <img src="../../Img/nomeLogo.png" id="logonome" alt=""></a>
 
-    <!-- Coluna 2 - Mapa do site -->
-    <div class="footer-exclusivo-coluna">
-      <h4>Mapa do Site</h4>
-      <ul>
-        <li><a href="../../home.html">Página Inicial</a></li>
-        <li><a href="Regioes.html">Regiões</a></li>
-        <li><a href="Parceiros.html">Parceiros</a></li>
-        <li><a href="Comunidade.html">Comunidade</a></li>
-        <li><a href="Sobre.html">Sobre</a></li>
+    <button class="hamburger" aria-label="menu hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <nav id="nav_list"> 
+  <ul>
+    <li onmouseover="exibe_regioes()" onmouseout="some_regioes()">
+      <a class="nav_links" href="../Regioes.html">Regiões</a>
+      <ul id="sub_menu">
+        <li><a href="Norte.html" class="nav_links">Norte</a></li>
+        <li><a href="Nordeste.html" class="nav_links">Nordeste</a></li>
+        <li><a href="Centro.html" class="nav_links">Centro-Oeste</a></li>
+        <li><a href="Sudeste.html" class="nav_links">Sudeste</a></li>
+        <li><a href="Sul.html" class="nav_links">Sul</a></li>
       </ul>
-    </div>
+    </li>
 
-    <!-- Coluna 3 - Ferramenta -->
-    <div class="footer-exclusivo-coluna">
-      <h4>Ferramenta</h4>
-      <ul>
-        <li><a href="ia.html">Planejador de Viagem</a></li>
-      </ul>
-    </div>
+    <li><a class="nav_links" href="../Parceiros.html">Parceiros</a></li>
+    <li><a class="nav_links" href="../Comunidade.html">Comunidade</a></li>
+    <li><a class="nav_links" href="../Sobre.html">Sobre</a></li>
 
-    <!-- Coluna 4 - Newsletter -->
-    <div class="footer-exclusivo-coluna">
-      <h4>Newsletter</h4>
-      <p>Quer receber conteúdos de viagem diariamente?<br>
-      Se inscreva no nosso Newsletter!</p>
-      <form class="footer-exclusivo-form">
-        <input type="email" placeholder="E-mail" required>
-        <button type="submit">INSCREVER</button>
-      </form>
-    </div>
+    <li><a class="nav_botao" href="../ia.html"> 
+      <img src="../../Img/logo_gemini.png" alt="">Planeje sua Viagem</a>
+    </li>
+    <li><a class="nav_botao" href=""> Login/Cadastro </a></li>
+  </ul>
+</nav>
 
-  </div>
-
-  <div class="footer-exclusivo-bottom">
-    <p><a href="#">Política de Privacidade</a></p>
-    <p>© 2025 Central de Viagens Brasil. Todos os direitos reservados.</p>
-  </div>
-</footer>
+  </header>
 
 <!-- inicio da api de libras-->
     <div vw class="enabled">

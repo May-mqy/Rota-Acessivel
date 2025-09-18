@@ -16,18 +16,18 @@
 }
 
 .conteudo__sembarreira--titulo{
-    width: 400px;
-    margin: 40px 0 0 50px;
+    width: 500px;
+    margin: 60px 0 20px 100px;
     color: var(--branco-cinza);
-    font-size: 30px;
+    font-size: 32px;
     font-family: Oswald;
     font-weight: bold;
 }
 
 .conteudo__sembarreira--txt{
     width: 400px;
-    margin-left: 50px;
-    font-family: Alumni;
+    margin-left: 100px;
+    font-family: "Open Sans", sans-serif;
     font-size: 24px;
     color: var(--branco-cinza);
 }
@@ -37,22 +37,32 @@
 }
 
 .conteudo__sembarreira--img{
-    width: 600px;
-    margin-top: 100px;
+    width: 500px;
+    margin: 100px auto -3px 80px;
+
+    & img{
+    margin-left: 60px;
+    }
 }
 
 .item__txt{
     position: absolute;
-    bottom: -29px;
+    bottom: -35px;
     left: 50%;
     font-weight: bold;
     text-transform: uppercase;
     padding: 5px 10px;
     transform: translateX(-50%);
-    background-color: var(--branco-cinza);
+    background-color: #3498DB;
+    color: var(--branco-cinza);
+    
+    height: 50px;
+    font-size: 16px;
+    font-family: "Sans Open", sans-serif;
+
+    display: flex;
+    align-items: center;
     text-align: center;
-    font-size: 22px;
-    font-family: Alumni;
 }
 
 

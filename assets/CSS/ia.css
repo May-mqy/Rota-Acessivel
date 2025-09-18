@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
+
 @font-face {
     font-family: Oswald;
     src: url(../fonts/Oswald-VariableFont_wght.ttf);
@@ -19,8 +21,8 @@ html {
     margin: 0;
     padding: 0;
     border: 0;
-    font-family: Alumni;
-    font-size: 1.6em;
+    font-family: "Open sans", sans-serif;
+    font-size: 1.2em;
     height: 100%;
     background-color: #1a1a1a;
     color: #fff;
@@ -31,12 +33,13 @@ main {
     height: 91vh;
 }
 
+/* Área para a Navbar */
+/* Área para a Navbar */
 #nav_bar {
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 9vh;
+    height: 12vh;
     background-color: #0d2c49;
     padding: 0 2%;
     position: relative;
@@ -44,9 +47,22 @@ main {
 
 #nav_bar img {
 
-    height: 80px;
+    height: 100px;
     width: auto;
     transition: .3s;
+
+  }
+  
+
+#Logo-text {
+  
+    text-decoration: none;
+    color: #D9D9D9;
+    
+    p{
+      margin-top: -70px;
+      margin-left: 100px;
+    }
 }
 
 #nav_bar img:hover {
@@ -93,7 +109,7 @@ main {
     gap: 8px;
     border: 1px solid var(--branco);
     padding: 20px;
-    border-radius: 20px;
+    border-radius: 30px;
     height: 20px;
     border: 1px solid #ffff;
     color: #fff;
@@ -129,6 +145,34 @@ main {
     border-radius: 10px;
     transition: all 0.3s linear;
 }
+
+/* Garante que o submenu fique escondido inicialmente */
+  #sub_menu {
+    display: none;
+    position: absolute; /* fica solto abaixo do item pai */
+    color: #D9D9D9;
+    background: #0d2642d5;
+    border: 5px solid #ddd;
+    list-style: none;
+    padding: 10px;
+    margin-top: 20px;
+    z-index: 1000;
+  }
+
+  #sub_menu li {
+    margin: 5px 0;
+  }
+
+  #sub_menu a {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #D9D9D9;
+  }
+
+  #sub_menu a:hover {
+    background:var(--destaque2);
+  }
 
 
 .chat {
@@ -468,14 +512,22 @@ footer {
         width: 100%;
         box-sizing: border-box;
     }
+
+#nav_bar {
+    height: 15vh;
+}
+
+  #nav_bar img {
+    display: flex;
+    flex-direction: row;
+    height:50px;
+    width: auto;
+    transition: .3s;
+}
 }
 
 @media (max-width: 480px) {
-
     .nav_botao {
-
         font-size: 0.5em;
-
     }
-
 }

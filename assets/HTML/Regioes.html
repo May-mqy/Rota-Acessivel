@@ -7,6 +7,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../CSS/leitordosite.css">
     <link rel="shortcut icon" href="../Img/Logo.png" type="image/x-icon">
+    <script src="../JS/regiõesnav.js" type="text/javascript"></script>
 
     <style>
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
@@ -21,6 +22,169 @@ body {
     color: #fff;
     overflow-x: hidden;
 }
+
+/* Área para a Navbar */
+#nav_bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 12vh;
+    background-color: #0d2c49;
+    padding: 0 2%;
+    position: relative;
+}
+
+#nav_bar img {
+
+    height: 100px;
+    width: auto;
+    transition: .3s;
+
+  }
+  
+
+#Logo-text {
+  
+    text-decoration: none;
+    color: #D9D9D9;
+    
+    p{
+      margin-top: -70px;
+      margin-left: 100px;
+    }
+}
+
+#nav_bar img:hover {
+
+    transform: scale(1.1);
+
+}
+
+#nav_list ul {
+
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    gap: 50px;
+
+}
+
+#nav_list img {
+
+    height: 40px;
+    width: auto;
+
+}
+
+.nav_links {
+    color: white;
+    text-decoration: none;
+}
+
+.nav_links:hover {
+
+    color: #F39C12;
+    transition: all 0.3s;
+
+}
+
+.nav_botao {
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--branco);
+    padding: 30px;
+    border-radius: 30px;
+    height: 20px;
+    border: 1px solid #ffff;
+    color: #fff;
+    text-decoration: none;
+
+}
+
+.nav_botao:hover {
+
+    background-color: #D9D9D9;
+    color: #000;
+    transition: all 0.3s;
+
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 100;
+}
+
+.hamburger .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+}
+
+/* Garante que o submenu fique escondido inicialmente */
+  #sub_menu {
+    display: none;
+    position: absolute; /* fica solto abaixo do item pai */
+    color: #D9D9D9;
+    background: #0d2642d5;
+    border: 5px solid #ddd;
+    list-style: none;
+    padding: 10px;
+    margin-top: 20px;
+    z-index: 1000;
+  }
+
+  #sub_menu li {
+    margin: 5px 0;
+  }
+
+  #sub_menu a {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #D9D9D9;
+  }
+
+  #sub_menu a:hover {
+    background:var(--destaque2);
+  }
+
+/*notebook*/
+@media screen and (min-width: 1500px) and (max-width: 2000px) {
+  #nav_bar {
+    height: 12vh;
+    font-size: 20px;
+}
+
+#nav_bar img {
+
+    height: 60px;
+  }
+
+#nav_list img {
+
+    height: 30px;
+    width: auto;
+}
+.nav_botao {
+    padding: 20px;
+}
+}
+
 
 #partiu-header-principal {
     background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, transparent 100%);
@@ -387,6 +551,10 @@ body {
     .partiu-header-nav {
         display: none;
     }
+
+    #nav_list img {
+    height: 10px;
+}
 }
 
 
@@ -610,7 +778,7 @@ body {
     color: white;
     border: none;
     padding: 12px 25px;
-    border-radius: 6px;
+    border-radius: 10px;
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -696,7 +864,19 @@ body {
     .carrossel-container {
         padding: 0 45px;
     }
+
+     #nav_bar {
+    height: 18vh;
 }
+
+  #nav_bar img {
+    display: flex;
+    flex-direction: row;
+    height:70px;
+
+  }
+}
+
 
 @media (max-width: 768px) {
     .explore-regioes-secao {
@@ -730,7 +910,21 @@ body {
         flex-direction: column;
         gap: 15px;
     }
+
+      #nav_bar {
+    height: 15vh;
 }
+
+  #nav_bar img {
+    display: flex;
+    flex-direction: row;
+    height:50px;
+    width: auto;
+    transition: .3s;
+
+  }
+}
+
 
 @media (max-width: 480px) {
     .explore-regioes-titulo {
@@ -752,164 +946,204 @@ body {
     .carrossel-container {
         padding: 0 0px;
     }
+
+     #nav_bar {
+    height: 15vh;
 }
+
+  #nav_bar img {
+    display: flex;
+    flex-direction: row;
+    height:30px;
+    width: auto;
+    transition: .3s;
+
+  }
+}
+
 
 
         /*FOOTER*/
 
-        .footer-exclusivo {
-        background-color: #223345; /* cor azul escura do fundo */
-        color: #fff;
-        font-family: 'Arial', sans-serif;
-        padding: 40px 20px 20px;
-        }
+        footer {
+    font-family: "Open Sans", sans-serif;
+}
 
-        .footer-exclusivo-container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 30px;
-        max-width: 1200px;
-        margin: 0 auto;
-        }
+.footer-exclusivo {
+    background-color: #223345;
+    color: #fff;
+    padding: 40px 20px 20px;
+}
 
-        .footer-exclusivo-logo {
-        margin-bottom: 15px;
+.footer-exclusivo-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-        img{
-          height: 60px;
-          width: auto;
-        }
-        }
+.footer-exclusivo-logo {
 
-        .footer-exclusivo-subtitulo {
-        font-size: 14px;
+    height: 60px;
+    width: auto;
+
+}
+
+.footer-exclusivo-subtitulo {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer-exclusivo-redes a {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.footer-exclusivo-redes a:hover {
+    color: #f0c040;
+}
+
+.footer-exclusivo-contato p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footer-exclusivo-coluna h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.footer-exclusivo-coluna p {
+    font-size: 14px;
+}
+
+.footer-exclusivo-coluna ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-exclusivo-coluna ul li {
+    margin-bottom: 8px;
+}
+
+.footer-exclusivo-coluna ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-exclusivo-coluna ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-exclusivo-form {
+    display: flex;
+    margin-top: 10px;
+    align-items: stretch;
+}
+
+.footer-exclusivo-form input {
+    padding: 8px;
+    border: none;
+    outline: none;
+    flex: 1;
+    margin-right: 5px;
+}
+
+.footer-exclusivo-form button {
+    padding: 8px 12px;
+    background: #fff;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.footer-exclusivo-form button:hover {
+    background: #f0c040;
+}
+
+.footer-exclusivo-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 15px;
+    font-size: 13px;
+}
+
+.footer-exclusivo-bottom a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-exclusivo-bottom a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 728px) {
+    .footer-exclusivo-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-exclusivo-form {
+        flex-direction: column;
+    }
+
+    .footer-exclusivo-form input {
+        width: 100%;
         margin-bottom: 10px;
-        }
+        margin-right: 0;
+        box-sizing: border-box;
+    }
 
-        .footer-exclusivo-redes a {
-        font-size: 20px;
-        margin-right: 10px;
-        color: #fff;
-        transition: 0.3s;
-        }
-
-        .footer-exclusivo-redes a:hover {
-        color: #f0c040;
-        }
-
-        .footer-exclusivo-contato p {
-        margin: 5px 0;
-        font-size: 14px;
-        }
-
-        .footer-exclusivo-coluna h4 {
-        margin-bottom: 10px;
-        font-size: 16px;
-        }
-
-        .footer-exclusivo-coluna ul {
-        list-style: none;
-        padding: 0;
-        }
-
-        .footer-exclusivo-coluna ul li {
-        margin-bottom: 8px;
-        }
-
-        .footer-exclusivo-coluna ul li a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 14px;
-        }
-
-        .footer-exclusivo-coluna ul li a:hover {
-        text-decoration: underline;
-        }
-
-        .footer-exclusivo-form {
-        display: flex;
-        margin-top: 10px;
-        }
-
-        .footer-exclusivo-form input {
-        padding: 8px;
-        border: none;
-        outline: none;
-        flex: 1;
-        }
-
-        .footer-exclusivo-form button {
-        padding: 8px 12px;
-        background: #fff;
-        color: #000;
-        border: none;
-        cursor: pointer;
-        font-weight: bold;
-        }
-
-        .footer-exclusivo-form button:hover {
-        background: #f0c040;
-        }
-
-        .footer-exclusivo-bottom {
-        text-align: center;
-        margin-top: 30px;
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
-        padding-top: 15px;
-        font-size: 13px;
-        }
-
-        .footer-exclusivo-bottom a {
-        color: #fff;
-        text-decoration: none;
-        }
-
-        .footer-exclusivo-bottom a:hover {
-        text-decoration: underline;
-        }
-
-        /* Responsivo */
-        @media (max-width: 900px) {
-        .footer-exclusivo-container {
-            grid-template-columns: 1fr 1fr;
-        }
-        }
-
-        @media (max-width: 600px) {
-        .footer-exclusivo-container {
-            grid-template-columns: 1fr;
-        }
-        .footer-exclusivo-form {
-            flex-direction: column;
-        }
-        .footer-exclusivo-form input {
-            margin-bottom: 10px;
-        }
-        }
+    .footer-exclusivo-form button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
 
     </style>
 </head>
 <body>
-    <header id="partiu-header-principal">
-        <div class="partiu-header-container">
-            <div class="partiu-header-logo"><a href="../../home.html"><img src="../Img/Logo.png" alt="Logo Rota Acessivel, possui o símbolo de acessibilidade no meio de um circulo colorido e passando no meio um avião."></a></div>
+    <!--Espaço Cabeçalho-->
+     <header id="nav_bar">
+    <a href="../../index.html" id="Logo-text"><img src="../Img/Logo.png" alt=""  > <img src="../Img/nomeLogo.png" id="logonome" alt=""></a>
 
+    <button class="hamburger" aria-label="menu hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
 
-            <div id="hamburger-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-            <nav class="partiu-header-nav">
-                <a href="Regioes.html" class="partiu-header-nav-link">Regiões</a>
-                <a href="Parceiros.html" class="partiu-header-nav-link">Parceiros</a>
-                <a href="Comunidade.html" class="partiu-header-nav-link">Comunidade</a>
-                <a href="Sobre.html" class="partiu-header-nav-link">Sobre</a>
-                <a href="ia.html" class="partiu-header-nav-link">Planeje sua Viagem</a>
-            </nav>
-            <div class="partiu-header-login"><a href="">Login/Cadastro</a></div>
-        </div>
-    </header>
+    <nav id="nav_list"> 
+  <ul>
+    <li onmouseover="exibe_regioes()" onmouseout="some_regioes()">
+      <a class="nav_links" href="Regioes.html">Regiões</a>
+      <ul id="sub_menu">
+        <li><a href="regiões/Norte.html" class="nav_links">Norte</a></li>
+        <li><a href="regiões/Nordeste.html" class="nav_links">Nordeste</a></li>
+        <li><a href="regiões/Centro.html" class="nav_links">Centro-Oeste</a></li>
+        <li><a href="regiões/Sudeste.html" class="nav_links">Sudeste</a></li>
+        <li><a href="regiões/Sul.html" class="nav_links">Sul</a></li>
+      </ul>
+    </li>
+
+    <li><a class="nav_links" href="Parceiros.html">Parceiros</a></li>
+    <li><a class="nav_links" href="Comunidade.html">Comunidade</a></li>
+    <li><a class="nav_links" href="Sobre.html">Sobre</a></li>
+
+    <li><a class="nav_botao" href="ia.html"> 
+      <img src="../Img/logo_gemini.png" alt="">Planeje sua Viagem</a>
+    </li>
+    <li><a class="nav_botao" href="#"> Login/Cadastro </a></li>
+  </ul>
+</nav>
+
+  </header>
 
     <main id="partiu-main-conteudo">
         <section class="partiu-secao-hero">
@@ -1103,64 +1337,57 @@ body {
     </div>
 </section>
     <footer class="footer-exclusivo">
-  <div class="footer-exclusivo-container">
-    
-    <!-- Coluna 1 - Logo e Redes -->
-    <div class="footer-exclusivo-coluna">
-       <h3 class="footer-exclusivo-logo"><img src="../Img/Logo.png" alt=""></h3>
-      <p class="footer-exclusivo-subtitulo">Siga nossas redes</p>
-      <div class="footer-exclusivo-redes">
-        <a href="#"><i class="bx bxl-tiktok"></i></a>
-        <a href="#"><i class="bx bxl-instagram"></i></a>
-        <a href="#"><i class="bx bxl-twitter"></i></a>
-        <a href="#"><i class="bx bxl-facebook"></i></a>
-        <a href="#"><i class="bx bxl-youtube"></i></a>
+    <div class="footer-exclusivo-container">
+      <div class="footer-exclusivo-coluna">
+        <img class="footer-exclusivo-logo" src="../Img/Logo.png">
+        <p class="footer-exclusivo-subtitulo">Siga nossas redes</p>
+        <div class="footer-exclusivo-redes">
+          <a href="#"><i class="bx bxl-tiktok"></i></a>
+          <a href="#"><i class="bx bxl-instagram"></i></a>
+          <a href="#"><i class="bx bxl-twitter"></i></a>
+          <a href="#"><i class="bx bxl-facebook"></i></a>
+          <a href="#"><i class="bx bxl-youtube"></i></a>
+        </div>
+        <div class="footer-exclusivo-contato">
+          <p>Entre em Contato</p>
+          <p>(11) 3818-1763</p>
+          <p>contato@centra.brasil.com</p>
+        </div>
       </div>
-      <div class="footer-exclusivo-contato">
-        <p>Entre em Contato</p>
-        <p>(11) 3818-1763</p>
-        <p>contato@centra.brasil.com</p>
+
+      <div class="footer-exclusivo-coluna">
+        <h4>Mapa do Site</h4>
+        <ul>
+          <li><a href="../../home.html">Página Inicial</a></li>
+          <li><a href="Regioes.html">Regiões</a></li>
+          <li><a href="Parceiros.html">Parceiros</a></li>
+          <li><a href="Comunidade.html">Comunidade</a></li>
+          <li><a href="Sobre.html">Sobre</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-exclusivo-coluna">
+        <h4>Ferramenta</h4>
+        <ul>
+          <li><a href="#">Planejador de Viagem</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-exclusivo-coluna">
+        <h4>Newsletter</h4>
+        <p>Quer receber conteúdos de viagem diariamente?<br> Se inscreva no nosso Newsletter!</p>
+        <form class="footer-exclusivo-form">
+          <input type="email" placeholder="E-mail" required>
+          <button type="submit">INSCREVER</button>
+        </form>
       </div>
     </div>
 
-    <!-- Coluna 2 - Mapa do site -->
-    <div class="footer-exclusivo-coluna">
-      <h4>Mapa do Site</h4>
-      <ul>
-        <li><a href="../../home.html">Página Inicial</a></li>
-        <li><a href="Regioes.html">Regiões</a></li>
-        <li><a href="Parceiros.html">Parceiros</a></li>
-        <li><a href="Comunidade.html">Comunidade</a></li>
-        <li><a href="Sobre.html">Sobre</a></li>
-      </ul>
+    <div class="footer-exclusivo-bottom">
+      <p><a href="#">Política de Privacidade</a></p>
+      <p>&copy; 2025 Central de Viagens Brasil. Todos os direitos reservados.</p>
     </div>
-
-    <!-- Coluna 3 - Ferramenta -->
-    <div class="footer-exclusivo-coluna">
-      <h4>Ferramenta</h4>
-      <ul>
-        <li><a href="ia.html">Planejador de Viagem</a></li>
-      </ul>
-    </div>
-
-    <!-- Coluna 4 - Newsletter -->
-    <div class="footer-exclusivo-coluna">
-      <h4>Newsletter</h4>
-      <p>Quer receber conteúdos de viagem diariamente?<br>
-      Se inscreva no nosso Newsletter!</p>
-      <form class="footer-exclusivo-form">
-        <input type="email" placeholder="E-mail" required>
-        <button type="submit">INSCREVER</button>
-      </form>
-    </div>
-
-  </div>
-
-  <div class="footer-exclusivo-bottom">
-    <p><a href="#">Política de Privacidade</a></p>
-    <p>© 2025 Central de Viagens Brasil. Todos os direitos reservados.</p>
-  </div>
-</footer>
+  </footer>
 
     <script>
 

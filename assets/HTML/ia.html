@@ -9,13 +9,15 @@
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="shortcut icon" href="../Img/Logo.png" type="image/x-icon">
   <link rel="stylesheet" href="../CSS/leitordosite.css">
+  <script src="../JS/regiõesnav.js" type="text/javascript"></script>
 
 </head>
 
 <body>
 
-  <header id="nav_bar">
-    <a href="../../home.html"><img src="../Img/Logo.png" alt=""></a>
+   <!--Espaço Cabeçalho-->
+     <header id="nav_bar">
+    <a href="../../../index.html" id="Logo-text"><img src="../Img/Logo.png" alt=""  > <img src="../Img/nomeLogo.png" id="logonome" alt=""></a>
 
     <button class="hamburger" aria-label="menu hamburger">
       <span class="bar"></span>
@@ -23,19 +25,30 @@
       <span class="bar"></span>
     </button>
 
-    <nav id="nav_list">
-
-      <ul>
-        <li><a class="nav_links" href="Regioes.html">Regiões</a></li>
-        <li><a class="nav_links" href="">Parceiros</a></li>
-        <li><a class="nav_links" href="Comunidade.html">Comunidade</a></li>
-        <li><a class="nav_links" href="Sobre.html">Sobre</a></li>
-
-        <li><a class="nav_botao" href="ia.html"> <img src="../Img/logo_gemini.png" alt="">Planeje sua Viagem</a></li>
-        <li><a class="nav_botao" href=""> Login/Cadastro </a></li>
-
+    <nav id="nav_list"> 
+  <ul>
+    <li onmouseover="exibe_regioes()" onmouseout="some_regioes()">
+      <a class="nav_links" href="Regioes.html">Regiões</a>
+      <ul id="sub_menu">
+        <li><a href="regiões/Norte.html" class="nav_links">Norte</a></li>
+        <li><a href="regiões/Nordeste.html" class="nav_links">Nordeste</a></li>
+        <li><a href="regiões/Centro.html" class="nav_links">Centro-Oeste</a></li>
+        <li><a href="regiões/Sudeste.html" class="nav_links">Sudeste</a></li>
+        <li><a href="regiões/Sul.html" class="nav_links">Sul</a></li>
       </ul>
-    </nav>
+    </li>
+
+    <li><a class="nav_links" href="Parceiros.html">Parceiros</a></li>
+    <li><a class="nav_links" href="Comunidade.html">Comunidade</a></li>
+    <li><a class="nav_links" href="Sobre.html">Sobre</a></li>
+
+    <li><a class="nav_botao" href="ia.html"> 
+      <img src="../../Img/logo_gemini.png" alt="">Planeje sua Viagem</a>
+    </li>
+    <li><a class="nav_botao" href=""> Login/Cadastro </a></li>
+  </ul>
+</nav>
+
   </header>
 
 
@@ -94,9 +107,9 @@
       <div class="footer-exclusivo-coluna">
         <h4>Mapa do Site</h4>
         <ul>
-          <li><a href="../../home.html">Página Inicial</a></li>
+          <li><a href="../../index.html">Página Inicial</a></li>
           <li><a href="Regioes.html">Regiões</a></li>
-          <li><a href="#">Parceiros</a></li>
+          <li><a href="Parceiros.html">Parceiros</a></li>
           <li><a href="Comunidade.html">Comunidade</a></li>
           <li><a href="Sobre.html">Sobre</a></li>
         </ul>
@@ -105,7 +118,7 @@
       <div class="footer-exclusivo-coluna">
         <h4>Ferramenta</h4>
         <ul>
-          <li><a href="#">Planejador de Viagem</a></li>
+          <li><a href="ia.html">Planejador de Viagem</a></li>
         </ul>
       </div>
 
