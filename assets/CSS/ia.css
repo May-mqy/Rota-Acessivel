@@ -34,7 +34,6 @@ main {
 }
 
 /* Área para a Navbar */
-/* Área para a Navbar */
 #nav_bar {
     display: flex;
     align-items: center;
@@ -110,12 +109,13 @@ main {
     border: 1px solid var(--branco);
     padding: 20px;
     border-radius: 30px;
-    height: 20px;
+    height: 5x;
     border: 1px solid #ffff;
     color: #fff;
     text-decoration: none;
 
 }
+
 
 .nav_botao:hover {
 

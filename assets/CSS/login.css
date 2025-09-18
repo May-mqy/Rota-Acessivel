@@ -19,6 +19,147 @@ main{
 
 }
 
+/* Área para a Navbar */
+#nav_bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 12vh;
+    background-color: #0d2c49;
+    padding: 0 2%;
+    position: relative;
+}
+
+#nav_bar img {
+
+    height: 100px;
+    width: auto;
+    transition: .3s;
+
+  }
+  
+
+#Logo-text {
+  
+    text-decoration: none;
+    color: #D9D9D9;
+    
+    p{
+      margin-top: -70px;
+      margin-left: 100px;
+    }
+}
+
+#nav_bar img:hover {
+
+    transform: scale(1.1);
+
+}
+
+#nav_list ul {
+
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    gap: 50px;
+
+}
+
+#nav_list img {
+
+    height: 40px;
+    width: auto;
+
+}
+
+.nav_links {
+    color: white;
+    text-decoration: none;
+}
+
+.nav_links:hover {
+
+    color: #F39C12;
+    transition: all 0.3s;
+
+}
+
+.nav_botao {
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--branco);
+    padding: 20px;
+    border-radius: 30px;
+    height: 5x;
+    border: 1px solid #ffff;
+    color: #fff;
+    text-decoration: none;
+
+}
+
+
+.nav_botao:hover {
+
+    background-color: #D9D9D9;
+    color: #000;
+    transition: all 0.3s;
+
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 100;
+}
+
+.hamburger .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+}
+
+/* Garante que o submenu fique escondido inicialmente */
+  #sub_menu {
+    display: none;
+    position: absolute; /* fica solto abaixo do item pai */
+    color: #D9D9D9;
+    background: #0d2642d5;
+    border: 5px solid #ddd;
+    list-style: none;
+    padding: 10px;
+    margin-top: 20px;
+    z-index: 1000;
+  }
+
+  #sub_menu li {
+    margin: 5px 0;
+  }
+
+  #sub_menu a {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #D9D9D9;
+  }
+
+  #sub_menu a:hover {
+    background:var(--destaque2);
+  }
+
 
 #lado-login{
 

@@ -191,6 +191,8 @@ main{
     flex-direction: row;
     width: 80%;
     margin: auto;
+    margin-right: 40px;
+    margin-top: 40px;
 }
 
 #depoimentos .group-card .card{
