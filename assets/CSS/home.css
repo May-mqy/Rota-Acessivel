@@ -168,6 +168,14 @@ body{
     background:var(--destaque2);
   }
 
+@media(max-width: 1800px){
+#remover{
+  display: none;
+}
+  
+
+}
+
 
 @media screen and (max-width:768px){
   .cabecalho__lista, .cabecalho__botoes{
