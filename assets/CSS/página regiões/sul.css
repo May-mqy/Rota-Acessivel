@@ -33,37 +33,6 @@ body {
 
 }
 
-* Área para a Navbar */
-#nav_bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 12vh;
-    background-color: #0d2c49;
-    padding: 0 2%;
-    position: relative;
-}
-
-#nav_bar img {
-
-    height: 100px;
-    width: auto;
-    transition: .3s;
-
-  }
-  
-
-#Logo-text {
-  
-    text-decoration: none;
-    color: #D9D9D9;
-    
-    p{
-      margin-top: -70px;
-      margin-left: 100px;
-    }
-}
-
 /* Área para a Navbar */
 #nav_bar {
     display: flex;
@@ -830,4 +799,26 @@ body{
         width: 100%;
         box-sizing: border-box;
     }
+}
+
+/*notebook*/
+@media screen and (min-width: 1500px) and (max-width: 2000px) {
+  #nav_bar {
+    height: 12vh;
+    font-size: 20px;
+}
+
+#nav_bar img {
+
+    height: 60px;
+  }
+
+#nav_list img {
+
+    height: 20px;
+    width: auto;
+}
+.nav_botao {
+    padding: 20px;
+}
 }
